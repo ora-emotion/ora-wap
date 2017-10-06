@@ -1,0 +1,186 @@
+/*
+ * spa.css
+ * Index namespace styles
+*/
+
+
+/* Start nav styles */
+.index-nav-horizontal {
+  display: flex;
+  justify-content: space-around;
+  padding-top: .33rem;
+  padding-left: .2rem;
+  padding-right: .2rem;
+}
+.index-nav-horizontal-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.index-nav-horizontal-item-icon {
+  -webkit-background-size: contain;
+  background-size: contain;
+  width: 1.58rem;
+  height: 1.58rem;
+}
+.index-nav-horizontal:nth-child(1) .index-nav-horizontal-item:nth-child(1) .index-nav-horizontal-item-icon {
+  background: url(../images/index/preface-icon-top-01.png) no-repeat center center;
+}
+.index-nav-horizontal:nth-child(1) .index-nav-horizontal-item:nth-child(2) .index-nav-horizontal-item-icon {
+  background: url(../images/index/preface-icon-top-02.png) no-repeat center center;
+}
+.index-nav-horizontal:nth-child(1) .index-nav-horizontal-item:nth-child(3) .index-nav-horizontal-item-icon {
+  background: url(../images/index/preface-icon-top-03.png) no-repeat center center;
+}
+.index-nav-horizontal:nth-child(1) .index-nav-horizontal-item:nth-child(4) .index-nav-horizontal-item-icon {
+  background: url(../images/index/preface-icon-top-04.png) no-repeat center center;
+}
+.index-nav-horizontal:nth-child(2) .index-nav-horizontal-item:nth-child(1) .index-nav-horizontal-item-icon {
+  background: url(../images/index/preface-icon-bot-01.png) no-repeat center center;
+}
+.index-nav-horizontal:nth-child(2) .index-nav-horizontal-item:nth-child(2) .index-nav-horizontal-item-icon {
+  background: url(../images/index/preface-icon-bot-02.png) no-repeat center center;
+}
+.index-nav-horizontal:nth-child(2) .index-nav-horizontal-item:nth-child(3) .index-nav-horizontal-item-icon {
+  background: url(../images/index/preface-icon-bot-03.png) no-repeat center center;
+}
+.index-nav-horizontal:nth-child(2) .index-nav-horizontal-item:nth-child(4) .index-nav-horizontal-item-icon {
+  background: url(../images/index/preface-icon-bot-04.png) no-repeat center center;
+}
+.index-nav-horizontal-item p {
+  font-size: .28rem;
+  line-height: .25rem;
+}
+/* End nav styles */
+
+/* Start company introduction */
+.index-company-intro-main {
+  background: url(../images/index/company-intro-bg.png) no-repeat center center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  height: 4.86rem;
+}
+.index-company-intro-main p {
+  line-height: .4rem;
+  padding: 0 .22rem;
+  margin: 0 auto;
+}
+.index-company-intro-main p:nth-child(1) {
+  padding-top: .23rem;
+  padding-bottom: .39rem;
+}
+/* End company introduction */
+
+/* Start solve problem */
+.index-solve-problem-row {
+  display: flex;
+  justify-content: center;
+  padding: 0 .15rem;
+}
+.index-solve-problem-row img {
+  padding: .07rem;
+  width: 3.47rem;
+  height: 2.13rem;
+}
+/* End solve problem */
+
+/* Start service step */
+.index-service-step-main {
+  display: flex;
+  justify-content: flex-start;
+  background: url(../images/index/service-step-bg.png) no-repeat center center;
+  -webkit-background-size: contain;
+  background-size: contain;
+  width: 100%;
+  height: 3.74rem;
+}
+.index-service-step-main-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: .37rem 0;
+}
+.index-service-step-main-column:first-child {
+  width: 3.4rem;
+  padding-left: .3rem;
+}
+.index-service-step-main-column:last-child {
+  padding-left: .64rem;
+}
+.index-service-step-main-column-row {
+  display: flex;
+  justify-content: flex-start;
+  height: .64rem;
+  line-height: .64rem;
+}
+.index-service-step-main-column-row-icon {
+  display: inline-block;
+  width: .64rem;
+  height: .64rem;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.index-service-step-main-column:nth-child(1) .index-service-step-main-column-row:nth-child(1) .index-service-step-main-column-row-icon {
+  background: url(../images/index/service-step-icon01.png) no-repeat center center;
+}
+.index-service-step-main-column:nth-child(1) .index-service-step-main-column-row:nth-child(2) .index-service-step-main-column-row-icon {
+  background: url(../images/index/service-step-icon02.png) no-repeat center center;
+}
+.index-service-step-main-column:nth-child(1) .index-service-step-main-column-row:nth-child(3) .index-service-step-main-column-row-icon {
+  background: url(../images/index/service-step-icon03.png) no-repeat center center;
+}
+.index-service-step-main-column:nth-child(2) .index-service-step-main-column-row:nth-child(1) .index-service-step-main-column-row-icon {
+  background: url(../images/index/service-step-icon04.png) no-repeat center center;
+}
+.index-service-step-main-column:nth-child(2) .index-service-step-main-column-row:nth-child(2) .index-service-step-main-column-row-icon {
+  background: url(../images/index/service-step-icon05.png) no-repeat center center;
+}
+.index-service-step-main-column:nth-child(2) .index-service-step-main-column-row:nth-child(3) .index-service-step-main-column-row-icon {
+  background: url(../images/index/service-step-icon06.png) no-repeat center center;
+}
+.index-service-step-main-column-row-txt {
+  position: relative;
+  top: .1rem;
+}
+.index-service-step-main-column-row-txt .ch {
+  color: #fff;
+}
+.index-service-step-main-column-row-txt .en {
+  color: #fa7c7c;
+  font-size: .126rem;
+  text-transform: uppercase;
+}
+/* End service step */
+
+/* Start service guarantee */
+.index-service-guarantee-main {
+  background: url(../images/index/service-guarantee-bg.png) center center no-repeat;
+  background-size: contain;
+  height: 3.95rem;
+}
+.index-service-guarantee-main-item {
+  width: 7rem;
+  height: 1.4rem;
+  margin: 0 auto;
+  padding-top: .4rem;
+}
+.index-service-guarantee-main-item img {
+  width: 1.96rem;
+  width: 1.96rem;
+  height: 1.32rem;
+  float: left;
+}
+.index-service-guarantee-main-item .txt {
+  float: left;
+  width: 4.6rem;
+  height: 1.4rem;
+  margin-left: .2rem;
+}
+.index-service-guarantee-main-item .txt p {
+  line-height: .35rem;
+  font-size: .26rem;
+}
+/* End service guarantee */
