@@ -14,39 +14,34 @@
 spa.index = (function () {
   var
     configMap = {
-      nav_html : String()
-        + '<div class="index-nav"></div>',
-      company_intro_html : String()
+      main_html : String()
+        + '<div class="index-nav"></div>'
         + '<div class="index-company-intro">'
           + '<div class="main"></div>'
-        + '</div>',
-      solve_problem_html : String()
+        + '</div>'
         + '<div class="index-solve-problem">'
           + '<div class="main"></div>'
-        + '</div>',
-      mentor_intro_html : String()
+        + '</div>'
         + '<div class="index-mentor-intro">'
           + '<div class="main"></div>'
-        + '</div>',
-      ora_dynamic_html : String()
+        + '</div>'
         + '<div class="index-ora-dynamic">'
           + '<div class="main"></div>'
-        + '</div>',
-      service_step_html : String()
+        + '</div>'
         + '<div class="index-service-step">'
           + '<div class="main"></div>'
-        + '</div>',
-      service_guarantee_html : String()
+        + '</div>'
         + '<div class="index-service-guarantee">'
           + '<div class="main"></div>'
-        + '</div>',
-      four_services_html : String()
+        + '</div>'
         + '<div class="index-four-services">'
           + '<div class="main"></div>'
         + '</div>'
     },
     stateMap = { $main : null },
     jqueryMap = {},
+
+    insertModule,
     setJqueryMap, initModule;
 
   setJqueryMap = function () {
@@ -64,19 +59,7 @@ spa.index = (function () {
     };
   };
 
-  initModule = function ($index_main) {
-    stateMap.$main = $index_main;
-    $index_main.append(configMap.nav_html);
-    $index_main.append(configMap.company_intro_html);
-    $index_main.append(configMap.solve_problem_html);
-    $index_main.append(configMap.mentor_intro_html);
-    $index_main.append(configMap.ora_dynamic_html);
-    $index_main.append(configMap.service_step_html);
-    $index_main.append(configMap.service_guarantee_html);
-    $index_main.append(configMap.four_services_html);
-
-    setJqueryMap();
-
+  insertModule = function () {
     spa.index.nav.initModule(jqueryMap.$nav);
     spa.index.company_intro.initModule(jqueryMap.$company_intro);
     spa.index.solve_problem.initModule(jqueryMap.$solve_problem);
@@ -85,6 +68,14 @@ spa.index = (function () {
     spa.index.service_step.initModule(jqueryMap.$service_step);
     spa.index.service_guarantee.initModule(jqueryMap.$service_guarantee);
     spa.index.four_services.initModule(jqueryMap.$four_services);
+  };
+
+  initModule = function ($index_main) {
+    stateMap.$main = $index_main;
+    $index_main.html(configMap.main_html);
+    setJqueryMap();
+
+    insertModule();
   };
 
   return { initModule : initModule };

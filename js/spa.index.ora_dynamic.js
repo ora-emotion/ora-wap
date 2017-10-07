@@ -140,9 +140,10 @@ spa.index.ora_dynamic = (function () {
     },
     stateMap = { $ora_dynamic : null },
     jqueryMap = {},
-    dynamicBanner,       mySwiper,
-    setJqueryMap, initModule;
+    dynamicBanner, openPage,
+    onClick,       setJqueryMap,  initModule;
 
+  // setJqueryMap() - 缓存 jQUery 集合
   setJqueryMap = function () {
     var $ora_dynamic = stateMap.$ora_dynamic;
     jqueryMap = {
@@ -152,22 +153,39 @@ spa.index.ora_dynamic = (function () {
     };
   };
 
+  // dynamicBanner() - 轮播图
   dynamicBanner = function () {
-    mySwiper = new Swiper(jqueryMap.$swiper, {
-      autoplay : configMap.swiper_autoplay,
+    var mySwiper = new Swiper(jqueryMap.$swiper, {
+      autoplay     : configMap.swiper_autoplay,
       initialSlide : configMap.swiper_initialSlide,
-      pagination : jqueryMap.$pagination,
-      loop : true,
+      pagination   : jqueryMap.$pagination,
+      loop         : true,
     });
   };
 
+  // openPage()
+  openPage = function () {
+    jqueryMap.$swiper.click(function () {
+      spa.data.news.initModule('new_01');
+    });
+  };
+
+//----------------------------- 事件处理程序 ------------------------------------
+  // onClick()
+  onClick = function () {
+    openPage();
+  };
+
+  // initModule() - 初始化模块
   initModule = function ($ora_dynamic) {
     stateMap.$ora_dynamic = $ora_dynamic;
     $ora_dynamic.html(configMap.ora_dynamic_html);
     setJqueryMap();
 
     dynamicBanner();
+    onClick();
   };
 
+  // 导出公开方法 initModule()
   return { initModule : initModule };
 }());

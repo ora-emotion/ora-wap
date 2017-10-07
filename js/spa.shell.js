@@ -14,14 +14,15 @@
 spa.shell = (function () {
   var
     configMap = {
-      header_html : String() + '<header class="spa-header"></header>',
-      preface_html : String() + '<div class="spa-preface"></div>',
-      main_html : String() + '<div class="spa-main"></div>',
-      footer_html: String() + '<footer class="spa-footer"></footer>'
+      main_html : String()
+        + '<header class="spa-header"></header>'
+        + '<div class="spa-preface"></div>'
+        + '<div class="spa-main"></div>'
+        + '<footer class="spa-footer"></footer>'
     },
     stateMap = { $container : null },
     jqueryMap = {},
-    onClickPage,
+    loadCommonModule,
     setJqueryMap, initModule;
 
   // setJqueryMap()
@@ -38,26 +39,24 @@ spa.shell = (function () {
     };
   };
 
-  onClickPage = function () {};
+  // loadCommonModule() - 加载公共模块
+  loadCommonModule = function () {
+    spa.shell.header.initModule(jqueryMap.$header);
+    spa.shell.preface.initModule(jqueryMap.$preface);
+    spa.shell.footer.initModule(jqueryMap.$footer);
+  };
 
   // initModule()
   // 说明 : 初始化模块
   initModule = function ($container) {
     stateMap.$container = $container;
-    $container.append(configMap.header_html);
-    $container.append(configMap.preface_html);
-    $container.append(configMap.main_html);
-    $container.append(configMap.footer_html);
-
+    $container.html(configMap.main_html);
     setJqueryMap();
 
-    spa.shell.header.initModule(jqueryMap.$header);
-    spa.shell.preface.initModule(jqueryMap.$preface);
-    spa.shell.footer.initModule(jqueryMap.$footer);
+    loadCommonModule();
 
+    // 加载首页主内容区域
     spa.index.initModule(jqueryMap.$main);
-
-    onClickPage();
   };
 
   // 导出公开方法

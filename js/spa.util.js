@@ -11,4 +11,27 @@
 */
 /*global $, spa */
 
-spa.util = (function () { return {}; }());
+spa.util = (function () {
+  var
+    configMap = {
+      anchor_schema_map : {
+        news : {
+          new_01 : true,
+          new_02 : true
+        }
+      }
+    },
+    onHashchange, initModule;
+
+  onHashchange = function () {
+
+  };
+
+  initModule = function () {
+    $(window)
+      .bind('hashchange', onHashchange)
+      .trigger('hashchange');
+  };
+
+  // return { initModule : initModule };
+}());
