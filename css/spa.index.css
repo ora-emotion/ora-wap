@@ -86,6 +86,82 @@
 }
 /* End solve problem */
 
+/**/
+
+/* Start orange dynamic */
+.index-ora-dynamic-main {
+  width: 100%;
+  background: #4b4947;
+  padding-bottom: .55rem;
+  overflow: hidden;
+}
+.index-ora-dynamic-main .swiper-container {
+  width: 100%;
+}
+.index-ora-dynamic-main .swiper-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.index-ora-dynamic-main .swiper-slide {
+  width: 100%;
+}
+.index-ora-dynamic-main .swiper-slide .title {
+  display: flex;
+  justify-content: flex-start;
+  border-bottom: 2px solid #9f9d9e;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: .68rem;
+}
+.index-ora-dynamic-main .swiper-slide .title p {
+  height: .46rem;
+  line-height: .46rem;
+  font-weight: bold;
+  font-size: .3rem;
+  padding: 0 .08rem;
+  color: #fff;
+}
+.index-ora-dynamic-main .swiper-slide .txt-content {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: .33rem;
+  padding-bottom: .22rem;
+  border-bottom: 2px solid #9f9d9e;
+}
+.index-ora-dynamic-main .swiper-slide .txt-content .column:nth-child(1) {
+  width: 3.94rem;
+  padding-right: .22rem;
+}
+.index-ora-dynamic-main .swiper-slide .txt-content .column:nth-child(1) p {
+  line-height: .36rem;
+  color: #fff;
+}
+.index-ora-dynamic-main .swiper-slide .txt-content .column:nth-child(1) .more {
+  color: #ff0000;
+}
+.index-ora-dynamic-main .swiper-slide .txt-content .column:nth-child(2) img {
+  width: 2.84rem;
+  height: 1.73rem;
+}
+.index-ora-dynamic-main .swiper-pagination {
+  width: 100%;
+  height: .4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index-ora-dynamic-main .swiper-pagination-bullet {
+  width: .13rem;
+  height: .13rem;
+  background: #9f9d9e;
+  margin: 0 .06rem;
+}
+.index-ora-dynamic-main .swiper-pagination-bullet-active {
+  background: #fff;
+}
+/* End orange dynamic */
+
 /* Start service step */
 .index-service-step-main {
   display: flex;
