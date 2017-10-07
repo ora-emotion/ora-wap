@@ -14,6 +14,15 @@
 spa.shell = (function () {
   var
     configMap = {
+      page_map : {
+        slove     : 'spa.slove.js',
+        smarrage  : 'spa.smarrage.js',
+        smistress : 'spa.smistress.js',
+        forum     : 'spa.forum.js',
+        mentor    : 'spa.mentor.js',
+        service   : 'spa.service.js',
+        about     : 'spa.about.js'
+      },
       main_html : String()
         + '<header class="spa-header"></header>'
         + '<div class="spa-preface"></div>'
@@ -57,6 +66,9 @@ spa.shell = (function () {
 
     // 加载首页主内容区域
     spa.index.initModule(jqueryMap.$main);
+
+    // 路由子页面
+    spa.router.initModule($container, configMap.page_map);
   };
 
   // 导出公开方法

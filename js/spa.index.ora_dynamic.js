@@ -158,8 +158,7 @@ spa.index.ora_dynamic = (function () {
     var mySwiper = new Swiper(jqueryMap.$swiper, {
       autoplay     : configMap.swiper_autoplay,
       initialSlide : configMap.swiper_initialSlide,
-      pagination   : jqueryMap.$pagination,
-      loop         : true,
+      pagination   : jqueryMap.$pagination
     });
   };
 
@@ -183,7 +182,7 @@ spa.index.ora_dynamic = (function () {
     setJqueryMap();
 
     dynamicBanner();
-    onClick();
+    // onClick();
   };
 
   // 导出公开方法 initModule()
