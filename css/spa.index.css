@@ -184,3 +184,53 @@
   font-size: .26rem;
 }
 /* End service guarantee */
+
+/* Start four services */
+.index-four-services-main-item {
+  width: 100%;
+  height: 2.7rem;
+}
+.index-four-services-main-item:nth-child(1) {
+  background: url("../images/index/four-services-bg01.png") center center no-repeat;
+  background-size: contain;
+}
+.index-four-services-main-item:nth-child(2) {
+  background: url("../images/index/four-services-bg02.png") center center no-repeat;
+  background-size: contain;
+}
+.index-four-services-main-item:nth-child(3) {
+  background: url("../images/index/four-services-bg03.png") center center no-repeat;
+  background-size: contain;
+}
+.index-four-services-main-item:nth-child(4) {
+  background: url("../images/index/four-services-bg04.png") center center no-repeat;
+  background-size: contain;
+}
+.index-four-services-main-item-right {
+  padding-left: 2.6rem;
+  padding-top: .15rem;
+}
+.index-four-services-main-item-right h2,
+.index-four-services-main-item-left h2 {
+  font-size: .3rem;
+  color: #333333;
+}
+.index-four-services-main-item-right h3,
+.index-four-services-main-item-left h3 {
+  padding-top: .1rem;
+  font-size: .26rem;
+  color: #FA7C7C;
+  text-transform: uppercase;
+}
+.index-four-services-main-item-right p,
+.index-four-services-main-item-left p {
+  font-size: .26rem;
+  line-height: .35rem;
+  padding-top: .05rem;
+}
+.index-four-services-main-item-left {
+  padding-top: .15rem;
+  padding-left: .15rem;
+  width: 4.78rem;
+}
+/* End four services */
