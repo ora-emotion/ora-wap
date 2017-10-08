@@ -49,16 +49,14 @@ spa.util_b = (function () {
       has_key_name = false,
       key_name;
 
-    console.log(anchor_map);
-
     for (key_name in anchor_map) {
       has_key_name = true;
     }
 
     if (has_key_name) {
-      console.log(key_name);
       switch (key_name) {
         case 'news'    :
+          // spa.router.initModule(anchor_map[key_name]);
           spa.data.news.initModule(anchor_map[key_name]);
           break;
         case '_s_news' :

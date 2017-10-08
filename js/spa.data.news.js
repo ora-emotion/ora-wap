@@ -15,25 +15,20 @@
 spa.data.news = (function () {
   var
     configMap = {
-      anchor_schema_map : {
-        news : {
-          new_01 : true,
-          new_02 : true
-        }
+      news_info : {
+        new_01 : { title : '客户远道而来，送来锦旗向导师团队致谢' },
+        new_02 : { title : '主导师团队分析学院情况以及制定方案' },
+        new_03 : { title : '第六届情感导师行业交流指导会' },
+        new_04 : { title : '“暖爱计划”婚恋知识公益讲座报道' },
+        new_05 : { title : '十大杰出诚信企业' },
+        new_06 : { title : '青岛市市南区区长，亲临视察工作' },
+        new_07 : { title : '' },
+        new_08 : { title : '' },
+        new_09 : { title : '' },
+        new_10 : { title : '' },
+        new_11 : { title : '' },
+        new_12 : { title : '' }
       },
-      // HTML 字符串说明 :
-      //   * new_01 - 第六届情感导师行业交流指导会
-      //   * new_02 - 主导师团队分析学院情况以及制定方案
-      //   * new_03 - 第六届情感导师行业交流指导会
-      //   * new_04 - “暖爱计划”婚恋知识公益讲座报道
-      //   * new_05 - 十大杰出诚信企业
-      //   * new_06 - 青岛市市南区区长，亲临视察工作
-      //   * new_07 -
-      //   * new_08 -
-      //   * new_09 -
-      //   * new_10 -
-      //   * new_11 -
-      //   * new_12 -
       new_01 : String()
         + '<div class="module">'
           + '<div class="main">'
@@ -109,35 +104,24 @@ spa.data.news = (function () {
   // setJqueryMap() - 缓存 jQuery 集合
   setJqueryMap = function () {
     var $container = stateMap.$container;
-    jqueryMap = { $container : $container };
+    jqueryMap = {
+      $container : $container,
+      $title     : $('head title')
+    };
   };
 
   changeAnchorPart = function (msg) {
     $.uriAnchor.setAnchor({ news : msg });
   };
 
-  onHashchange = function (msg) {
-    var anchor_map_proposed = $.uriAnchor.makeAnchorMap();
-
-    if (anchor_map_proposed.news) {
-      $('.spa-main').children().remove();
-      $('.spa-main').html(configMap[anchor_map_proposed.news]);
-    }
-
-    if (!anchor_map_proposed.news) {
-      $('#spa').children().remove();
-      $(function (){ spa.initModule( $('#spa') ); });
-    }
-
-  };
-
   insertNews = function (msg) {
     var
       anchor_map = $.uriAnchor.makeAnchorMap(),
+      news_info  = configMap['news_info'],
       key_name, has_key_name;
 
     if (configMap.hasOwnProperty(msg)) {
-      
+
       for (key_name in anchor_map) {
         has_key_name = true;
       }
@@ -145,12 +129,19 @@ spa.data.news = (function () {
       if (has_key_name) {
         $( document ).scrollTop( 0 );
         jqueryMap.$container.html(configMap[msg]);
+        jqueryMap.$title.text('橘子情感 - ' + news_info[msg]['title']);
       } else {
         $( document ).scrollTop( 0 );
         jqueryMap.$container.html(configMap[msg]);
         changeAnchorPart(msg);
+        jqueryMap.$title.text('橘子情感 - ' + news_info[msg]['title']);
       }
     }
+
+    // 试图跳转到不存在的页面时，将地址栏 URL 设置为首页
+    // if (!configMap.hasOwnProperty(msg)) {
+    //   $.uriAnchor.setAnchor( {} );
+    // }
 
     return false;
   };
@@ -160,14 +151,6 @@ spa.data.news = (function () {
     setJqueryMap();
 
     insertNews(msg);
-
-    // $.uriAnchor.configModule({
-    //   schema_map : configMap.anchor_schema_map
-    // });
-
-    // $(window)
-    //   .bind('hashchange', onHashchange)
-    //   .trigger('hashchange');
 
   };
 
