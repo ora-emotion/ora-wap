@@ -13,9 +13,7 @@
 
 spa.router = (function () {
   var
-    configMap = {
-      src_map : {}
-    },
+    configMap = {},
     stateMap = { $container : null },
     jqueryMap = {},
     loadPage,
@@ -25,30 +23,21 @@ spa.router = (function () {
     var $container   = stateMap.$container;
 
     jqueryMap = {
-      $container : $container,
-      $index_ora_dynamic : {
-        $slide_01 : $container.find('.swiper-slide:nth-child(1)'),
-        $slide_02 : $container.find('.swiper-slide:nth-child(2)'),
-        $slide_03 : $container.find('.swiper-slide:nth-child(3)'),
-        $slide_04 : $container.find('.swiper-slide:nth-child(4)'),
-        $slide_05 : $container.find('.swiper-slide:nth-child(5)'),
-        $slide_06 : $container.find('.swiper-slide:nth-child(6)')
-      }
+      $container : $container
     };
   };
 
   // loadPage() - 加载子页面
-  loadPage = function (src_map) {
+  loadPage = function () {
     // 加载首页下的子页面
-    spa.router.index.initModule(jqueryMap.$index_ora_dynamic);
+    spa.router.index.initModule(jqueryMap.$container);
   };
 
-  initModule = function ($container, src_map) {
+  initModule = function ($container) {
     stateMap.$container = $container;
-    configMap.src_map   = src_map;
     setJqueryMap();
 
-    loadPage(src_map);
+    loadPage();
   };
 
   return { initModule : initModule };

@@ -14,15 +14,6 @@
 spa.shell = (function () {
   var
     configMap = {
-      page_map : {
-        slove     : 'spa.slove.js',
-        smarrage  : 'spa.smarrage.js',
-        smistress : 'spa.smistress.js',
-        forum     : 'spa.forum.js',
-        mentor    : 'spa.mentor.js',
-        service   : 'spa.service.js',
-        about     : 'spa.about.js'
-      },
       main_html : String()
         + '<header class="spa-header"></header>'
         + '<div class="spa-preface"></div>'
@@ -55,8 +46,7 @@ spa.shell = (function () {
     spa.shell.footer.initModule(jqueryMap.$footer);
   };
 
-  // initModule()
-  // 说明 : 初始化模块
+  // initModule() - 初始化模块
   initModule = function ($container) {
     stateMap.$container = $container;
     $container.html(configMap.main_html);
@@ -68,7 +58,7 @@ spa.shell = (function () {
     spa.index.initModule(jqueryMap.$main);
 
     // 路由子页面
-    spa.router.initModule($container, configMap.page_map);
+    spa.router.initModule($container);
   };
 
   // 导出公开方法

@@ -13,7 +13,7 @@
 
 spa.util_b = (function () {
   var
-    root_ele,      device_width,
+    root_ele,      device_width, onHashchange,
     fontAutomatic, initModule;
 
   // Start fontAutomatic()
@@ -41,8 +41,46 @@ spa.util_b = (function () {
   };
   // End fontAutoMatic()
 
+  // Start onHashchange()
+  // 功能 : 监听地址栏哈西片段
+  onHashchange = function () {
+    var
+      anchor_map = $.uriAnchor.makeAnchorMap(),
+      has_key_name = false,
+      key_name;
+
+    console.log(anchor_map);
+
+    for (key_name in anchor_map) {
+      has_key_name = true;
+    }
+
+    if (has_key_name) {
+      console.log(key_name);
+      switch (key_name) {
+        case 'news'    :
+          spa.data.news.initModule(anchor_map[key_name]);
+          break;
+        case '_s_news' :
+          spa.data.news.initModule(anchor_map[key_name]);
+          break;
+        default:
+          break;
+      }
+    }
+
+    // 当地址栏中没有哈希片段时，加载首页
+    if (!has_key_name) { spa.shell.initModule( $('#spa') ); }
+
+  };
+  // End onHashchange()
+
   initModule = function () {
     fontAutomatic();
+
+    $(window)
+      .bind('hashchange', onHashchange)
+      .trigger('hashchange');
   };
 
   return { initModule : initModule };

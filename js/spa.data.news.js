@@ -23,6 +23,17 @@ spa.data.news = (function () {
       },
       // HTML 字符串说明 :
       //   * new_01 - 第六届情感导师行业交流指导会
+      //   * new_02 - 主导师团队分析学院情况以及制定方案
+      //   * new_03 - 第六届情感导师行业交流指导会
+      //   * new_04 - “暖爱计划”婚恋知识公益讲座报道
+      //   * new_05 - 十大杰出诚信企业
+      //   * new_06 - 青岛市市南区区长，亲临视察工作
+      //   * new_07 -
+      //   * new_08 -
+      //   * new_09 -
+      //   * new_10 -
+      //   * new_11 -
+      //   * new_12 -
       new_01 : String()
         + '<div class="module">'
           + '<div class="main">'
@@ -74,7 +85,17 @@ spa.data.news = (function () {
             + '</p>'
           + '</div>'
         + '</div>',
-      new_02 : String() + 'This is another newspaper~'
+      new_02 : String() + 'new_02',
+      new_03 : String() + 'new_03',
+      new_04 : String() + 'new_04',
+      new_05 : String() + 'new_05',
+      new_06 : String() + 'new_06',
+      new_07 : String() + 'new_07',
+      new_08 : String() + 'new_08',
+      new_09 : String() + 'new_09',
+      new_10 : String() + 'new_10',
+      new_11 : String() + 'new_11',
+      new_12 : String() + 'new_12'
     },
     stateMap = {
       $container : null
@@ -111,12 +132,27 @@ spa.data.news = (function () {
   };
 
   insertNews = function (msg) {
-    $( document ).scrollTop( 0 );
+    var
+      anchor_map = $.uriAnchor.makeAnchorMap(),
+      key_name, has_key_name;
+
     if (configMap.hasOwnProperty(msg)) {
-      jqueryMap.$container.html(configMap[msg]);
-      // console.log($.uriAnchor.makeAnchorMap());
-      changeAnchorPart(msg);
+      
+      for (key_name in anchor_map) {
+        has_key_name = true;
+      }
+
+      if (has_key_name) {
+        $( document ).scrollTop( 0 );
+        jqueryMap.$container.html(configMap[msg]);
+      } else {
+        $( document ).scrollTop( 0 );
+        jqueryMap.$container.html(configMap[msg]);
+        changeAnchorPart(msg);
+      }
     }
+
+    return false;
   };
 
   initModule = function (msg) {
@@ -129,9 +165,9 @@ spa.data.news = (function () {
     //   schema_map : configMap.anchor_schema_map
     // });
 
-    $(window)
-      .bind('hashchange', onHashchange)
-      .trigger('hashchange');
+    // $(window)
+    //   .bind('hashchange', onHashchange)
+    //   .trigger('hashchange');
 
   };
 

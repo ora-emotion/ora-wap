@@ -1,6 +1,7 @@
 /*
  * spa.index.ora_dynamic.js
  * Ora Dynamic module for Index
+ * 首页 - 橘子动态模块
 */
 
 /*jslint           browser : true,   continue : true,
@@ -14,7 +15,6 @@
 spa.index.ora_dynamic = (function () {
   var
     configMap = {
-      // ora_dynamic_html : 橘子动态模块
       ora_dynamic_html : String()
         + '<div class="spa-module-title">'
           + '<span class="spa-module-title-line"></span>'
