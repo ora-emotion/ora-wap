@@ -97,7 +97,7 @@ spa.data.news = (function () {
     },
     jqueryMap = {},
 
-    setJqueryMap, insertNews, changeAnchorPart,
+    setJqueryMap, loadPage, changeAnchorPart,
     onHashchange, initModule;
 
 
@@ -110,40 +110,18 @@ spa.data.news = (function () {
     };
   };
 
-  changeAnchorPart = function (msg) {
-    $.uriAnchor.setAnchor({ news : msg });
-  };
+  loadPage = function (key_name_value) {
+    var news_info = configMap['news_info'];
 
-  insertNews = function (key_name_value) {
-    var
-      anchor_map = $.uriAnchor.makeAnchorMap(),
-      news_info  = configMap['news_info'],
-      key_name, has_key_name;
-
-    if (configMap.hasOwnProperty(key_name_value)) {
-
-      for (key_name in anchor_map) {
-        has_key_name = true;
-      }
-
-      if (has_key_name) {
-        $( document ).scrollTop( 0 );
-        jqueryMap.$container.html(configMap[key_name_value]);
-        jqueryMap.$title
-          .text('橘子情感 - ' + news_info[key_name_value]['title']);
-      } else {
-        $( document ).scrollTop( 0 );
-        jqueryMap.$container.html(configMap[key_name_value]);
-        changeAnchorPart(key_name_value);
-        jqueryMap.$title
-          .text('橘子情感 - ' + news_info[key_name_value]['title']);
-      }
+    if (!configMap.hasOwnProperty(key_name_value)) {
+      $.uriAnchor.setAnchor({});
+      return false;
     }
 
-    // 试图跳转到不存在的页面时，将地址栏 URL 设置为首页
-    // if (!configMap.hasOwnProperty(msg)) {
-    //   $.uriAnchor.setAnchor( {} );
-    // }
+    $( document ).scrollTop( 0 );
+    jqueryMap.$container.html(configMap[key_name_value]);
+    jqueryMap.$title
+      .text('橘子情感 - ' + news_info[key_name_value]['title']);
 
     return false;
   };
@@ -152,9 +130,9 @@ spa.data.news = (function () {
     stateMap.$container = $('.spa-main');
     setJqueryMap();
 
-    insertNews(key_name_value);
+    loadPage(key_name_value);
 
   };
 
-  return { initModule : initModule };
+  return { initModule : initModule, configMap : configMap };
 }());

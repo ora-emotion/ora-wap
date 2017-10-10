@@ -140,8 +140,7 @@ spa.index.ora_dynamic = (function () {
     },
     stateMap = { $ora_dynamic : null },
     jqueryMap = {},
-    dynamicBanner, openPage,
-    onClick,       setJqueryMap,  initModule;
+    dynamicBanner, setJqueryMap, initModule;
 
   // setJqueryMap() - 缓存 jQUery 集合
   setJqueryMap = function () {
@@ -149,6 +148,7 @@ spa.index.ora_dynamic = (function () {
     jqueryMap = {
       $ora_dynamic : $ora_dynamic,
       $swiper      : $ora_dynamic.find('.swiper-container'),
+      $slide       : $ora_dynamic.find('.swiper-slide'),
       $pagination  : $ora_dynamic.find('.swiper-pagination')
     };
   };
@@ -160,19 +160,6 @@ spa.index.ora_dynamic = (function () {
       initialSlide : configMap.swiper_initialSlide,
       pagination   : jqueryMap.$pagination
     });
-  };
-
-  // openPage()
-  openPage = function () {
-    jqueryMap.$swiper.click(function () {
-      spa.data.news.initModule('new_01');
-    });
-  };
-
-//----------------------------- 事件处理程序 ------------------------------------
-  // onClick()
-  onClick = function () {
-    openPage();
   };
 
   // initModule() - 初始化模块
