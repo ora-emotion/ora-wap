@@ -22,23 +22,28 @@ spa.router = (function () {
   setJqueryMap = function () {
     var $container   = stateMap.$container;
 
-    jqueryMap = {
-      $container : $container
-    };
+    jqueryMap = { $container : $container };
   };
 
   // loadPage() - 加载子页面
-  loadPage = function () {
+  loadPage = function (key_name_value) {
     // 加载首页下的子页面
-    spa.router.index.initModule(jqueryMap.$container);
+    spa.router.index.initModule(jqueryMap.$container, key_name_value);
   };
 
-  initModule = function ($container) {
+  // Start initModule()
+  // 功能 : 初始化模块
+  // 说明 :
+  //   * $container - $('#spa')
+  //
+  initModule = function ($container, key_name_value) {
     stateMap.$container = $container;
     setJqueryMap();
 
-    loadPage();
+    loadPage(key_name_value);
   };
+  // End initModule()
 
+  // 导出公开方法
   return { initModule : initModule };
 }());

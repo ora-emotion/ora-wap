@@ -4,7 +4,7 @@
 */
 
 
-/* Start nav styles */
+/* Start : nav styles - 二级按钮 */
 .index-nav-horizontal {
   display: flex;
   justify-content: space-around;
@@ -52,9 +52,9 @@
   font-size: .28rem;
   line-height: .25rem;
 }
-/* End nav styles */
+/* End : nav styles - 二级按钮 */
 
-/* Start company introduction */
+/* Start : company introduction - 公司简介 */
 .index-company-intro-main {
   background: url(../images/index/company-intro-bg.png) no-repeat center center;
   -webkit-background-size: cover;
@@ -71,9 +71,9 @@
   padding-top: .23rem;
   padding-bottom: .39rem;
 }
-/* End company introduction */
+/* End : company introduction - 公司简介 */
 
-/* Start solve problem */
+/* Start : solve problem - 我们解决的四大问题 */
 .index-solve-problem-row {
   display: flex;
   justify-content: center;
@@ -84,11 +84,81 @@
   width: 3.47rem;
   height: 2.13rem;
 }
-/* End solve problem */
+/* End : solve problem - 我们解决的四大问题 */
 
-/**/
+/* Start : mentor intro - 导师介绍 */
+.index-mentor-intro-main .slide {
+	width: 100%;
+	min-height: 1.8rem;
+	overflow: hidden;
+	position: relative;
+}
+.index-mentor-intro-main .slide .img {
+	overflow: hidden;
+	position: absolute;
+	transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s, z-index 0.4s;
+}
+.index-mentor-intro-main .slide .img img {
+	width: calc(100% - .14rem);
+	height: calc(100% - .14rem);
+	margin: .07rem;
+}
+.index-mentor-intro-main .slide .img1 {
+	width: 50%;
+	height: 45%;
+	top: 30%;
+	left: -50%;
+	z-index: 1;
+}
+.index-mentor-intro-main .slide .img2 {
+	width: 70%;
+	height: 65%;
+	top: 20%;
+	left: -10%;
+	z-index: 2;
+}
+.index-mentor-intro-main .slide .img3 {
+	width: 90%;
+	height: 85%;
+	top: 10%;
+	left: 5%;
+	z-index: 3;
+}
+.index-mentor-intro-main .slide .img4 {
+	width: 70%;
+	height: 65%;
+	top: 20%;
+	left: 80%;
+	z-index: 2;
+}
+.index-mentor-intro-main .slide .img5 {
+	width: 50%;
+	height: 45%;
+	top: 30%;
+	left: 110%;
+	z-index: 1;
+}
+.index-mentor-intro-main .slide-bt {
+	position: absolute;
+	left: 55%;
+	bottom: 1%;
+	z-index: 10;
+}
+.index-mentor-intro-main .slide-bt span {
+	width: .13rem;
+	height: .13rem;
+	background: #c9caca;
+	float: left;
+	z-index: 9999;
+	margin: .05rem;
+	border-radius: 50%;
+}
+.index-mentor-intro-main .slide .slide-bt .on {
+	background: #4F4F4F;
+}
+/* End : mentor intro - 导师介绍 */
 
-/* Start orange dynamic */
+/* Start : orange dynamic -橘子动态 */
 .index-ora-dynamic-main {
   width: 100%;
   background: #4b4947;
@@ -160,7 +230,7 @@
 .index-ora-dynamic-main .swiper-pagination-bullet-active {
   background: #fff;
 }
-/* End orange dynamic */
+/* End : orange dynamic - 橘子动态 */
 
 /* Start service step */
 .index-service-step-main {

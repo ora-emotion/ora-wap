@@ -45,7 +45,7 @@ spa.util_b = (function () {
   // 功能 : 监听地址栏哈西片段
   onHashchange = function () {
     var
-      anchor_map = $.uriAnchor.makeAnchorMap(),
+      anchor_map   = $.uriAnchor.makeAnchorMap(),
       has_key_name = false,
       key_name;
 
@@ -61,6 +61,7 @@ spa.util_b = (function () {
           break;
         case '_s_news' :
           spa.data.news.initModule(anchor_map[key_name]);
+          spa.router.initModule($('#spa'), anchor_map[key_name]);
           break;
         default:
           break;
@@ -73,7 +74,7 @@ spa.util_b = (function () {
   };
   // End onHashchange()
 
-  initModule = function () {
+  initModule = function ($container) {
     fontAutomatic();
 
     $(window)

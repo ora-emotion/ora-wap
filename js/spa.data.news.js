@@ -114,13 +114,13 @@ spa.data.news = (function () {
     $.uriAnchor.setAnchor({ news : msg });
   };
 
-  insertNews = function (msg) {
+  insertNews = function (key_name_value) {
     var
       anchor_map = $.uriAnchor.makeAnchorMap(),
       news_info  = configMap['news_info'],
       key_name, has_key_name;
 
-    if (configMap.hasOwnProperty(msg)) {
+    if (configMap.hasOwnProperty(key_name_value)) {
 
       for (key_name in anchor_map) {
         has_key_name = true;
@@ -128,13 +128,15 @@ spa.data.news = (function () {
 
       if (has_key_name) {
         $( document ).scrollTop( 0 );
-        jqueryMap.$container.html(configMap[msg]);
-        jqueryMap.$title.text('橘子情感 - ' + news_info[msg]['title']);
+        jqueryMap.$container.html(configMap[key_name_value]);
+        jqueryMap.$title
+          .text('橘子情感 - ' + news_info[key_name_value]['title']);
       } else {
         $( document ).scrollTop( 0 );
-        jqueryMap.$container.html(configMap[msg]);
-        changeAnchorPart(msg);
-        jqueryMap.$title.text('橘子情感 - ' + news_info[msg]['title']);
+        jqueryMap.$container.html(configMap[key_name_value]);
+        changeAnchorPart(key_name_value);
+        jqueryMap.$title
+          .text('橘子情感 - ' + news_info[key_name_value]['title']);
       }
     }
 
@@ -146,11 +148,11 @@ spa.data.news = (function () {
     return false;
   };
 
-  initModule = function (msg) {
+  initModule = function (key_name_value) {
     stateMap.$container = $('.spa-main');
     setJqueryMap();
 
-    insertNews(msg);
+    insertNews(key_name_value);
 
   };
 
