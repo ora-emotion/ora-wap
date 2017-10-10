@@ -15,6 +15,20 @@
 spa.index.ora_dynamic = (function () {
   var
     configMap = {
+      news_arr : [
+        { news : 'new_01' },
+        { news : 'new_02' },
+        { news : 'new_03' },
+        { news : 'new_04' },
+        { news : 'new_05' },
+        { news : 'new_06' },
+        { news : 'new_07' },
+        { news : 'new_08' },
+        { news : 'new_09' },
+        { news : 'new_10' },
+        { news : 'new_11' },
+        { news : 'new_12' }
+      ],
       ora_dynamic_html : String()
         + '<div class="spa-module-title">'
           + '<span class="spa-module-title-line"></span>'
@@ -141,7 +155,7 @@ spa.index.ora_dynamic = (function () {
     },
     stateMap = { $ora_dynamic : null },
     jqueryMap = {},
-    dynamicBanner, setJqueryMap, initModule;
+   setJqueryMap, onClickSlide, dynamicBanner, initModule;
 
   // setJqueryMap() - 缓存 jQUery 集合
   setJqueryMap = function () {
@@ -154,14 +168,36 @@ spa.index.ora_dynamic = (function () {
     };
   };
 
-  // dynamicBanner() - 轮播图
+  // Start : onClickSlide()
+  // 功能  : 跳转到对应新闻页面
+  //
+  onClickSlide = function () {
+    var
+      slide = jqueryMap.$slide,
+      news_arr = configMap.news_arr,
+      i;
+
+    for (i = 0; i < slide.length; i++) {
+      $(slide[i]).click(function () {
+        var index = $(this).index();
+        $.uriAnchor.setAnchor(news_arr[index]);
+      });
+    }
+  };
+  // End : onClickSlide()
+
+  // Start : dynamicBanner() - 轮播图
+  //
   dynamicBanner = function () {
     var mySwiper = new Swiper(jqueryMap.$swiper, {
       autoplay     : configMap.swiper_autoplay,
       initialSlide : configMap.swiper_initialSlide,
       pagination   : jqueryMap.$pagination
     });
+
+    onClickSlide();
   };
+  // End : dynamicBanner() - 轮播图
 
   // initModule() - 初始化模块
   initModule = function ($ora_dynamic) {
@@ -170,7 +206,6 @@ spa.index.ora_dynamic = (function () {
     setJqueryMap();
 
     dynamicBanner();
-    // onClick();
   };
 
   // 导出公开方法 initModule()
