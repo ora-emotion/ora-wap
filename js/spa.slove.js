@@ -71,6 +71,10 @@ spa.slove = (function () {
   // 功能  : 插入模块
   //
   insertModule = function () {
+    $('title').text('橘子情感 - 挽回爱情');
+
+    changePrefaceImg();
+
     spa.slove.separate.initModule(jqueryMap.$separate);
     spa.slove.wrong.initModule(jqueryMap.$wrong);
     spa.slove.fail.initModule(jqueryMap.$fail);
@@ -88,13 +92,10 @@ spa.slove = (function () {
   //
   initModule = function ($container, $slove) {
     stateMap.$container  = $container;
-    stateMap.$slove = $slove;
-
-    $('title').text('橘子情感 - 挽回爱情');
+    stateMap.$slove      = $slove;
     $slove.html(configMap.main_html);
-    setJqueryMap();
 
-    changePrefaceImg();
+    setJqueryMap();
     insertModule();
   };
   // End : initModule()
