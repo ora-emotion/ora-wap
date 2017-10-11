@@ -15,14 +15,23 @@
 spa.slove = (function () {
   var
     configMap = {
-      main_html : String() + '挽回爱情页面'
+      main_html : String()
+        + '<div class="slove-separate"></div>'
+        + '<div class="slove-wrong"></div>'
+        + '<div class="slove-fail"></div>'
+        + '<div class="slove-advantage"></div>'
+        + '<div class="slove-kind"></div>'
+        + '<div class="slove-service"></div>'
+        + '<div class="slove-example"></div>'
+        + '<div class="slove-mentor"></div>'
+        + '<div class="slove-step"></div>'
     },
     stateMap = {
       $container : null,
       $slove     : null
     },
     jqueryMap = {},
-    setJqueryMap, changePrefaceImg, initModule;
+    setJqueryMap, changePrefaceImg, insertModule, initModule;
 
   // Start : setJqueryMap()
   // 功能  : 缓存 jQuery 集合
@@ -34,7 +43,16 @@ spa.slove = (function () {
 
     jqueryMap = {
       $container : $container,
-      $slove     : $slove
+      $slove     : $slove,
+      $separate  : $slove.find('.slove-separate'),
+      $wrong     : $slove.find('.slove-wrong'),
+      $fail      : $slove.find('.slove-fail'),
+      $advantage : $slove.find('.slove-advantage'),
+      $kind      : $slove.find('.slove-kind'),
+      $service   : $slove.find('.slove-service'),
+      $example   : $slove.find('.slove-example'),
+      $mentor    : $slove.find('.slove-mentor'),
+      $step      : $slove.find('.slove-mentor')
     };
   };
   // End : setJqueryMap()
@@ -49,19 +67,35 @@ spa.slove = (function () {
   };
   // End : changePrefaceImg()
 
+  // Start : insertModule()
+  // 功能  : 插入模块
+  //
+  insertModule = function () {
+    spa.slove.separate.initModule(jqueryMap.$separate);
+    spa.slove.wrong.initModule(jqueryMap.$wrong);
+    spa.slove.fail.initModule(jqueryMap.$fail);
+    spa.slove.advantage.initModule(jqueryMap.$advantage);
+    spa.slove.kind.initModule(jqueryMap.$kind);
+    spa.slove.service.initModule(jqueryMap.$service);
+    spa.slove.example.initModule(jqueryMap.$example);
+    spa.slove.mentor.initModule(jqueryMap.$mentor);
+    spa.slove.step.initModule(jqueryMap.$step);
+  };
+  // End : insertModule()
+
   // Start : initModule()
   // 功能  : 初始化模块
   //
   initModule = function ($container, $slove) {
     stateMap.$container  = $container;
-    stateMap.$slove_main = $slove;
+    stateMap.$slove = $slove;
 
     $('title').text('橘子情感 - 挽回爱情');
     $slove.html(configMap.main_html);
     setJqueryMap();
 
     changePrefaceImg();
-
+    insertModule();
   };
   // End : initModule()
 
