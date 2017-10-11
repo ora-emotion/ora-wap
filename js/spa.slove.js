@@ -1,7 +1,7 @@
 /*
- * spa.index.ora_dynamic.js
- * Ora Dynamic module for Index
- * 首页 - 橘子动态模块
+ * spa.slove.js
+ * save love module for SPA
+ * 挽回爱情
 */
 
 /*jslint           browser : true,   continue : true,
@@ -17,7 +17,7 @@ spa.slove = (function () {
     configMap = {
       main_html : String() + '挽回爱情页面'
     },
-    stateMap = { $container : null },
+    stateMap = { $slove : null },
     jqueryMap = {},
     setJqueryMap, initModule;
 
@@ -25,9 +25,9 @@ spa.slove = (function () {
   // 功能  : 缓存 jQuery 集合
   //
   setJqueryMap = function () {
-    var $container = stateMap.$container;
+    var $slove = stateMap.$slove;
     jqueryMap = {
-      $container : $container
+      $slove : $slove
     };
   };
   // End : setJqueryMap()
@@ -35,12 +35,14 @@ spa.slove = (function () {
   // Start : initModule()
   // 功能  : 初始化模块
   //
-  initModule = function ($container) {
-    stateMap.$container = $container;
-    $container.html(configMap.main_html);
+  initModule = function ($slove) {
+    stateMap.$slove_main = $slove;
+    $slove.html(configMap.main_html);
+    $('title').text('橘子情感 - 挽回爱情');
+
     setJqueryMap();
   };
   // End : initModule()
 
-  return { initModule : initModule };
+  return { initModule : initModule, configMap : configMap };
 }());

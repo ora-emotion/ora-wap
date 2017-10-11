@@ -14,6 +14,16 @@
 spa.index = (function () {
   var
     configMap = {
+      // page_info :{
+      //   save_love         : { title : '挽回爱情' },
+      //   save_marriage     : { title : '挽救婚姻' },
+      //   separate_mistress : { title : '分离小三' },
+      //   custom_love       : { title : '定制爱情' },
+      //   emotion_forum     : { title : '情感论坛' },
+      //   mentor_team       : { title : '权威专家' },
+      //   service_intro     : { title : '服务介绍' },
+      //   about_us          : { title : '关于我们' }
+      // },
       main_html : String()
         + '<div class="index-nav"></div>'
         + '<div class="index-company-intro">'

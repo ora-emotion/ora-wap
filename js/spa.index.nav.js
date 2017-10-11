@@ -14,6 +14,16 @@
 spa.index.nav = (function () {
   var
     configMap = {
+      page_arr : [
+        { page : 'save_love' },
+        { page : 'save_marriage' },
+        { page : 'separate_mistress' },
+        { page : 'custom_love' },
+        { page : 'emotion_forum' },
+        { page : 'mentor_team' },
+        { page : 'service_intro' },
+        { page : 'about_us' },
+      ],
       nav_html : String()
         + '<div class="index-nav-horizontal">'
           + '<div class="index-nav-horizontal-item">'
@@ -54,20 +64,48 @@ spa.index.nav = (function () {
     },
     stateMap = { $nav : null },
     jqueryMap = {},
-    setJqueryMap, initModule;
+    setJqueryMap, onClickBtn, initModule;
 
+  // Start : setJqueryMap()
+  // 功能  : 缓存 jQuery 集合
+  //
   setJqueryMap = function () {
     var $nav = stateMap.$nav;
     jqueryMap = {
-      $nav : $nav
+      $nav   : $nav,
+      $slove : $nav.find('.index-nav-horizontal:nth-child(1) .index-nav-horizontal-item:nth-child(1)')
     };
   };
+  // End : setJqueryMap()
 
+  //-------------------------- Start : 事件处理程序 -----------------------------
+  onClickBtn = function () {
+    // 挽回爱情
+    // jqueryMap.$slove.click(function () {
+    //   $.uriAnchor.setAnchor(configMap.page_arr[0]);
+    // });
+    // 挽救婚姻
+    // 分离小三
+    // 定制爱情
+    // 情感论坛
+    // 权威专家
+    // 服务介绍
+    // 关于我们
+  };
+  //--------------------------- End : 事件处理程序 ------------------------------
+
+  // Start : initModule()
+  // 功能  : 初始化模块
+  //
   initModule = function ($nav) {
     stateMap.$nav = $nav;
     $nav.html(configMap.nav_html);
     setJqueryMap();
-  };
 
+    onClickBtn();
+  };
+  // End : initModule()
+
+  // 导出公开方法
   return { initModule : initModule };
 }());
