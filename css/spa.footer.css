@@ -25,8 +25,10 @@
   padding-right: .82rem;
 }
 .spa-footer-column:first-child img {
-  width: 2.02rem;
-  height: 1.25rem;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  top: .15rem;
 }
 .spa-footer-column-wechat,
 .spa-footer-column-address,
