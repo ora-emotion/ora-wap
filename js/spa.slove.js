@@ -17,30 +17,51 @@ spa.slove = (function () {
     configMap = {
       main_html : String() + '挽回爱情页面'
     },
-    stateMap = { $slove : null },
+    stateMap = {
+      $container : null,
+      $slove     : null
+    },
     jqueryMap = {},
-    setJqueryMap, initModule;
+    setJqueryMap, changePrefaceImg, initModule;
 
   // Start : setJqueryMap()
   // 功能  : 缓存 jQuery 集合
   //
   setJqueryMap = function () {
-    var $slove = stateMap.$slove;
+    var
+      $container = stateMap.$container,
+      $slove     = stateMap.$slove;
+
     jqueryMap = {
-      $slove : $slove
+      $container : $container,
+      $slove     : $slove
     };
   };
   // End : setJqueryMap()
 
+  // Start : changePrefaceImg()
+  // 功能  : 动态更换头图
+  //
+  changePrefaceImg = function () {
+    var preface_img = jqueryMap.$container.find('.spa-preface img');
+
+    preface_img.attr('src', 'images/slove/preface.png');
+  };
+  // End : changePrefaceImg()
+
   // Start : initModule()
   // 功能  : 初始化模块
   //
-  initModule = function ($slove) {
+  initModule = function ($container, $slove) {
+    stateMap.$container  = $container;
     stateMap.$slove_main = $slove;
-    $slove.html(configMap.main_html);
-    $('title').text('橘子情感 - 挽回爱情');
 
+    $('title').text('橘子情感 - 挽回爱情');
+    $slove.html(configMap.main_html);
     setJqueryMap();
+
+    changePrefaceImg();
+
   };
   // End : initModule()
 

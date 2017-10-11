@@ -122,7 +122,7 @@ spa.shell = (function () {
     else if (key_name === 'page') {
       switch (anchor_map[key_name]) {
         case 'save_love' :          // 挽回爱情
-          spa.slove.initModule(jqueryMap.$main);
+          spa.slove.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
         case 'save_marriage' :      // 挽救婚姻
           spa.smarriage.initModule(jqueryMap.$main);
@@ -159,7 +159,7 @@ spa.shell = (function () {
   // 功能  : 加载子页面
   //
   loadPage = function (arg_map) {
-    var is_key_name_exist = false, key_name;
+    var is_key_name_exist = false, key_name, preface_img;
 
     for (key_name in arg_map) {
       if (arg_map.hasOwnProperty(key_name)) {
@@ -184,7 +184,10 @@ spa.shell = (function () {
 
     // 若地址栏中的哈西片段没有对应的页面，加载首页
     if (!is_key_name_exist) {
+      preface_img = jqueryMap.$container.find('.spa-preface img');
+
       spa.index.initModule( jqueryMap.$main );
+      preface_img.attr('src', 'images/index/preface.png');
     }
 
   };
