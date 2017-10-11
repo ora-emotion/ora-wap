@@ -36,20 +36,11 @@ spa.index.company_intro = (function () {
         + '</div>'
     },
     stateMap = { $company_intro : null },
-    jqueryMap = {},
-    setJqueryMap, initModule;
-
-  setJqueryMap = function () {
-    var $company_intro = stateMap.$company_intro;
-    jqueryMap = {
-      $company_intro : $company_intro
-    };
-  };
+    initModule;
 
   initModule = function ($company_intro) {
     stateMap.$company_intro = $company_intro;
     $company_intro.html(configMap.company_intro_html);
-    setJqueryMap();
   };
 
   return { initModule : initModule };
