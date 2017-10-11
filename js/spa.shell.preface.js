@@ -20,15 +20,7 @@ spa.shell.preface = (function () {
         + '</div>'
     },
     stateMap = { $preface : null },
-    jqueryMap = {},
-    setJqueryMap, initModule;
-
-  setJqueryMap = function () {
-    var $preface = stateMap.$preface;
-    jqueryMap = {
-      $preface : $preface
-    };
-  };
+    initModule;
 
   initModule = function ($preface) {
     stateMap.$preface = $preface;

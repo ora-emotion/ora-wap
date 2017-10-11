@@ -27,15 +27,7 @@ spa.shell.header = (function () {
         + '</div>'
     },
     stateMap = { $header : null },
-    jqueryMap = {},
-    setJqueryMap, initModule;
-
-  setJqueryMap = function () {
-    var $header = stateMap.$header;
-    jqueryMap = {
-      $header : $header
-    };
-  };
+    initModule;
 
   initModule = function ($header) {
     stateMap.$header = $header;
