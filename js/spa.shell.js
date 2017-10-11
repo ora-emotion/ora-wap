@@ -41,17 +41,9 @@ spa.shell = (function () {
     },
     jqueryMap = {},
     root_ele,      device_width,
-    copyAnchorMap, setJqueryMap,     mergeConfigMap,
+    setJqueryMap,  mergeConfigMap,
     fontAutomatic, loadCommonModule, checkAnchor,    loadPage,
     onHashchange,  initModule;
-
-  // Start : copyAnchorMap()
-  // 功能  : 复制锚对象
-  //
-  copyAnchorMap = function () {
-    return $.extend(true, {}, stateMap.anchor_map);
-  };
-  // End : copyAnchorMap()
 
   // Start : setJqueryMap()
   // 功能  : 缓存 jQuery 集合
@@ -73,11 +65,9 @@ spa.shell = (function () {
   //
   mergeConfigMap = function () {
     var
-      news_detail = spa.data.news.configMap,
-      page_detail = spa.index.configMap;
+      news_detail = spa.data.news.configMap;
 
     news_detail = $.extend(true, configMap.news_detail, news_detail);
-    // page_detail = $.extend(true, configMap.page_detail, page_detail);
   };
   // End : mergeConfigMap()
 
@@ -122,56 +112,43 @@ spa.shell = (function () {
   //     页面，则返回首页
   //
   checkAnchor = function (key_name) {
-    var
-      anchor_map     = $.uriAnchor.makeAnchorMap(),
-      news_detail    = configMap.news_detail,
-      page_detail    = configMap.page_detail,
-      slove          = configMap.slove,
-      is_value_exist = false,
-      key_name;
-
-    // console.log(anchor_map);
+    var anchor_map = $.uriAnchor.makeAnchorMap();
 
     delete anchor_map['_s_' + key_name];
 
-    for (key_name in anchor_map) {
-
-      if (key_name === 'news') {
-        spa.data.news.initModule(anchor_map[key_name]);
+    if (key_name === 'news') {
+      spa.data.news.initModule(anchor_map[key_name]);
+    }
+    else if (key_name === 'page') {
+      switch (anchor_map[key_name]) {
+        case 'save_love' :          // 挽回爱情
+          spa.slove.initModule(jqueryMap.$main);
+          break;
+        case 'save_marriage' :      // 挽救婚姻
+          spa.smarriage.initModule(jqueryMap.$main);
+          break;
+        case 'separate_mistress' :  // 分离小三
+          spa.smistress.initModule(jqueryMap.$main);
+          break;
+        case 'custom_love' :        // 定制爱情
+          spa.clove.initModule(jqueryMap.$main);
+          break;
+        case 'emotion_forum' :      // 情感论坛
+          spa.forum.initModule(jqueryMap.$main);
+          break;
+        case 'mentor_team' :        // 权威专家
+          spa.mentor.initModule(jqueryMap.$main);
+          break;
+        case 'service_intro' :      // 服务介绍
+          spa.service.initModule(jqueryMap.$main);
+          break;
+        case 'about_us' :           // 关于我们
+          spa.about.initModule(jqueryMap.$main);
+          break;
+        default:                    // 回到首页
+          $.uriAnchor.setAnchor({});
+          break;
       }
-
-      else if (key_name === 'page') {
-        switch (anchor_map[key_name]) {
-          case 'save_love' :          // 挽回爱情
-            spa.slove.initModule(jqueryMap.$main);
-            break;
-          case 'save_marriage' :      // 挽救婚姻
-            spa.smarriage.initModule(jqueryMap.$main);
-            break;
-          case 'separate_mistress' :  // 分离小三
-            spa.smistress.initModule(jqueryMap.$main);
-            break;
-          case 'custom_love' :        // 定制爱情
-            spa.clove.initModule(jqueryMap.$main);
-            break;
-          case 'emotion_forum' :      // 情感论坛
-            spa.forum.initModule(jqueryMap.$main);
-            break;
-          case 'mentor_team' :        // 权威专家
-            spa.mentor.initModule(jqueryMap.$main);
-            break;
-          case 'service_intro' :      // 服务介绍
-            spa.service.initModule(jqueryMap.$main);
-            break;
-          case 'about_us' :           // 关于我们
-            spa.about.initModule(jqueryMap.$main);
-            break;
-          default:
-            $.uriAnchor.setAnchor({});
-            break;
-        }
-      }
-
     }
 
     return false;
@@ -182,9 +159,7 @@ spa.shell = (function () {
   // 功能  : 加载子页面
   //
   loadPage = function (arg_map) {
-    var
-      is_key_name_exist = false,
-      key_name, key_name_value;
+    var is_key_name_exist = false, key_name;
 
     for (key_name in arg_map) {
       if (arg_map.hasOwnProperty(key_name)) {
@@ -219,13 +194,8 @@ spa.shell = (function () {
   // 功能  : 监听地址栏哈西片段
   //
   onHashchange = function () {
-    var
-      anchor_map        = $.uriAnchor.makeAnchorMap(),
-      is_key_name_exist = false,
-      key_name;
-
+    var anchor_map = $.uriAnchor.makeAnchorMap();
     loadPage(anchor_map);
-
   };
   // End : onHashchange()
 
