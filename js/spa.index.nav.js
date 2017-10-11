@@ -22,7 +22,7 @@ spa.index.nav = (function () {
         { page : 'emotion_forum' },
         { page : 'mentor_team' },
         { page : 'service_intro' },
-        { page : 'about_us' },
+        { page : 'about_us' }
       ],
       nav_html : String()
         + '<div class="index-nav-horizontal">'
@@ -72,8 +72,15 @@ spa.index.nav = (function () {
   setJqueryMap = function () {
     var $nav = stateMap.$nav;
     jqueryMap = {
-      $nav   : $nav,
-      $slove : $nav.find('.index-nav-horizontal:nth-child(1) .index-nav-horizontal-item:nth-child(1)')
+      $nav       : $nav,
+      $slove     : $nav.find('.index-nav-horizontal:nth-child(1) .index-nav-horizontal-item:nth-child(1)'),
+      $smarriage : $nav.find('.index-nav-horizontal:nth-child(1) .index-nav-horizontal-item:nth-child(2)'),
+      $smistress : $nav.find('.index-nav-horizontal:nth-child(1) .index-nav-horizontal-item:nth-child(3)'),
+      $clove     : $nav.find('.index-nav-horizontal:nth-child(1) .index-nav-horizontal-item:nth-child(4)'),
+      $forum     : $nav.find('.index-nav-horizontal:nth-child(2) .index-nav-horizontal-item:nth-child(1)'),
+      $mentor    : $nav.find('.index-nav-horizontal:nth-child(2) .index-nav-horizontal-item:nth-child(2)'),
+      $service   : $nav.find('.index-nav-horizontal:nth-child(2) .index-nav-horizontal-item:nth-child(3)'),
+      $about     : $nav.find('.index-nav-horizontal:nth-child(2) .index-nav-horizontal-item:nth-child(4)')
     };
   };
   // End : setJqueryMap()
@@ -81,16 +88,45 @@ spa.index.nav = (function () {
   //-------------------------- Start : 事件处理程序 -----------------------------
   onClickBtn = function () {
     // 挽回爱情
-    // jqueryMap.$slove.click(function () {
-    //   $.uriAnchor.setAnchor(configMap.page_arr[0]);
-    // });
+    jqueryMap.$slove.click(function () {
+      $.uriAnchor.setAnchor(configMap.page_arr[0]);
+    });
+
     // 挽救婚姻
+    jqueryMap.$smarriage.click(function () {
+      $.uriAnchor.setAnchor(configMap.page_arr[1]);
+    });
+
     // 分离小三
+    jqueryMap.$smistress.click(function () {
+      $.uriAnchor.setAnchor(configMap.page_arr[2]);
+    });
+
     // 定制爱情
+    jqueryMap.$clove.click(function () {
+      $.uriAnchor.setAnchor(configMap.page_arr[3]);
+    });
+
     // 情感论坛
+    jqueryMap.$forum.click(function () {
+      $.uriAnchor.setAnchor(configMap.page_arr[4]);
+    });
+
     // 权威专家
+    jqueryMap.$mentor.click(function () {
+      $.uriAnchor.setAnchor(configMap.page_arr[5]);
+    });
+
     // 服务介绍
+    jqueryMap.$service.click(function () {
+      $.uriAnchor.setAnchor(configMap.page_arr[6]);
+    });
+
     // 关于我们
+    jqueryMap.$about.click(function () {
+      $.uriAnchor.setAnchor(configMap.page_arr[7]);
+    });
+
   };
   //--------------------------- End : 事件处理程序 ------------------------------
 

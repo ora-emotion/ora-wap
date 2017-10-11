@@ -131,7 +131,6 @@ spa.data.news = (function () {
     setJqueryMap();
 
     loadPage(key_name_value);
-
   };
 
   return { initModule : initModule, configMap : configMap };
