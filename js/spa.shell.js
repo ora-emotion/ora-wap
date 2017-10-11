@@ -125,7 +125,7 @@ spa.shell = (function () {
           spa.slove.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
         case 'save_marriage' :      // 挽救婚姻
-          spa.smarriage.initModule(jqueryMap.$main);
+          spa.smarriage.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
         case 'separate_mistress' :  // 分离小三
           spa.smistress.initModule(jqueryMap.$main);

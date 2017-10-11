@@ -17,23 +17,43 @@ spa.smarriage = (function () {
     configMap = {
       main_html : String() + '挽救婚姻页面'
     },
-    stateMap = { $smarriage : null },
+    stateMap = {
+      $container : null,
+      $smarriage : null
+    },
     jqueryMap = {},
-    setJqueryMap, initModule;
+    setJqueryMap, changePrefaceImg, insertModule, initModule;
 
   setJqueryMap = function () {
-    var $smarriage = stateMap.$smarriage;
+    var
+      $smarriage = stateMap.$smarriage,
+      $container = stateMap.$container;
+
     jqueryMap = {
+      $container : $container,
       $smarriage : $smarriage
     };
   };
 
-  initModule = function ($smarriage, key_name_value) {
+  changePrefaceImg = function () {
+    var preface_img = jqueryMap.$container.find('.spa-preface img');
+
+    preface_img.attr('src', 'images/smarriage/preface.png');
+  };
+
+  insertModule = function () {
+    $('title').text('橘子情感 - 挽回爱情');
+
+    changePrefaceImg();
+  };
+
+  initModule = function ($container, $smarriage, key_name_value) {
+    stateMap.$container = $container;
     stateMap.$smarriage = $smarriage;
     $smarriage.html(configMap.main_html);
-    $('title').text('橘子情感 - 挽救婚姻');
 
     setJqueryMap();
+    insertModule();
   };
 
   return { initModule : initModule };
