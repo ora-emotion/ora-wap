@@ -63,21 +63,10 @@ spa.index.four_services = (function () {
           + '</div>'
         + '</div>'
     },
-    stateMap = { $four_services : null },
-    jqueryMap = {},
-    setJqueryMap, initModule;
-
-  setJqueryMap = function () {
-    var $four_services = stateMap.$four_services;
-    jqueryMap = {
-      $four_services : $four_services
-    };
-  };
+    initModule;
 
   initModule = function ($four_services) {
-    stateMap.$four_services = $four_services;
     $four_services.html(configMap.four_services_html);
-    setJqueryMap();
   };
 
   return { initModule : initModule };

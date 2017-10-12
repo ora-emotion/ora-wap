@@ -1,0 +1,153 @@
+/*
+ * spa.slove.css
+ * Save Love namespace styles
+ * 挽回爱情样式表
+*/
+
+/* Start : common styles */
+.slove-para {
+  font-size: .26rem;
+  line-height: .36rem;
+  color: #333;
+  height: 100%;
+}
+.slove-para-indent {
+  text-indent: .5rem;
+}
+/* End : common styles */
+
+/* Start : sperate - 分手状态 - */
+/* End : sperate - 分手状态 - */
+
+/* Start : wrong - 错误做法 */
+/* End : wrong - 错误做法 */
+
+/* Start : fail - 挽回失败原因 */
+.slove-fail-main {
+  background: #eaedf8;
+}
+.slove-fail-main-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .22rem 0;
+  border-bottom: 1px solid #ccd4f3;
+}
+.slove-fail-main-item:last-child {
+  border-bottom: none;
+}
+.slove-fail-main-item-img {
+  width: 1.42rem;
+  height: 1.89rem;
+  padding-left: .37rem;
+}
+.slove-fail-main-item-txt {
+  width: 5.3rem;
+  padding-left: .15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slove-fail-main-item-txt-title {
+  font-weight: bold;
+  height: .36rem;
+  padding-bottom: .08rem;
+}
+/* End : fail - 挽回失败原因 */
+
+/* Start : advantage - 橘子情感优势 */
+.spa-advantage-main-item {
+  padding: .24rem 0;
+}
+.spa-advantage-main-item:first-child {
+  background: #f9f9f9;
+}
+.spa-advantage-main-item:last-child {
+  background: #ececec;
+}
+.spa-advantage-main-item p {
+  padding-left: .3rem;
+  height: 100%;
+  line-height: .36rem;
+}
+.spa-advantage-main-item p span:first-child {
+  font-weight: bold;
+  padding-bottom: .06rem;
+}
+.spa-advantage-main-item p img {
+  float: right;
+  padding-right: .22rem;
+  padding-left: .1rem;
+}
+.spa-advantage-main-item p span:last-child {
+  text-indent: .5rem;
+}
+/* End : advantage - 橘子情感优势 */
+
+
+/* Start : kind - 擅长挽回的爱情类型 */
+/* End : kind - 擅长挽回的爱情类型 */
+
+/* Start : service - 能够提供的挽回爱情服务 */
+.slove-service-main {
+  background: url("../images/slove/service-bg.png") center center no-repeat;
+  background-size: contain;
+  height: 5.1rem;
+}
+/* End : service - 能够提供的挽回爱情服务 */
+
+/* Start : example - 成功案例 */
+.slove-example-main-item {
+  display: flex;
+  justify-content: flex-start;
+}
+.slove-example-main-item:first-child {
+  padding-bottom: .2rem;
+}
+.slove-example-main-item img {
+  width: 100%;
+  height: 100%;
+  padding: 0 .2rem;
+}
+.slove-example-main-item-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: .15rem;
+}
+.slove-example-main-item-txt p:first-child {
+  font-size: .28rem;
+  font-weight: bold;
+  padding-bottom: .1rem;
+}
+.slove-example-main-item-txt p:last-child {
+  color: #fd3232;
+  padding-top: .1rem;
+}
+/* End : example - 成功案例 */
+
+/* Start : mentor - 导师团队 */
+.slove-step-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slove-mentor-main-item {
+  display: flex;
+  justify-content: center;
+}
+.slove-mentor-main-item img {
+  width: 2.65rem;
+  height: 3.72rem;
+  padding: .1rem;
+}
+/* End : mentor - 导师团队 */
+
+/* Start : step - 挽回爱情服务流程 */
+.slove-step-main {
+  background: url(../images/slove/step-bg.png) no-repeat center center;
+  background-size: 7.04rem 100%;
+  height: 7.67rem;
+  margin-top: .3rem;
+}
+/* End : step - 挽回爱情服务流程 */

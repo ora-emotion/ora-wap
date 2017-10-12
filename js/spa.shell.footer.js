@@ -45,15 +45,7 @@ spa.shell.footer = (function () {
         + '</div>'
     },
     stateMap = { $footer : null },
-    jqueryMap = {},
-    setJqueryMap, initModule;
-
-  setJqueryMap = function () {
-    var $footer = stateMap.$footer;
-    jqueryMap = {
-      $footer : $footer
-    };
-  };
+    initModule;
 
   initModule = function ($footer) {
     stateMap.$footer = $footer;

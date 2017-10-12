@@ -173,16 +173,15 @@ spa.index.ora_dynamic = (function () {
   //
   onClickSlide = function () {
     var
-      slide = jqueryMap.$slide,
+      slide    = jqueryMap.$slide,
       news_arr = configMap.news_arr,
-      i;
+      index;
 
-    for (i = 0; i < slide.length; i++) {
-      $(slide[i]).click(function () {
-        var index = $(this).index();
-        $.uriAnchor.setAnchor(news_arr[index]);
-      });
-    }
+    slide.click(function () {
+      index = $(this).index();
+      $.uriAnchor.setAnchor(news_arr[index]);
+    });
+
   };
   // End : onClickSlide()
 

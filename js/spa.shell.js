@@ -19,6 +19,12 @@ spa.shell = (function () {
           new_01 : true, new_02 : true, new_03 : true, new_04 : true,
           new_05 : true, new_06 : true, new_07 : true, new_08 : true,
           new_09 : true, new_10 : true, new_11 : true, new_12 : true
+        },
+        page : {
+          save_love         : true, save_marriage : true,
+          separate_mistress : true, custom_love   : true,
+          emotion_forum     : true, mentor_team   : true,
+          service_intro     : true, about_us      : true
         }
       },
       main_html : String()
@@ -26,7 +32,8 @@ spa.shell = (function () {
         + '<div class="spa-preface"></div>'
         + '<div class="spa-main"></div>'
         + '<footer class="spa-footer"></footer>',
-      news_detail : {}
+      news_detail : {},
+      page_detail : {}
     },
     stateMap = {
       $container : null,
@@ -34,17 +41,9 @@ spa.shell = (function () {
     },
     jqueryMap = {},
     root_ele,      device_width,
-    copyAnchorMap, setJqueryMap,     mergeConfigMap,
+    setJqueryMap,  mergeConfigMap,
     fontAutomatic, loadCommonModule, checkAnchor,    loadPage,
     onHashchange,  initModule;
-
-  // Start : copyAnchorMap()
-  // 功能  : 复制锚对象
-  //
-  copyAnchorMap = function () {
-    return $.extend(true, {}, stateMap.anchor_map);
-  };
-  // End : copyAnchorMap()
 
   // Start : setJqueryMap()
   // 功能  : 缓存 jQuery 集合
@@ -65,7 +64,8 @@ spa.shell = (function () {
   // 合并配置项，用于检查
   //
   mergeConfigMap = function () {
-    var news_detail = spa.data.news.configMap;
+    var
+      news_detail = spa.data.news.configMap;
 
     news_detail = $.extend(true, configMap.news_detail, news_detail);
   };
@@ -111,26 +111,80 @@ spa.shell = (function () {
   //   * 用于检查地址栏的哈西片段是否有对应的页面检查如果所检查的哈西片段没有对应
   //     页面，则返回首页
   //
-  checkAnchor = function (key_name_value) {
-    var
-      news_detail    = configMap.news_detail,
-      is_value_exist = false,
-      key_name;
+  checkAnchor = function (key_name) {
+    var anchor_map = $.uriAnchor.makeAnchorMap();
 
+    delete anchor_map['_s_' + key_name];
 
-      if (news_detail.hasOwnProperty(key_name_value)) {
-        // for (key_name in news_detail) {
-          is_value_exist = true;
-        // }
-      }
-
-
-    if (is_value_exist) {
-      spa.data.news.initModule(key_name_value);
+    if (key_name === 'news') {
+      spa.data.news.initModule(anchor_map[key_name]);
     }
-
-    if (!is_value_exist) {
-      $.uriAnchor.setAnchor({});
+    else if (key_name === 'page') {
+      switch (anchor_map[key_name]) {
+        case 'save_love' :          // 挽回爱情
+          spa.slove.initModule(jqueryMap.$container, jqueryMap.$main);
+          break;
+        case 'save_marriage' :      // 挽救婚姻
+          spa.smarriage.initModule(jqueryMap.$container, jqueryMap.$main);
+          break;
+        case 'separate_mistress' :  // 分离小三
+          spa.smistress.initModule(jqueryMap.$main);
+          break;
+        case 'custom_love' :        // 定制爱情
+          spa.clove.initModule(jqueryMap.$main);
+          break;
+        case 'emotion_forum' :      // 情感论坛
+          spa.forum.initModule(jqueryMap.$main);
+          break;
+        case 'mentor_team' :        // 权威专家
+          spa.mentor.initModule(jqueryMap.$main);
+          break;
+        case 'service_intro' :      // 服务介绍
+          spa.service.initModule(jqueryMap.$main);
+          break;
+        case 'about_us' :           // 关于我们
+          spa.about.initModule(jqueryMap.$main);
+          break;
+        default:                    // 回到首页
+          $.uriAnchor.setAnchor({});
+          break;
+      }
+    }
+    else if (key_name === 'case') {
+      switch (anchor_map[key_name]) {
+        case 'case_01' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_02' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_03' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_04' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_05' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_06' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_07' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_08' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_09' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_10' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        default:
+          break;
+      }
     }
 
     return false;
@@ -141,21 +195,26 @@ spa.shell = (function () {
   // 功能  : 加载子页面
   //
   loadPage = function (arg_map) {
-    var
-      is_key_name_exist = false,
-      key_name, key_name_value;
+    var is_key_name_exist = false, key_name, preface_img;
 
     for (key_name in arg_map) {
       if (arg_map.hasOwnProperty(key_name)) {
         is_key_name_exist = true;
+        delete arg_map['_s_' + key_name];
       }
     }
 
     if (is_key_name_exist) {
       // 通过地址栏中的哈西片段定位到对应页面
       switch (key_name) {
-        case '_s_news' :
-          checkAnchor(arg_map[key_name]);
+        case 'news' :
+          checkAnchor(key_name);
+          break;
+        case 'page' :
+          checkAnchor(key_name);
+          break;
+        case 'case' :
+          checkAnchor(key_name);
           break;
         default:
           break;
@@ -164,7 +223,10 @@ spa.shell = (function () {
 
     // 若地址栏中的哈西片段没有对应的页面，加载首页
     if (!is_key_name_exist) {
+      preface_img = jqueryMap.$container.find('.spa-preface img');
+
       spa.index.initModule( jqueryMap.$main );
+      preface_img.attr('src', 'images/index/preface.png');
     }
 
   };
@@ -174,13 +236,8 @@ spa.shell = (function () {
   // 功能  : 监听地址栏哈西片段
   //
   onHashchange = function () {
-    var
-      anchor_map        = $.uriAnchor.makeAnchorMap(),
-      is_key_name_exist = false,
-      key_name;
-
+    var anchor_map = $.uriAnchor.makeAnchorMap();
     loadPage(anchor_map);
-
   };
   // End : onHashchange()
 

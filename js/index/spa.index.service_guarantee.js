@@ -42,20 +42,11 @@ spa.index.service_guarantee = (function () {
         + '</div>'
     },
     stateMap = { $service_guarantee : null },
-    jqueryMap = {},
-    setJqueryMap, initModule;
-
-  setJqueryMap = function () {
-    var $service_guarantee = stateMap.$service_guarantee;
-    jqueryMap = {
-      $service_guarantee : $service_guarantee
-    };
-  };
+    initModule;
 
   initModule = function ($service_guarantee) {
     stateMap.$service_guarantee = $service_guarantee;
     $service_guarantee.html(configMap.service_guarantee_html);
-    setJqueryMap();
   };
 
   return { initModule : initModule };

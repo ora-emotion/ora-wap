@@ -32,20 +32,11 @@ spa.index.solve_problem = (function () {
         + '</div>'
     },
     stateMap = { $solve_problem : null },
-    jqueryMap = {},
-    setJqueryMap, initModule;
-
-  setJqueryMap = function () {
-    var $solve_problem = stateMap.$solve_problem;
-    jqueryMap = {
-      $solve_problem : $solve_problem
-    };
-  };
+    initModule;
 
   initModule = function ($solve_problem) {
     stateMap.$solve_problem = $solve_problem;
     $solve_problem.html(configMap.solve_problem_html);
-    setJqueryMap();
   };
 
   return { initModule : initModule };

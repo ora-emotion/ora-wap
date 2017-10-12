@@ -46,6 +46,7 @@ spa.index = (function () {
 
   setJqueryMap = function () {
     var $main = stateMap.$main;
+
     jqueryMap = {
       $main              : $main,
       $nav               : $main.find('.index-nav'),
