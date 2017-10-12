@@ -103,4 +103,10 @@
 /* End : mentor - 导师团队 */
 
 /* Start : step - 挽回爱情服务流程 */
+.slove-step-main {
+  background: url(../images/slove/step-bg.png) no-repeat center center;
+  background-size: 7.04rem 100%;
+  height: 7.67rem;
+  margin-top: .3rem;
+}
 /* End : step - 挽回爱情服务流程 */
