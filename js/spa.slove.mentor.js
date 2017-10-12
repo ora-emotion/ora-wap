@@ -15,7 +15,12 @@
 spa.slove.mentor = (function () {
   var
     configMap = {
-      main_html : String() + '导师团队模块'
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">导师团队</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
     },
     initModule;
 

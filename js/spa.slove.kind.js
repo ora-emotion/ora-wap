@@ -15,7 +15,12 @@
 spa.slove.kind = (function () {
   var
     configMap = {
-      main_html : String() + '擅长挽回的爱情类型模块'
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">擅长挽回的爱情类型</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
     },
     initModule;
 

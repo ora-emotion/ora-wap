@@ -15,12 +15,34 @@
 spa.slove.fail = (function () {
   var
     configMap = {
-      main_html : String() + '挽回失败原因模块'
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">挽回失败原因</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+        + '<div class="slove-fail-main">'
+          + '<div class="slove-fail-main-item">'
+            + '<div class="">'
+            + '</div>'
+          + '</div>'
+        + '</div>'
     },
-    initModule;
+    stateMap = { $fail : null },
+    jqueryMap = {},
+    setJqueryMap, initModule;
+
+  setJqueryMap = function () {
+    var $fail = stateMap.$fail;
+    jqueryMap = {
+      $fail : $fail
+    };
+  };
 
   initModule = function ($fail) {
+    stateMap.$fail = $fail;
     $fail.html(configMap.main_html);
+    setJqueryMap();
   };
 
   return { initModule : initModule };

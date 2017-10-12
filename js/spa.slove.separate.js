@@ -15,7 +15,12 @@
 spa.slove.separate = (function () {
   var
     configMap = {
-      main_html : String() + '分手状态模块'
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">分手状态</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
     },
     initModule;
 

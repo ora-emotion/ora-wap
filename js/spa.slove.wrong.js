@@ -15,7 +15,12 @@
 spa.slove.wrong = (function () {
   var
     configMap = {
-      main_html : String() + '错误做法模块'
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">错误做法</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
     },
     initModule;
 

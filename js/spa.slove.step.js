@@ -15,7 +15,12 @@
 spa.slove.step = (function () {
   var
     configMap = {
-      main_html : String() + '挽回爱情服务流程模块'
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">挽回爱情服务流程</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
     },
     initModule;
 

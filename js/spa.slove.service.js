@@ -15,7 +15,12 @@
 spa.slove.service = (function () {
   var
     configMap = {
-      main_html : String() + '能够提供的挽回爱情服务模块'
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">能够提供的挽回爱情服务</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
     },
     initModule;
 

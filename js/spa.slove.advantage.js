@@ -15,7 +15,12 @@
 spa.slove.advantage = (function () {
   var
     configMap = {
-      main_html : String() + '橘子情感优势模块'
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">橘子情感优势</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
     },
     initModule;
 

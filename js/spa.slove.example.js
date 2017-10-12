@@ -15,7 +15,12 @@
 spa.slove.example = (function () {
   var
     configMap = {
-      main_html : String() + '成功案例模块'
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">成功案例</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
     },
     initModule;
 
