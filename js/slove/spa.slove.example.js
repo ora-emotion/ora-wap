@@ -46,10 +46,39 @@ spa.slove.example = (function () {
           + '</div>'
         + '</div>'
     },
-    initModule;
+    stateMap = { $container : null, $example : null },
+    jqueryMap = {},
+    setJqueryMap, loadPage, initModule;
 
-  initModule = function ($example) {
+  setJqueryMap = function () {
+    var
+      $container = stateMap.$container,
+      $example = stateMap.$example;
+
+    jqueryMap = {
+      $container : $container,
+      $example   : $example,
+      $case      : $example.find('.slove-example-main-item')
+    };
+  };
+
+  loadPage = function () {
+    var index;
+
+    jqueryMap.$case.click(function () {
+      index = $(this).index() + 1;
+      spa.data.case.initModule(jqueryMap.$container, 'case_0' + index);
+    });
+  };
+
+  initModule = function ($container, $example) {
+    stateMap.$container = $container;
+    stateMap.$example   = $example;
+
     $example.html(configMap.main_html);
+    setJqueryMap();
+
+    loadPage();
   };
 
   return { initModule : initModule };

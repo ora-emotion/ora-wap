@@ -81,7 +81,7 @@ spa.slove = (function () {
     spa.slove.advantage.initModule(jqueryMap.$advantage);
     spa.slove.kind.initModule(jqueryMap.$kind);
     spa.slove.service.initModule(jqueryMap.$service);
-    spa.slove.example.initModule(jqueryMap.$example);
+    spa.slove.example.initModule(jqueryMap.$container, jqueryMap.$example);
     spa.slove.mentor.initModule(jqueryMap.$mentor);
     spa.slove.step.initModule(jqueryMap.$step);
   };

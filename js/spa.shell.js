@@ -150,6 +150,42 @@ spa.shell = (function () {
           break;
       }
     }
+    else if (key_name === 'case') {
+      switch (anchor_map[key_name]) {
+        case 'case_01' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_02' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_03' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_04' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_05' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_06' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_07' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_08' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_09' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        case 'case_10' :
+          spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+          break;
+        default:
+          break;
+      }
+    }
 
     return false;
   };
@@ -175,6 +211,9 @@ spa.shell = (function () {
           checkAnchor(key_name);
           break;
         case 'page' :
+          checkAnchor(key_name);
+          break;
+        case 'case' :
           checkAnchor(key_name);
           break;
         default:
