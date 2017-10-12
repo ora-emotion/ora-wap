@@ -13,5 +13,20 @@
 /*global $, spa */
 
 spa.smarriage.example = (function () {
-  return {};
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">成功案例</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
+    initModule;
+
+  initModule = function ($example) {
+    $example.html(configMap.main_html);
+  };
+
+  return { initModule : initModule };
 }());

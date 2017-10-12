@@ -13,5 +13,20 @@
 /*global $, spa */
 
 spa.smarriage.method = (function () {
-  return {};
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">错误挽回方式</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
+    initModule;
+
+  initModule = function ($method) {
+    $method.html(configMap.main_html);
+  };
+
+  return { initModule : initModule };
 }());

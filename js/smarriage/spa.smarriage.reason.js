@@ -13,5 +13,20 @@
 /*global $, spa */
 
 spa.smarriage.reason = (function () {
-  return {};
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">婚姻危机出现的原因</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
+    initModule;
+
+  initModule = function ($reason) {
+    $reason.html(configMap.main_html);
+  };
+
+  return { initModule : initModule };
 }());

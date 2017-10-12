@@ -15,14 +15,23 @@
 spa.smarriage = (function () {
   var
     configMap = {
-      main_html : String() + '挽救婚姻页面'
+      main_html : String()
+        + '<div class="smarriage-state"></div>'
+        + '<div class="smarriage-reason"></div>'
+        + '<div class="smarriage-advantage"></div>'
+        + '<div class="smarriage-method"></div>'
+        + '<div class="smarriage-kind"></div>'
+        + '<div class="smarriage-service"></div>'
+        + '<div class="smarriage-example"></div>'
+        + '<div class="smarriage-mentor"></div>'
+        + '<div class="smarriage-progress"></div>'
     },
     stateMap = {
       $container : null,
       $smarriage : null
     },
     jqueryMap = {},
-    setJqueryMap, changePrefaceImg, insertModule, initModule;
+    setJqueryMap, changePrefaceImg, insertModule, loadModule, initModule;
 
   setJqueryMap = function () {
     var
@@ -31,7 +40,16 @@ spa.smarriage = (function () {
 
     jqueryMap = {
       $container : $container,
-      $smarriage : $smarriage
+      $smarriage : $smarriage,
+      $state     : $smarriage.find('.smarriage-state'),
+      $reason    : $smarriage.find('.smarriage-reason'),
+      $advantage : $smarriage.find('.smarriage-advantage'),
+      $method    : $smarriage.find('.smarriage-method'),
+      $kind      : $smarriage.find('.smarriage-kind'),
+      $service   : $smarriage.find('.smarriage-service'),
+      $example   : $smarriage.find('.smarriage-example'),
+      $mentor    : $smarriage.find('.smarriage-mentor'),
+      $progress  : $smarriage.find('.smarriage-progress')
     };
   };
 
@@ -43,8 +61,18 @@ spa.smarriage = (function () {
 
   insertModule = function () {
     $('title').text('橘子情感 - 挽回爱情');
-
     changePrefaceImg();
+
+    // 加载模块
+    spa.smarriage.state.initModule(jqueryMap.$state);
+    spa.smarriage.reason.initModule(jqueryMap.$reason);
+    spa.smarriage.advantage.initModule(jqueryMap.$advantage);
+    spa.smarriage.method.initModule(jqueryMap.$method);
+    spa.smarriage.kind.initModule(jqueryMap.$kind);
+    spa.smarriage.service.initModule(jqueryMap.$service);
+    spa.smarriage.example.initModule(jqueryMap.$example);
+    spa.smarriage.mentor.initModule(jqueryMap.$mentor);
+    spa.smarriage.progress.initModule(jqueryMap.$progress);
   };
 
   initModule = function ($container, $smarriage, key_name_value) {

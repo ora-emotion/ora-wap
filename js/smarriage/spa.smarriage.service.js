@@ -13,5 +13,20 @@
 /*global $, spa */
 
 spa.smarriage.service = (function () {
-  return {};
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">能够提供的挽回婚姻服务</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
+    initModule;
+
+  initModule = function ($service) {
+    $service.html(configMap.main_html);
+  };
+
+  return { initModule : initModule };
 }());

@@ -13,5 +13,20 @@
 /*global $, spa */
 
 spa.smarriage.progress = (function () {
-  return {};
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">挽回婚姻服务流程</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
+    initModule;
+
+  initModule = function ($progress) {
+    $progress.html(configMap.main_html);
+  };
+
+  return { initModule : initModule };
 }());
