@@ -128,22 +128,22 @@ spa.shell = (function () {
           spa.smarriage.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
         case 'separate_mistress' :  // 分离小三
-          spa.smistress.initModule(jqueryMap.$main);
+          spa.smistress.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
         case 'custom_love' :        // 定制爱情
-          spa.clove.initModule(jqueryMap.$main);
+          spa.clove.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
         case 'emotion_forum' :      // 情感论坛
-          spa.forum.initModule(jqueryMap.$main);
+          spa.forum.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
         case 'mentor_team' :        // 权威专家
-          spa.mentor.initModule(jqueryMap.$main);
+          spa.mentor.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
         case 'service_intro' :      // 服务介绍
-          spa.service.initModule(jqueryMap.$main);
+          spa.service.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
         case 'about_us' :           // 关于我们
-          spa.about.initModule(jqueryMap.$main);
+          spa.about.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
         default:                    // 回到首页
           $.uriAnchor.setAnchor({});

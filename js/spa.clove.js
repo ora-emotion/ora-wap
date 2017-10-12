@@ -17,21 +17,29 @@ spa.clove = (function () {
     configMap = {
       main_html : String() +'定制爱情页面'
     },
-    stateMap = { $clove : null },
+    stateMap = { $container : null, $clove : null },
     jqueryMap = {},
-    setJqueryMap, initModule;
+    setJqueryMap, loadModule, initModule;
 
   setJqueryMap = function () {
-    var $clove = stateMap.$clove;
+    var
+      $container = stateMap.$container,
+      $clove     = stateMap.$clove;
     jqueryMap = {
-      $clove : $clove
+      $container : $container,
+      $clove     : $clove
     };
   };
 
-  initModule = function ($clove) {
-    stateMap.$clove = $clove;
-    $clove.html(configMap.main_html);
+  loadModule = function () {
     $('title').text('橘子情感 - 定制爱情');
+  };
+
+  initModule = function ($container, $clove) {
+    stateMap.$container = $container;
+    stateMap.$clove     = $clove;
+    $clove.html(configMap.main_html);
+
     setJqueryMap();
   };
 
