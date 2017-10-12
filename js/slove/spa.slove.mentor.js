@@ -21,6 +21,16 @@ spa.slove.mentor = (function () {
           + '<p class="spa-module-title-txt">导师团队</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
+        + '<div class="slove-mentor-main">'
+          + '<div class="slove-mentor-main-item">'
+            + '<img src="images/slove/mentor-jiawei.png">'
+            + '<img src="images/slove/mentor-asu.png">'
+          + '</div>'
+          + '<div class="slove-mentor-main-item">'
+            + '<img src="images/slove/mentor-lujia.png">'
+            + '<img src="images/slove/mentor-qianwu.png">'
+          + '</div>'
+        + '</div>'
     },
     initModule;
 

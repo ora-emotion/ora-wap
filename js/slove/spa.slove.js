@@ -52,7 +52,7 @@ spa.slove = (function () {
       $service   : $slove.find('.slove-service'),
       $example   : $slove.find('.slove-example'),
       $mentor    : $slove.find('.slove-mentor'),
-      $step      : $slove.find('.slove-mentor')
+      $step      : $slove.find('.slove-step')
     };
   };
   // End : setJqueryMap()
