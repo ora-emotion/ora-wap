@@ -97,6 +97,33 @@
 /* End : service - 能够提供的挽回爱情服务 */
 
 /* Start : example - 成功案例 */
+.slove-example-main-item {
+  display: flex;
+  justify-content: flex-start;
+}
+.slove-example-main-item:first-child {
+  padding-bottom: .2rem;
+}
+.slove-example-main-item img {
+  width: 100%;
+  height: 100%;
+  padding: 0 .2rem;
+}
+.slove-example-main-item-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: .15rem;
+}
+.slove-example-main-item-txt p:first-child {
+  font-size: .28rem;
+  font-weight: bold;
+  padding-bottom: .1rem;
+}
+.slove-example-main-item-txt p:last-child {
+  color: #fd3232;
+  padding-top: .1rem;
+}
 /* End : example - 成功案例 */
 
 /* Start : mentor - 导师团队 */
