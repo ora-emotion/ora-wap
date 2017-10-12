@@ -21,6 +21,7 @@ spa.slove.service = (function () {
           + '<p class="spa-module-title-txt">能够提供的挽回爱情服务</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
+        + '<div class="slove-service-main"></div>'
     },
     initModule;
 

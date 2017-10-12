@@ -89,6 +89,11 @@
 /* End : kind - 擅长挽回的爱情类型 */
 
 /* Start : service - 能够提供的挽回爱情服务 */
+.slove-service-main {
+  background: url("../images/slove/service-bg.png") center center no-repeat;
+  background-size: contain;
+  height: 5.1rem;
+}
 /* End : service - 能够提供的挽回爱情服务 */
 
 /* Start : example - 成功案例 */
