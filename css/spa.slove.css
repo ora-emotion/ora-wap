@@ -4,7 +4,49 @@
  * 挽回爱情样式表
 */
 
+/* Start : common styles */
+p {
+  font-size: .26rem;
+  line-height: .36rem;
+  color: #333;
+  height: 100%;
+}
+.para-indent {
+  text-indent: .5rem;
+}
+/* End : common styles */
+
 /* Start : sperate - 分手状态 - */
+.slove-fail-main {
+  background: #eaedf8;
+}
+.slove-fail-main-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: .22rem 0;
+  border-bottom: 1px solid #ccd4f3;
+}
+.slove-fail-main-item:last-child {
+  border-bottom: none;
+}
+.slove-fail-main-item-img {
+  width: 1.42rem;
+  height: 1.89rem;
+  padding-left: .37rem;
+}
+.slove-fail-main-item-txt {
+  width: 5.3rem;
+  padding-left: .15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slove-fail-main-item-txt-title {
+  font-weight: bold;
+  height: .36rem;
+  padding-bottom: .08rem;
+}
 /* End : sperate - 分手状态 - */
 
 /* Start : wrong - 错误做法 */
