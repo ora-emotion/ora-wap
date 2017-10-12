@@ -74,21 +74,10 @@ spa.slove.fail = (function () {
           + '</div>'
         + '</div>'
     },
-    stateMap = { $fail : null },
-    jqueryMap = {},
-    setJqueryMap, initModule;
-
-  setJqueryMap = function () {
-    var $fail = stateMap.$fail;
-    jqueryMap = {
-      $fail : $fail
-    };
-  };
+    initModule;
 
   initModule = function ($fail) {
-    stateMap.$fail = $fail;
     $fail.html(configMap.main_html);
-    setJqueryMap();
   };
 
   return { initModule : initModule };
