@@ -5,13 +5,13 @@
 */
 
 /* Start : common styles */
-p {
+.slove-para {
   font-size: .26rem;
   line-height: .36rem;
   color: #333;
   height: 100%;
 }
-.para-indent {
+.slove-para-indent {
   text-indent: .5rem;
 }
 /* End : common styles */
