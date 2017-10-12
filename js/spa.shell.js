@@ -37,12 +37,14 @@ spa.shell = (function () {
     },
     stateMap = {
       $container : null,
-      anchor_map : {}
+      anchor_map : {},
+      scroll : null
     },
     jqueryMap = {},
     root_ele,      device_width,
     setJqueryMap,  mergeConfigMap,
-    fontAutomatic, loadCommonModule, checkAnchor,    loadPage,
+    fontAutomatic, /*watchScroll,*/ loadCommonModule,
+    checkAnchor,   loadPage,
     onHashchange,  initModule;
 
   // Start : setJqueryMap()
@@ -96,6 +98,16 @@ spa.shell = (function () {
   };
   // End fontAutoMatic()
 
+  // watchScroll = function () {
+  //   i = 0;
+  //
+  //   $(window).scroll(function () {
+  //     stateMap.scroll_top.previous = $(document).scrollTop();
+  //     console.log(stateMap.scroll_top.previous);
+  //   });
+  //
+  // };
+
   // Start : loadCommonModule() - 加载公共模块
   // 功能  : 加载公共模块
   //
@@ -122,28 +134,44 @@ spa.shell = (function () {
     else if (key_name === 'page') {
       switch (anchor_map[key_name]) {
         case 'save_love' :          // 挽回爱情
+          stateMap.scroll = $(document).scrollTop();
           spa.slove.initModule(jqueryMap.$container, jqueryMap.$main);
+          $(document).scrollTop(0);
           break;
         case 'save_marriage' :      // 挽救婚姻
+          stateMap.scroll = $(document).scrollTop();
           spa.smarriage.initModule(jqueryMap.$container, jqueryMap.$main);
+          $(document).scrollTop(0);
           break;
         case 'separate_mistress' :  // 分离小三
+          stateMap.scroll = $(document).scrollTop();
           spa.smistress.initModule(jqueryMap.$container, jqueryMap.$main);
+          $(document).scrollTop(0);
           break;
         case 'custom_love' :        // 定制爱情
+          stateMap.scroll = $(document).scrollTop();
           spa.clove.initModule(jqueryMap.$container, jqueryMap.$main);
+          $(document).scrollTop(0);
           break;
         case 'emotion_forum' :      // 情感论坛
+          stateMap.scroll = $(document).scrollTop();
           spa.forum.initModule(jqueryMap.$container, jqueryMap.$main);
+          $(document).scrollTop(0);
           break;
         case 'mentor_team' :        // 权威专家
+          stateMap.scroll = $(document).scrollTop();
           spa.mentor.initModule(jqueryMap.$container, jqueryMap.$main);
+          $(document).scrollTop(0);
           break;
         case 'service_intro' :      // 服务介绍
+          stateMap.scroll = $(document).scrollTop();
           spa.service.initModule(jqueryMap.$container, jqueryMap.$main);
+          $(document).scrollTop(0);
           break;
         case 'about_us' :           // 关于我们
+          stateMap.scroll = $(document).scrollTop();
           spa.about.initModule(jqueryMap.$container, jqueryMap.$main);
+          $(document).scrollTop(0);
           break;
         default:                    // 回到首页
           $.uriAnchor.setAnchor({});
@@ -226,6 +254,9 @@ spa.shell = (function () {
       preface_img = jqueryMap.$container.find('.spa-preface img');
 
       spa.index.initModule( jqueryMap.$main );
+
+      $(document).scrollTop(stateMap.scroll);
+
       preface_img.attr('src', 'images/index/preface.png');
     }
 

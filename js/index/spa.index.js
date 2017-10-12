@@ -38,7 +38,7 @@ spa.index = (function () {
           + '<div class="main"></div>'
         + '</div>'
     },
-    stateMap = { $main : null },
+    stateMap = { $main : null, scroll : null },
     jqueryMap = {},
 
     insertModule,
