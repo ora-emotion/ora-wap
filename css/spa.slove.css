@@ -17,6 +17,12 @@
 /* End : common styles */
 
 /* Start : sperate - 分手状态 - */
+/* End : sperate - 分手状态 - */
+
+/* Start : wrong - 错误做法 */
+/* End : wrong - 错误做法 */
+
+/* Start : fail - 挽回失败原因 */
 .slove-fail-main {
   background: #eaedf8;
 }
@@ -47,15 +53,35 @@
   height: .36rem;
   padding-bottom: .08rem;
 }
-/* End : sperate - 分手状态 - */
-
-/* Start : wrong - 错误做法 */
-/* End : wrong - 错误做法 */
-
-/* Start : fail - 挽回失败原因 */
 /* End : fail - 挽回失败原因 */
 
 /* Start : advantage - 橘子情感优势 */
+.spa-advantage-main-item {
+  padding: .24rem 0;
+}
+.spa-advantage-main-item:first-child {
+  background: #f9f9f9;
+}
+.spa-advantage-main-item:last-child {
+  background: #ececec;
+}
+.spa-advantage-main-item p {
+  padding-left: .3rem;
+  height: 100%;
+  line-height: .36rem;
+}
+.spa-advantage-main-item p span:first-child {
+  font-weight: bold;
+  padding-bottom: .06rem;
+}
+.spa-advantage-main-item p img {
+  float: right;
+  padding-right: .22rem;
+  padding-left: .1rem;
+}
+.spa-advantage-main-item p span:last-child {
+  text-indent: .5rem;
+}
 /* End : advantage - 橘子情感优势 */
 
 
