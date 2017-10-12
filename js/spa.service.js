@@ -17,22 +17,38 @@ spa.service = (function () {
     configMap = {
       main_html : String() + '服务介绍页面'
     },
-    stateMap = { $service : null },
+    stateMap = { $container : null, $service : null },
     jqueryMap = {},
-    setJqueryMap, initModule;
+    setJqueryMap, loadModule, initModule;
 
   setJqueryMap = function () {
-    var $service = stateMap.$service;
+    var
+      $container = stateMap.$container,
+      $service   = stateMap.$service;
+
     jqueryMap = {
-      $service : $service
+      $container : $container,
+      $service   : $service
     };
   };
 
-  initModule = function ($service) {
-    stateMap.$service = $service;
-    $service.html(configMap.main_html);
+  loadModule = function () {
+    var preface_img = jqueryMap.$container.find('.spa-preface img');
+
     $('title').text('橘子情感 - 服务介绍');
+    preface_img.attr('src', 'images/service/preface.png');
+
+    // 加载模块
+  };
+
+  initModule = function ($container, $service) {
+    stateMap.$container = $container;
+    stateMap.$service   = $service;
+
+    $service.html(configMap.main_html);
+
     setJqueryMap();
+    loadModule();
   };
 
   return { initModule : initModule };

@@ -32,7 +32,12 @@ spa.clove = (function () {
   };
 
   loadModule = function () {
+    var preface_img = jqueryMap.$container.find('.spa-preface img');
+
     $('title').text('橘子情感 - 定制爱情');
+    preface_img.attr('src', 'images/clove/preface.png');
+
+    // 加载模块
   };
 
   initModule = function ($container, $clove) {
@@ -41,6 +46,7 @@ spa.clove = (function () {
     $clove.html(configMap.main_html);
 
     setJqueryMap();
+    loadModule();
   };
 
   return { initModule : initModule };

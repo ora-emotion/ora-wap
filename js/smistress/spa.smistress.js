@@ -28,7 +28,7 @@ spa.smistress = (function () {
     },
     stateMap = { $container : null, $smistress : null },
     jqueryMap = {},
-    setJqueryMap, changePrefaceImg, loadModule, initModule;
+    setJqueryMap, loadModule, initModule;
 
   setJqueryMap = function () {
     var
@@ -50,18 +50,11 @@ spa.smistress = (function () {
     };
   };
 
-  // Start : changePrefaceImg()
-  // 功能  : 动态更换头图
-  //
-  changePrefaceImg = function () {
-    var preface_img = jqueryMap.$container.find('.spa-preface img');
-    preface_img.attr('src', 'images/smistress/preface.png');
-  };
-  // End : changePrefaceImg()
-
   loadModule = function () {
+    var preface_img = jqueryMap.$container.find('.spa-preface img');
+
     $('title').text('橘子情感 - 分离小三');
-    changePrefaceImg();
+    preface_img.attr('src', 'images/smistress/preface.png');
 
     // 加载模块
     spa.smistress.state.initModule(jqueryMap.$state);

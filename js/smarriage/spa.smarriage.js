@@ -26,12 +26,9 @@ spa.smarriage = (function () {
         + '<div class="smarriage-mentor"></div>'
         + '<div class="smarriage-progress"></div>'
     },
-    stateMap = {
-      $container : null,
-      $smarriage : null
-    },
+    stateMap = { $container : null, $smarriage : null },
     jqueryMap = {},
-    setJqueryMap, changePrefaceImg, insertModule, loadModule, initModule;
+    setJqueryMap, loadModule, initModule;
 
   setJqueryMap = function () {
     var
@@ -53,15 +50,11 @@ spa.smarriage = (function () {
     };
   };
 
-  changePrefaceImg = function () {
+  loadModule = function () {
     var preface_img = jqueryMap.$container.find('.spa-preface img');
 
-    preface_img.attr('src', 'images/smarriage/preface.png');
-  };
-
-  insertModule = function () {
     $('title').text('橘子情感 - 挽回爱情');
-    changePrefaceImg();
+    preface_img.attr('src', 'images/smarriage/preface.png');
 
     // 加载模块
     spa.smarriage.state.initModule(jqueryMap.$state);
@@ -81,7 +74,7 @@ spa.smarriage = (function () {
     $smarriage.html(configMap.main_html);
 
     setJqueryMap();
-    insertModule();
+    loadModule();
   };
 
   return { initModule : initModule };

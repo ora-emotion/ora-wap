@@ -33,7 +33,12 @@ spa.mentor = (function () {
   };
 
   loadModule = function () {
+    var preface_img = jqueryMap.$container.find('.spa-preface img');
+
     $('title').text('橘子情感 - 权威专家');
+    preface_img.attr('src', 'images/mentor/preface.png');
+
+    // 加载模块
   };
 
   initModule = function ($container, $mentor) {
