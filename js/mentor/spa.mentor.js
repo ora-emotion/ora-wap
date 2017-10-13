@@ -15,7 +15,10 @@
 spa.mentor = (function () {
   var
     configMap = {
-      main_html : String() + '权威专家页面'
+      main_html : String()
+        + '<div class="mentor-excellent"></div>'
+        + '<div class="mentor-team"></div>'
+        + '<div class="mentor-tutor"></div>'
     },
     stateMap = { $container : null, $mentor : null },
     jqueryMap = {},
@@ -28,7 +31,10 @@ spa.mentor = (function () {
 
     jqueryMap = {
       $container : $container,
-      $mentor    : $mentor
+      $mentor    : $mentor,
+      $excellent : $mentor.find('.mentor-excellent'),
+      $team      : $mentor.find('.mentor-team'),
+      $tutor     : $mentor.find('.mentor-tutor')
     };
   };
 
@@ -39,6 +45,9 @@ spa.mentor = (function () {
     preface_img.attr('src', 'images/mentor/preface.png');
 
     // 加载模块
+    spa.mentor.excellent.initModule(jqueryMap.$excellent);
+    spa.mentor.team.initModule(jqueryMap.$team);
+    spa.mentor.tutor.initModule(jqueryMap.$tutor);
   };
 
   initModule = function ($container, $mentor) {

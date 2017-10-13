@@ -21,6 +21,14 @@ spa.slove.kind = (function () {
           + '<p class="spa-module-title-txt">擅长挽回的爱情类型</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
+        // + '<div class="slove-kind-main">'
+        //   + '<iframe '
+        //     + 'src="iframes/3Dbanner/index.html" '
+        //     + 'frameborder="0" '
+        //     + 'scrolling="no" '
+        //     + 'style="background: transparent; border: 0; width: 100%; height: 5.4rem;">'
+        //   + '</iframe>'
+        // + '<div>'
     },
     initModule;
 

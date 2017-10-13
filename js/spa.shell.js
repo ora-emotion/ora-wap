@@ -134,44 +134,30 @@ spa.shell = (function () {
     else if (key_name === 'page') {
       switch (anchor_map[key_name]) {
         case 'save_love' :          // 挽回爱情
-          stateMap.scroll = $(document).scrollTop();
+          // stateMap.scroll = $(document).scrollTop();
           spa.slove.initModule(jqueryMap.$container, jqueryMap.$main);
-          $(document).scrollTop(0);
+          // $(document).scrollTop(0);
           break;
         case 'save_marriage' :      // 挽救婚姻
-          stateMap.scroll = $(document).scrollTop();
           spa.smarriage.initModule(jqueryMap.$container, jqueryMap.$main);
-          $(document).scrollTop(0);
           break;
         case 'separate_mistress' :  // 分离小三
-          stateMap.scroll = $(document).scrollTop();
           spa.smistress.initModule(jqueryMap.$container, jqueryMap.$main);
-          $(document).scrollTop(0);
           break;
         case 'custom_love' :        // 定制爱情
-          stateMap.scroll = $(document).scrollTop();
           spa.clove.initModule(jqueryMap.$container, jqueryMap.$main);
-          $(document).scrollTop(0);
           break;
         case 'emotion_forum' :      // 情感论坛
-          stateMap.scroll = $(document).scrollTop();
           spa.forum.initModule(jqueryMap.$container, jqueryMap.$main);
-          $(document).scrollTop(0);
           break;
         case 'mentor_team' :        // 权威专家
-          stateMap.scroll = $(document).scrollTop();
           spa.mentor.initModule(jqueryMap.$container, jqueryMap.$main);
-          $(document).scrollTop(0);
           break;
         case 'service_intro' :      // 服务介绍
-          stateMap.scroll = $(document).scrollTop();
           spa.service.initModule(jqueryMap.$container, jqueryMap.$main);
-          $(document).scrollTop(0);
           break;
         case 'about_us' :           // 关于我们
-          stateMap.scroll = $(document).scrollTop();
           spa.about.initModule(jqueryMap.$container, jqueryMap.$main);
-          $(document).scrollTop(0);
           break;
         default:                    // 回到首页
           $.uriAnchor.setAnchor({});

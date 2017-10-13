@@ -53,7 +53,7 @@ spa.smarriage = (function () {
   loadModule = function () {
     var preface_img = jqueryMap.$container.find('.spa-preface img');
 
-    $('title').text('橘子情感 - 挽回爱情');
+    $('title').text('橘子情感 - 挽救婚姻');
     preface_img.attr('src', 'images/smarriage/preface.png');
 
     // 加载模块

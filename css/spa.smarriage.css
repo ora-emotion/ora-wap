@@ -8,9 +8,39 @@
 /* End : common styles */
 
 /* Start : state - 当下婚姻状态 */
+.smarriage-state-main {
+	display: flex;
+	justify-content: space-around;
+}
+
+.smarriage-state-main .icon-txt-group {
+	width: 1.6rem;
+}
+
+.smarriage-state-main .icon-txt-group img {
+	width: 1.22rem;
+	height: 1.22rem;
+	padding-left: .17rem;
+}
+
+.smarriage-state-main .icon-txt-group p {
+	width: 100%;
+	text-align: center;
+}
 /* End : state - 当下婚姻状态 */
 
 /* Start : reason - 婚姻危机出现的原因 */
+.smarriage-reason-main {
+  background: #F4F4F4;
+}
+.smarriage-reason-main-bg {
+  background: url("../images/smarriage/reason-bg.png") center center no-repeat;
+  background-size: 100%;
+  width: 6.78rem;
+  height: 6.5rem;
+  margin: 0 auto;
+  padding-top: .2rem;
+}
 /* End : reason - 婚姻危机出现的原因 */
 
 /* Start : advantage - 橘子情感优势 */
