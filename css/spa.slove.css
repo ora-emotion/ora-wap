@@ -17,6 +17,56 @@
 /* End : common styles - 本页面公共样式 */
 
 /* Start : sperate - 分手状态 - */
+.slove-separate-main {
+    background: #eaedf8;
+}
+.slove-separate-main .split-line {
+    width: 100%;
+    height: .01rem;
+    background: #313131;
+}
+.slove-separate-main .swiper-container .swiper-wrapper .swiper-slide {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: .24rem;
+    padding-bottom: .27rem;
+}
+.slove-separate-main .swiper-container .swiper-wrapper .swiper-slide .img {
+    width: 2.62rem;
+    height: 1.93rem;
+    padding-left: .13rem;
+}
+.slove-separate-main .swiper-container .swiper-wrapper .swiper-slide .img img {
+    width: 100%;
+    height: 100%;
+}
+.slove-separate-main .swiper-container .swiper-wrapper .swiper-slide .txt {
+    width: 4.46rem;
+    padding-left: .11rem;
+}
+.slove-separate-main .swiper-container .swiper-wrapper .swiper-slide .txt p {
+    line-height: .4rem;
+}
+
+.slove-separate-main .tabs {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: .11rem;
+}
+.slove-separate-main .tabs p {
+    height: .64rem;
+    line-height: .64rem;
+    color: #415580;
+}
+.slove-separate-main .tabs p.active {
+    font-weight: bold;
+}
+.slove-separate-main .tabs p:first-child {
+    padding-left: .335rem;
+}
+.slove-separate-main .tabs p:last-child {
+    padding-right: .335rem;
+}
 /* End : sperate - 分手状态 - */
 
 /* Start : wrong - 错误做法 */
