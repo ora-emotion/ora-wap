@@ -14,7 +14,14 @@
 
 spa.mentor.excellent = (function () {
   var
-    configMap = {},
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">专注卓越</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
     initModule;
 
   initModule = function ($excellent) {

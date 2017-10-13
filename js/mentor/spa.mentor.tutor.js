@@ -14,7 +14,14 @@
 
 spa.mentor.tutor = (function () {
   var
-    configMap = {},
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">橘子情感首席导师</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
     initModule;
 
   initModule = function ($tutor) {
