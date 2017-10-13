@@ -12,4 +12,21 @@
 */
 /*global $, spa */
 
-spa.clove.advantage = (function () { return {}; }());
+spa.clove.advantage = (function () {
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">橘子优势</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
+    initModule;
+
+  initModule = function ($advantage) {
+    $advantage.html(configMap.main_html);
+  };
+
+  return { initModule : initModule };
+}());

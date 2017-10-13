@@ -12,4 +12,21 @@
 */
 /*global $, spa */
 
-spa.clove.mentor = (function () { return {}; }());
+spa.clove.mentor = (function () {
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">导师团队</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
+    initModule;
+
+  initModule = function ($mentor) {
+    $mentor.html(configMap.main_html);
+  };
+
+  return { initModule : initModule };
+}());

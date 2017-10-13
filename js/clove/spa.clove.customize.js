@@ -12,4 +12,21 @@
 */
 /*global $, spa */
 
-spa.clove.customize = (function () { return {}; }());
+spa.clove.customize = (function () {
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">橘子情感定制服务</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
+    initModule;
+
+  initModule = function ($customize) {
+    $customize.html(configMap.main_html);
+  };
+
+  return { initModule : initModule };
+}());

@@ -12,4 +12,21 @@
 */
 /*global $, spa */
 
-spa.clove.reason = (function () { return {}; }());
+spa.clove.reason = (function () {
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">单身原因</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
+    initModule;
+
+  initModule = function ($reason) {
+    $reason.html(configMap.main_html);
+  };
+
+  return { initModule : initModule };
+}());

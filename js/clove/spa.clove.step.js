@@ -12,4 +12,21 @@
 */
 /*global $, spa */
 
-spa.clove.step = (function () { return {}; }());
+spa.clove.step = (function () {
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">服务流程</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
+    initModule;
+
+  initModule = function ($step) {
+    $step.html(configMap.main_html);
+  };
+
+  return { initModule : initModule };
+}());
