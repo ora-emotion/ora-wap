@@ -21,6 +21,9 @@ spa.smarriage.reason = (function () {
           + '<p class="spa-module-title-txt">婚姻危机出现的原因</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
+        + '<div class="smarriage-reason-main">'
+          + '<div class="smarriage-reason-main-bg"></div>'
+        + '<div>'
     },
     initModule;
 

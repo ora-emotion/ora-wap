@@ -30,6 +30,17 @@
 /* End : state - 当下婚姻状态 */
 
 /* Start : reason - 婚姻危机出现的原因 */
+.smarriage-reason-main {
+  background: #F4F4F4;
+}
+.smarriage-reason-main-bg {
+  background: url("../images/smarriage/reason-bg.png") center center no-repeat;
+  background-size: 100%;
+  width: 6.78rem;
+  height: 6.5rem;
+  margin: 0 auto;
+  padding-top: .2rem;
+}
 /* End : reason - 婚姻危机出现的原因 */
 
 /* Start : advantage - 橘子情感优势 */
