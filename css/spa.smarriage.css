@@ -8,6 +8,25 @@
 /* End : common styles */
 
 /* Start : state - 当下婚姻状态 */
+.smarriage-state-main {
+	display: flex;
+	justify-content: space-around;
+}
+
+.smarriage-state-main .icon-txt-group {
+	width: 1.6rem;
+}
+
+.smarriage-state-main .icon-txt-group img {
+	width: 1.22rem;
+	height: 1.22rem;
+	padding-left: .17rem;
+}
+
+.smarriage-state-main .icon-txt-group p {
+	width: 100%;
+	text-align: center;
+}
 /* End : state - 当下婚姻状态 */
 
 /* Start : reason - 婚姻危机出现的原因 */
