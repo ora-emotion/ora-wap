@@ -15,7 +15,15 @@
 spa.service = (function () {
   var
     configMap = {
-      main_html : String() + '服务介绍页面'
+      main_html : String()
+        + '<div class="service-customize"></div>'
+        + '<div class="service-state"></div>'
+        + '<div class="service-system"></div>'
+        + '<div class="service-course"></div>'
+        + '<div class="service-mentor"></div>'
+        + '<div class="service-tutor"></div>'
+        + '<div class="service-step"></div>'
+        + '<div class="service-guarantee"></div>'
     },
     stateMap = { $container : null, $service : null },
     jqueryMap = {},
@@ -28,7 +36,15 @@ spa.service = (function () {
 
     jqueryMap = {
       $container : $container,
-      $service   : $service
+      $service   : $service,
+      $customize : $service.find('.service-customize'),
+      $state     : $service.find('.service-state'),
+      $system    : $service.find('.service-system'),
+      $course    : $service.find('.service-course'),
+      $mentor    : $service.find('.service-mentor'),
+      $tutor     : $service.find('.service-tutor'),
+      $step      : $service.find('.service-step'),
+      $guarantee : $service.find('.service-guarantee')
     };
   };
 
@@ -39,6 +55,14 @@ spa.service = (function () {
     preface_img.attr('src', 'images/service/preface.png');
 
     // 加载模块
+    spa.service.customize.initModule(jqueryMap.$customize);
+    spa.service.state.initModule(jqueryMap.$state);
+    spa.service.system.initModule(jqueryMap.$system);
+    spa.service.course.initModule(jqueryMap.$course);
+    spa.service.mentor.initModule(jqueryMap.$mentor);
+    spa.service.tutor.initModule(jqueryMap.$tutor);
+    spa.service.step.initModule(jqueryMap.$step);
+    spa.service.guarantee.initModule(jqueryMap.$guarantee);
   };
 
   initModule = function ($container, $service) {
