@@ -17,22 +17,36 @@ spa.forum = (function () {
     configMap = {
       main_html : String() + '情感论坛页面'
     },
-    stateMap = { $forum : null },
+    stateMap = { $container : null, $forum : null },
     jqueryMap = {},
-    setJqueryMap, initModule;
+    setJqueryMap, loadModule, initModule;
 
   setJqueryMap = function () {
-    var $forum = stateMap.$forum;
+    var
+      $container = stateMap.$container,
+      $forum     = stateMap.$forum;
     jqueryMap = {
-      $forum : $forum
+      $container : $container,
+      $forum     : $forum
     };
   };
 
-  initModule = function ($forum) {
-    stateMap.$forum = $forum;
-    $forum.html(configMap.main_html);
+  loadModule = function () {
+    var preface_img = jqueryMap.$container.find('.spa-preface img');
+
     $('title').text('橘子情感 - 情感论坛');
+    preface_img.attr('src', 'images/forum/preface.png');
+
+    // 加载模块
+  };
+
+  initModule = function ($container, $forum) {
+    stateMap.$container = $container;
+    stateMap.$forum     = $forum;
+    $forum.html(configMap.main_html);
+
     setJqueryMap();
+    loadModule();
   };
 
   return { initModule : initModule };

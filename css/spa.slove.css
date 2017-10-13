@@ -4,7 +4,7 @@
  * 挽回爱情样式表
 */
 
-/* Start : common styles */
+/* Start : common styles - 本页面公共样式 */
 .slove-para {
   font-size: .26rem;
   line-height: .36rem;
@@ -14,12 +14,75 @@
 .slove-para-indent {
   text-indent: .5rem;
 }
-/* End : common styles */
+/* End : common styles - 本页面公共样式 */
 
 /* Start : sperate - 分手状态 - */
 /* End : sperate - 分手状态 - */
 
 /* Start : wrong - 错误做法 */
+.slove-wrong-main {
+    position: relative;
+    background: #f9f9f9;
+
+    padding-top: .32rem;
+    padding-bottom: .92rem;
+}
+.slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide {
+    display: flex;
+    justify-content: space-between;
+}
+.slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide .item {
+    width: 1.6rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 .22rem;
+}
+.slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide .item .icon {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+.slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(1) .icon {
+    background: url("../images/slove//wrong-icon01.png") no-repeat center center;
+}
+.slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(2) .icon {
+    background: url("../images/slove//wrong-icon02.png") no-repeat center center;
+}
+.slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(3) .icon {
+    background: url("../images/slove//wrong-icon03.png") no-repeat center center;
+}
+.slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:last-child .item:nth-child(1) .icon {
+    background: url("../images/slove//wrong-icon04.png") no-repeat center center;
+}
+.slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:last-child .item:nth-child(2) .icon {
+    background: url("../images/slove//wrong-icon05.png") no-repeat center center;
+}
+.slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:last-child .item:nth-child(3) .icon {
+    background: url("../images/slove//wrong-icon06.png") no-repeat center center;
+}
+
+.slove-wrong-main .swiper-pagination {
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    bottom: .15rem;
+    left: 40%;
+    right: 40%;
+}
+.slove-wrong-main .swiper-pagination .swiper-pagination-bullet {
+    width: .16rem;
+    height: .16rem;
+    background: #b8b8b8;
+
+    margin: 0 .08rem;
+}
+.slove-wrong-main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #b1b1b1;
+}
 /* End : wrong - 错误做法 */
 
 /* Start : fail - 挽回失败原因 */

@@ -31,7 +31,7 @@ spa.slove = (function () {
       $slove     : null
     },
     jqueryMap = {},
-    setJqueryMap, changePrefaceImg, insertModule, initModule;
+    setJqueryMap, loadModule, initModule;
 
   // Start : setJqueryMap()
   // 功能  : 缓存 jQuery 集合
@@ -57,23 +57,14 @@ spa.slove = (function () {
   };
   // End : setJqueryMap()
 
-  // Start : changePrefaceImg()
-  // 功能  : 动态更换头图
-  //
-  changePrefaceImg = function () {
-    var preface_img = jqueryMap.$container.find('.spa-preface img');
-
-    preface_img.attr('src', 'images/slove/preface.png');
-  };
-  // End : changePrefaceImg()
-
   // Start : insertModule()
   // 功能  : 插入模块
   //
-  insertModule = function () {
-    $('title').text('橘子情感 - 挽回爱情');
+  loadModule = function () {
+    var preface_img = jqueryMap.$container.find('.spa-preface img');
 
-    changePrefaceImg();
+    $('title').text('橘子情感 - 挽回爱情');
+    preface_img.attr('src', 'images/slove/preface.png');
 
     spa.slove.separate.initModule(jqueryMap.$separate);
     spa.slove.wrong.initModule(jqueryMap.$wrong);
@@ -96,7 +87,7 @@ spa.slove = (function () {
     $slove.html(configMap.main_html);
 
     setJqueryMap();
-    insertModule();
+    loadModule();
   };
   // End : initModule()
 

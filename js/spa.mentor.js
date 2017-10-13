@@ -17,22 +17,37 @@ spa.mentor = (function () {
     configMap = {
       main_html : String() + '权威专家页面'
     },
-    stateMap = { $mentor : null },
+    stateMap = { $container : null, $mentor : null },
     jqueryMap = {},
-    setJqueryMap, initModule;
+    setJqueryMap, loadModule, initModule;
 
   setJqueryMap = function () {
-    var $mentor = stateMap.$mentor;
+    var
+      $container = stateMap.$container,
+      $mentor    = stateMap.$mentor;
+
     jqueryMap = {
-      $mentor : $mentor
+      $container : $container,
+      $mentor    : $mentor
     };
   };
 
-  initModule = function ($mentor) {
-    stateMap.$mentor = $mentor;
-    $mentor.html(configMap.main_html);
+  loadModule = function () {
+    var preface_img = jqueryMap.$container.find('.spa-preface img');
+
     $('title').text('橘子情感 - 权威专家');
+    preface_img.attr('src', 'images/mentor/preface.png');
+
+    // 加载模块
+  };
+
+  initModule = function ($container, $mentor) {
+    stateMap.$container = $container;
+    stateMap.$mentor    = $mentor;
+    $mentor.html(configMap.main_html);
+
     setJqueryMap();
+    loadModule();
   };
 
   return { initModule : initModule };
