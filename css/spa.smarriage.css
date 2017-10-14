@@ -59,6 +59,29 @@
 /* End : example - 成功案例 */
 
 /* Start : mentor - 导师团队 */
+/*.smarriage-mentor-main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}*/
+.smarriage-mentor-main-horizontal {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+.smarriage-mentor-main-horizontal:first-child {
+	padding-top: .2rem;
+	padding-bottom: .4rem;
+}
+.smarriage-mentor-main-horizontal-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.smarriage-mentor-main-horizontal-item p {
+	font-weight: bold;
+	padding-top: .2rem;
+}
 /* End : mentor - 导师团队 */
 
 /* Start : progress - 挽回婚姻服务流程 */
