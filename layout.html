@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>橘子情感优势</title>
+    <style media="screen">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        font-size: 100px;
+      }
+      p {
+        font-size: .26rem;
+        line-height: .36rem;
+      }
+
+      .smarriage-advantage-main {
+        background: #ffeded;
+      }
+      .smarriage-advantage-main-item {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: .2rem;
+        padding-right: .2rem;
+        padding-bottom: .2rem;
+      }
+      .smarriage-advantage-main-item:first-child {
+        padding-top: .2rem;
+        border-bottom: 2px solid #ffcaca;
+      }
+      .smarriage-advantage-main-item:last-child {
+        padding-right: .2rem;
+        padding-top: .2rem;
+      }
+      .smarriage-advantage-main-item:first-child p,
+      .smarriage-advantage-main-item:last-child p {
+        padding-left: .15rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="smarriage-advantage-main">
+      <div class="smarriage-advantage-main-item">
+        <img src="images/smarriage/advantage-pic01.png">
+        <p>
+          中国情感挽回行业权威领导者，八年从业经验，已经累计为数万人解决情感问题，针对挽回婚姻、挽回爱情、分离小三、长期关系维护等领域具有权威地位。
+        </p>
+      </div>
+      <div class="smarriage-advantage-main-item">
+        <p>
+          中国情感挽回行业权威领导者，八年从业经验，已经累计为数万人解决情感问题，针对挽回婚姻、挽回爱情、分离小三、长期关系维护等领域具有权威地位。
+        </p>
+        <img src="images/smarriage/advantage-pic02.png">
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      fontAutomatic = (function () {
+        root_ele     = document.documentElement;
+        device_width = root_ele.clientWidth;
+
+        // 根元素字体大小 - 以 iPhone6 为准
+        root_ele.style.fontSize   = device_width / 7.5 + 'px';
+
+        // 当页面缩放时，动态更改字体大小
+        window.onresize = function () {
+          root_ele     = document.documentElement;
+          device_width = root_ele.clientWidth;
+          root_ele.style.fontSize = device_width / 7.5 + 'px';
+        };
+
+      }());
+    </script>
+  </body>
+</html>

@@ -44,6 +44,38 @@
 /* End : reason - 婚姻危机出现的原因 */
 
 /* Start : advantage - 橘子情感优势 */
+.smarriage-advantage-main {
+	background: #ffeded;
+}
+.smarriage-advantage-main-item {
+	display: flex;
+	justify-content: flex-start;
+	padding-left: .2rem;
+	padding-right: .2rem;
+	padding-bottom: .2rem;
+}
+.smarriage-advantage-main-item:first-child {
+	padding-top: .2rem;
+	border-bottom: 2px solid #ffcaca;
+}
+.smarriage-advantage-main-item:last-child {
+	padding-right: .2rem;
+	padding-top: .2rem;
+}
+.smarriage-advantage-main-item p{
+	width: 4.25rem;
+	line-height: .35rem;
+}
+.smarriage-advantage-main-item:first-child p {
+	padding-left: .15rem;
+}
+.smarriage-advantage-main-item:last-child p {
+	padding-right: .15rem;
+}
+.smarriage-advantage-main-item img {
+	width: 2.71rem;
+	height: 1.7rem;
+}
 /* End : advantage - 橘子情感优势 */
 
 /* Start : method - 错误挽回方式 */
