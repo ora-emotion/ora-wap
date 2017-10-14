@@ -65,9 +65,7 @@ spa.shell = (function () {
   // 合并配置项，用于检查
   //
   mergeConfigMap = function () {
-    var
-      news_detail = spa.data.news.configMap;
-
+    var news_detail = spa.data.news.configMap;
     news_detail = $.extend(true, configMap.news_detail, news_detail);
   };
   // End : mergeConfigMap()
@@ -239,6 +237,7 @@ spa.shell = (function () {
   //
   onHashchange = function () {
     var anchor_map = $.uriAnchor.makeAnchorMap();
+    $(document).scrollTop(0);
     loadPage(anchor_map);
   };
   // End : onHashchange()
