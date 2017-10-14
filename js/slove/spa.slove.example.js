@@ -74,10 +74,9 @@ spa.slove.example = (function () {
   initModule = function ($container, $example) {
     stateMap.$container = $container;
     stateMap.$example   = $example;
-
     $example.html(configMap.main_html);
-    setJqueryMap();
 
+    setJqueryMap();
     loadPage();
   };
 

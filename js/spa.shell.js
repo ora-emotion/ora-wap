@@ -37,13 +37,12 @@ spa.shell = (function () {
     },
     stateMap = {
       $container : null,
-      anchor_map : {},
-      scroll : null
+      anchor_map : {}
     },
     jqueryMap = {},
     root_ele,      device_width,
     setJqueryMap,  mergeConfigMap,
-    fontAutomatic, /*watchScroll,*/ loadCommonModule,
+    fontAutomatic, loadCommonModule,
     checkAnchor,   loadPage,
     onHashchange,  initModule;
 
@@ -98,16 +97,6 @@ spa.shell = (function () {
   };
   // End fontAutoMatic()
 
-  // watchScroll = function () {
-  //   i = 0;
-  //
-  //   $(window).scroll(function () {
-  //     stateMap.scroll_top.previous = $(document).scrollTop();
-  //     console.log(stateMap.scroll_top.previous);
-  //   });
-  //
-  // };
-
   // Start : loadCommonModule() - 加载公共模块
   // 功能  : 加载公共模块
   //
@@ -134,9 +123,7 @@ spa.shell = (function () {
     else if (key_name === 'page') {
       switch (anchor_map[key_name]) {
         case 'save_love' :          // 挽回爱情
-          // stateMap.scroll = $(document).scrollTop();
           spa.slove.initModule(jqueryMap.$container, jqueryMap.$main);
-          // $(document).scrollTop(0);
           break;
         case 'save_marriage' :      // 挽救婚姻
           spa.smarriage.initModule(jqueryMap.$container, jqueryMap.$main);
@@ -159,8 +146,7 @@ spa.shell = (function () {
         case 'about_us' :           // 关于我们
           spa.about.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
-        default:                    // 回到首页
-          $.uriAnchor.setAnchor({});
+        default:
           break;
       }
     }
@@ -231,6 +217,7 @@ spa.shell = (function () {
           checkAnchor(key_name);
           break;
         default:
+          $.uriAnchor.setAnchor({});
           break;
       }
     }
@@ -240,8 +227,6 @@ spa.shell = (function () {
       preface_img = jqueryMap.$container.find('.spa-preface img');
 
       spa.index.initModule( jqueryMap.$main );
-
-      $(document).scrollTop(stateMap.scroll);
 
       preface_img.attr('src', 'images/index/preface.png');
     }
