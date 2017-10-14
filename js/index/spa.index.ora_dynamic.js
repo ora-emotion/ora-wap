@@ -110,13 +110,13 @@ spa.index.ora_dynamic = (function () {
               + '</div>'
               + '<div class="swiper-slide">'
                 + '<div class="title">'
-                  + '<p>十大杰出诚信企业</p>'
+                  + '<p>联合青岛大学商学院举办创业就业经验分享讲座</p>'
                 + '</div>'
                 + '<div class="txt-content">'
                   + '<div class="column">'
                     + '<p class="para">'
-                      + '山东省举办的“十大杰出诚信企业大会”在山东济南人民大会堂隆重'
-                      + '召开。政府领导出席大会并发表重要讲话。'
+                      + '本次讲座是由橘子情感与青岛大学商学院联合合作举办，意在为即'
+                      + '将步入社会的新兴力量给出正确、实用的创业就业建议。'
                     + '</p>'
                     + '<p class="more">查看更多>>></p>'
                   + '</div>'
@@ -127,13 +127,13 @@ spa.index.ora_dynamic = (function () {
               + '</div>'
               + '<div class="swiper-slide">'
                 + '<div class="title">'
-                  + '<p>青岛市市南区区长，亲临视察工作</p>'
+                  + '<p>联合山东省创业中心举办中俄新兴行业交流会</p>'
                 + '</div>'
                 + '<div class="txt-content">'
                   + '<div class="column">'
                     + '<p class="para">'
-                      + '青岛市市南区区长高健在青岛市人力资源和社会保障局局长纪敏的'
-                      + '陪同下，参观了橘子情感的工作环境'
+                      + '此次会议涉猎各个新兴行业，尤其是情感咨询培训行业，得到多方'
+                      + '面的重视，俄罗斯代表提出...'
                     + '</p>'
                     + '<p class="more">查看更多>>></p>'
                   + '</div>'
@@ -191,7 +191,8 @@ spa.index.ora_dynamic = (function () {
     var mySwiper = new Swiper(jqueryMap.$swiper, {
       autoplay     : configMap.swiper_autoplay,
       initialSlide : configMap.swiper_initialSlide,
-      pagination   : jqueryMap.$pagination
+      pagination   : jqueryMap.$pagination,
+      loop         : true
     });
 
     onClickSlide();
