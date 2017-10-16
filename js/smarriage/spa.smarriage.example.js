@@ -15,6 +15,10 @@
 spa.smarriage.example = (function () {
   var
     configMap = {
+      case_arr : [
+        { case : 'case_01' },
+        { case : 'case_02' }
+      ],
       main_html : String()
         + '<div class="spa-module-title">'
           + '<span class="spa-module-title-line"></span>'
@@ -23,7 +27,7 @@ spa.smarriage.example = (function () {
         +  '</div>'
 
         + '<div class="smarriage-example-main">'
-          + '<div class="smarriage-example-main-item">'
+          + '<div class="smarriage-example-main-item first-item">'
             + '<p>挽回老公的心，让婚姻走出“出轨”阴影</p>'
             + '<p>'
               + '我和老公恋爱了两年，结婚也有五年了。在孩子出生后，我开始专心在家里'
@@ -31,7 +35,7 @@ spa.smarriage.example = (function () {
               + '老公不要我们了，我和孩子该怎么办？我还能挽回老公的心吗？'
             + '</p>'
           + '</div>'
-          + '<div class="smarriage-example-main-item">'
+          + '<div class="smarriage-example-main-item last-item">'
             + '<p>维持好长期婚姻关系，让生活不再磕磕绊绊</p>'
             + '<p>'
               + '公婆有点重男轻女，在女儿出生之后，我和公婆的关系降到冰点。为了照顾'
@@ -43,10 +47,36 @@ spa.smarriage.example = (function () {
         + '</div>'
 
     },
-    initModule;
+    stateMap = { $container : null, $example : null },
+    jqueryMap = {},
+    setJqueryMap, loadPage, initModule;
 
-  initModule = function ($example) {
+  setJqueryMap = function () {
+    var
+      $container = stateMap.$container,
+      $example   = stateMap.$example;
+
+    jqueryMap = {
+      $container : $container,
+      $example   : $example,
+      $item      : $example.find('.smarriage-example-main-item')
+    };
+  };
+
+  loadPage = function () {
+    jqueryMap.$item.click(function () {
+      var index = $(this).index();
+      $.uriAnchor.setAnchor(configMap.case_arr[index]);
+    });
+  };
+
+  initModule = function ($container, $example) {
+    stateMap.$container = $container;
+    stateMap.$example   = $example;
     $example.html(configMap.main_html);
+
+    setJqueryMap();
+    loadPage();
   };
 
   return { initModule : initModule };
