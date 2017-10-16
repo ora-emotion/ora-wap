@@ -17,6 +17,39 @@
 /* End : method - 错误应对方式 */
 
 /* Start : advantage - 橘子情感优势 */
+.smistress-advantage-main {
+  width: 100%;
+}
+.smistress-advantage-main div h3{
+  font-size: .28rem;
+  text-align: center;
+
+}
+.smistress-advantage-main div p{
+  line-height: .35rem;
+  padding-top: .2rem;
+  padding-left: .7rem;
+  padding-right: .7rem;
+}
+.smistress-advantage-main .top{
+  background: url("../images/smistress/advantage-bg01.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 2.93rem;
+}
+.smistress-advantage-main .top h3{
+  padding-top: .5rem;
+}
+.smistress-advantage-main .bottom{
+  background: url("../images/smistress/advantage-bg02.png") center center no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 2.93rem;
+  margin-top: .1rem;
+}
+.smistress-advantage-main .bottom h3{
+  padding-top: .3rem;
+}
 /* End : advantage - 橘子情感优势 */
 
 /* Start : kind - 擅长分离的小三类型 */
