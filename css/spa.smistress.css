@@ -20,6 +20,33 @@
 /* End : advantage - 橘子情感优势 */
 
 /* Start : kind - 擅长分离的小三类型 */
+.smistress-kind-main {
+  background: #f4fafe;
+  padding: .2rem 0;
+}
+.smistress-kind-main-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: .6rem;
+  margin: .2rem 0;
+}
+.smistress-kind-main-item-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: .6rem;
+  padding-right: .5rem;
+}
+.smistress-kind-main-item-txt p:first-child {
+  font-size: .28rem;
+  font-weight: bold;
+  line-height: .5rem;
+  height: .5rem;
+}
+.smistress-kind-main-item-txt p:last-child {
+  font-size: .26rem;
+}
 /* End : kind - 擅长分离的小三类型 */
 
 /* Start : service - 能够提供的分离小三服务 */
