@@ -22,31 +22,31 @@ spa.smarriage.mentor = (function () {
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
 
-        // + '<div class="smarriage-mentor-main">'
-        //
-        //   + '<div class="smarriage-mentor-main-horizontal">'
-        //     + '<div class="smarriage-mentor-main-horizontal-item">'
-        //       + '<img src="images/smarriage/mentor-jiawei.png">'
-        //       + '<p>嘉伟导师</p>'
-        //     + '</div>'
-        //     + '<div class="smarriage-mentor-main-horizontal-item">'
-        //       + '<img src="images/smarriage/mentor-qianwu.png">'
-        //       + '<p>千芜导师</p>'
-        //     + '</div>'
-        //   + '</div>'
-        //
-        //   + '<div class="smarriage-mentor-main-horizontal">'
-        //     + '<div class="smarriage-mentor-main-horizontal-item">'
-        //       + '<img src="images/smarriage/mentor-lujia.png">'
-        //       + '<p>路加导师</p>'
-        //     + '</div>'
-        //     + '<div class="smarriage-mentor-main-horizontal-item">'
-        //       + '<img src="images/smarriage/mentor-qingen.png">'
-        //       + '<p>青恩导师</p>'
-        //     + '</div>'
-        //   + '</div>'
-        //
-        // + '</div>'
+        + '<div class="smarriage-mentor-main">'
+
+          + '<div class="smarriage-mentor-main-horizontal">'
+            + '<div class="smarriage-mentor-main-horizontal-item">'
+              + '<img src="images/smarriage/mentor-jiawei.png">'
+              + '<p>嘉伟导师</p>'
+            + '</div>'
+            + '<div class="smarriage-mentor-main-horizontal-item">'
+              + '<img src="images/smarriage/mentor-qianwu.png">'
+              + '<p>千芜导师</p>'
+            + '</div>'
+          + '</div>'
+
+          + '<div class="smarriage-mentor-main-horizontal">'
+            + '<div class="smarriage-mentor-main-horizontal-item">'
+              + '<img src="images/smarriage/mentor-lujia.png">'
+              + '<p>路加导师</p>'
+            + '</div>'
+            + '<div class="smarriage-mentor-main-horizontal-item">'
+              + '<img src="images/smarriage/mentor-qingen.png">'
+              + '<p>青恩导师</p>'
+            + '</div>'
+          + '</div>'
+
+        + '</div>'
     },
     initModule;
 

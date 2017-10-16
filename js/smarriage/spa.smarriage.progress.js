@@ -21,7 +21,7 @@ spa.smarriage.progress = (function () {
           + '<p class="spa-module-title-txt">挽回婚姻服务流程</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
-        // + '<div class="smarriage-progress-main"></div>'
+        + '<div class="smarriage-progress-main"></div>'
     },
     initModule;
 
