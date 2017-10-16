@@ -21,6 +21,7 @@ spa.slove.wrong = (function () {
           + '<p class="spa-module-title-txt">错误做法</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
+
         + '<div class="slove-wrong-main">'
           + '<div class="swiper-container">'
             + '<div class="swiper-wrapper">'

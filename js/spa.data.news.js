@@ -92,9 +92,7 @@ spa.data.news = (function () {
       new_11 : String() + 'new_11',
       new_12 : String() + 'new_12'
     },
-    stateMap = {
-      $container : null
-    },
+    stateMap = { $container : null },
     jqueryMap = {},
 
     setJqueryMap, loadPage, changeAnchorPart,

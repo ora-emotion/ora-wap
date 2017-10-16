@@ -24,7 +24,7 @@ spa.slove = (function () {
         + '<div class="slove-service"></div>'
         + '<div class="slove-example"></div>'
         + '<div class="slove-mentor"></div>'
-        + '<div class="slove-step"></div>'
+        + '<div class="slove-progress"></div>'
     },
     stateMap = {
       $container : null,
@@ -52,7 +52,7 @@ spa.slove = (function () {
       $service   : $slove.find('.slove-service'),
       $example   : $slove.find('.slove-example'),
       $mentor    : $slove.find('.slove-mentor'),
-      $step      : $slove.find('.slove-step')
+      $progress  : $slove.find('.slove-progress')
     };
   };
   // End : setJqueryMap()
@@ -74,7 +74,7 @@ spa.slove = (function () {
     spa.slove.service.initModule(jqueryMap.$service);
     spa.slove.example.initModule(jqueryMap.$container, jqueryMap.$example);
     spa.slove.mentor.initModule(jqueryMap.$mentor);
-    spa.slove.step.initModule(jqueryMap.$step);
+    spa.slove.progress.initModule(jqueryMap.$progress);
   };
   // End : insertModule()
 

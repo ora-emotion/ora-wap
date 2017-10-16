@@ -38,10 +38,10 @@ spa.index = (function () {
           + '<div class="main"></div>'
         + '</div>'
     },
-    stateMap = { $main : null, scroll : null },
+    stateMap = { $main : null },
     jqueryMap = {},
 
-    insertModule,
+    loadModule,
     setJqueryMap, initModule;
 
   setJqueryMap = function () {
@@ -60,7 +60,7 @@ spa.index = (function () {
     };
   };
 
-  insertModule = function () {
+  loadModule = function () {
     spa.index.nav.initModule(jqueryMap.$nav);
     spa.index.company_intro.initModule(jqueryMap.$company_intro);
     spa.index.solve_problem.initModule(jqueryMap.$solve_problem);
@@ -76,7 +76,7 @@ spa.index = (function () {
     $index_main.html(configMap.main_html);
     setJqueryMap();
 
-    insertModule();
+    loadModule();
   };
 
   return { initModule : initModule };

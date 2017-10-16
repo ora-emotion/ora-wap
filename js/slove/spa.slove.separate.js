@@ -21,7 +21,7 @@ spa.slove.separate = (function () {
           + '<p class="spa-module-title-txt">分手状态</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
-        /*************************************/
+
         + '<div class="slove-separate-main">'
           + '<div class="swiper-container" id="tabs-container">'
             + '<div class="swiper-wrapper">'

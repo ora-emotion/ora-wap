@@ -12,7 +12,7 @@
 */
 /*global $, spa */
 
-spa.slove.step = (function () {
+spa.slove.progress = (function () {
   var
     configMap = {
       main_html : String()
@@ -21,7 +21,7 @@ spa.slove.step = (function () {
           + '<p class="spa-module-title-txt">挽回爱情服务流程</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
-        + '<div class="slove-step-main"></div>'
+        + '<div class="slove-progress-main"></div>'
     },
     initModule;
 

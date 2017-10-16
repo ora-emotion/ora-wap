@@ -63,7 +63,7 @@ spa.smarriage = (function () {
     spa.smarriage.method.initModule(jqueryMap.$method);
     spa.smarriage.kind.initModule(jqueryMap.$kind);
     spa.smarriage.service.initModule(jqueryMap.$service);
-    spa.smarriage.example.initModule(jqueryMap.$example);
+    spa.smarriage.example.initModule(jqueryMap.$container, jqueryMap.$example);
     spa.smarriage.mentor.initModule(jqueryMap.$mentor);
     spa.smarriage.progress.initModule(jqueryMap.$progress);
   };
