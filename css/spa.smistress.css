@@ -8,6 +8,42 @@
 /* End : common styles */
 
 /* Start : state - 婚姻状况 */
+.smistress-state-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.smistress-state-main-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.smistress-state-main-group-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.9rem;
+  margin: .2rem .4rem;;
+}
+.smistress-state-main-group-item-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: .2rem;
+}
+.smistress-state-main-group-item-txt p {
+  text-align: center;
+  line-height: .36rem;
+}
+.smistress-state-main-group-item-txt p:first-child {
+  font-size: .28rem;
+  font-weight: bold;
+  line-height: .4rem;
+  height: .4rem;
+}
 /* End : state - 婚姻状况 */
 
 /* Start : reason - 出现第三者的原因 */
