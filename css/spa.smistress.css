@@ -11,6 +11,22 @@
 /* End : state - 婚姻状况 */
 
 /* Start : reason - 出现第三者的原因 */
+.smistress-reason-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: .3rem;
+}
+.smistress-reason-main-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.smistress-reason-main-item p {
+  text-align: center;
+  padding-top: .2rem;
+}
 /* End : reason - 出现第三者的原因 */
 
 /* Start : method - 错误应对方式 */
