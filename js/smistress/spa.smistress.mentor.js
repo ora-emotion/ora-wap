@@ -21,6 +21,7 @@ spa.smistress.mentor = (function () {
         + '<p class="spa-module-title-txt">导师团队</p>'
         + '<span class="spa-module-title-line"></span>'
       +  '</div>'
+      + '<div class="smistress-mentor-main"></div>'
     },
     initModule;
 

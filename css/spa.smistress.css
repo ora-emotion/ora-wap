@@ -29,6 +29,12 @@
 /* End : example - 成功案例 */
 
 /* Start : mentor - 导师团队 */
+.smistress-mentor-main {
+  background: url("../images/smistress/mentor-bg.png") no-repeat center center;
+  background-size: 100%;
+  width: 100%;
+  height: 3.84rem;
+}
 /* End : mentor - 导师团队 */
 
 /* Start : progress - 分离小三服务流程 */
