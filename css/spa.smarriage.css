@@ -139,6 +139,70 @@
 /* End : kind - 擅长挽回的婚姻类型 */
 
 /* Start : service - 能够提供的挽回婚姻服务 */
+.smarriage-service-main {
+    position: relative;
+    background: #d7e3f1;
+    padding-top: .32rem;
+    padding-bottom: .92rem;
+    height: 2rem;
+}
+.smarriage-service-main .swiper-container .swiper-wrapper .swiper-slide {
+    display: flex;
+    justify-content: space-around;
+}
+.smarriage-service-main .swiper-container .swiper-wrapper .swiper-slide .item {
+    width: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 .22rem;
+}
+.smarriage-service-main .swiper-container .swiper-wrapper .swiper-slide .item .icon {
+    width: 1.44rem;
+    height: 1.44rem;
+}
+.smarriage-service-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(1) .icon {
+    background: url(../images/smarriage/service-icon01.png) no-repeat center center;
+}
+.smarriage-service-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(2) .icon {
+    background: url(../images/smarriage/service-icon02.png) no-repeat center center;
+}
+.smarriage-service-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(3) .icon {
+    background: url(../images/smarriage/service-icon03.png) no-repeat center center;
+}
+.smarriage-service-main .swiper-container .swiper-wrapper .swiper-slide:last-child .item:nth-child(1) .icon {
+    background: url(../images/smarriage/service-icon04.png) no-repeat center center;
+}
+.smarriage-service-main .swiper-container .swiper-wrapper .swiper-slide:last-child .item:nth-child(2) .icon {
+    background: url(../images/smarriage/service-icon05.png) no-repeat center center;
+}
+
+.smarriage-service-main .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: .15rem;
+    left: 40%;
+    right: 40%;
+}
+.smarriage-service-main .swiper-pagination .swiper-pagination-bullet {
+    width: .5rem;
+    height: .1rem;
+    background: #BDD3ED;
+    margin: 0 .08rem;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
+.smarriage-service-main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #ABC3DF;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+}
 /* End : service - 能够提供的挽回婚姻服务 */
 
 /* Start : example - 成功案例 */
