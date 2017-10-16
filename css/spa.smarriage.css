@@ -79,6 +79,48 @@
 /* End : advantage - 橘子情感优势 */
 
 /* Start : method - 错误挽回方式 */
+.smarriage-method-main .ul1 {
+	width: 5.25rem;
+	background-color: #BECCE7;
+	margin: 0 auto;
+	transform: translateZ(0);
+}
+
+.smarriage-method-main .ul1 input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+
+.smarriage-method-main .ul1 label {
+	position: relative;
+	display: block;
+	height: .8rem;
+	line-height: .8rem;
+	padding-left: .8rem;
+	font-size: .26rem;
+	font-weight: 600;
+	cursor: pointer;
+	border-top: 1px #919FBA solid;
+}
+
+.smarriage-method-main .ul1 label[for*='1'] {
+	border: 0;
+}
+
+.smarriage-method-main .ul1 section {
+	height: 0;
+	transition: .3s all;
+	overflow: hidden;
+}
+.smarriage-method-main .ul1 section.active {
+	height: 1.8rem;
+	width: 5.26rem;
+	background: url("../images/smarriage/method-bg.png") center center / 100% 100% no-repeat;
+}
+.smarriage-method-main .p1{
+	line-height: .35rem;
+	padding: .3rem .1rem .2rem .3rem;
+}
 /* End : method - 错误挽回方式 */
 
 /* Start : kind - 擅长挽回的婚姻类型 */
