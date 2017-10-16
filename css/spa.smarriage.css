@@ -164,6 +164,8 @@
 .smarriage-example-main-item p:first-child {
 	font-size: .28rem;
 	font-weight: bold;
+	line-height: .4rem;
+	height: .4rem;
 }
 .smarriage-example-main-item p:last-child {
 	font-size: .26rem;
