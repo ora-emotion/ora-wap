@@ -177,6 +177,17 @@
 /* End : kind - 擅长分离的小三类型 */
 
 /* Start : service - 能够提供的分离小三服务 */
+.smistress-service-main{
+  background: url("../images/smistress/service-bg.png") center 0.3rem no-repeat;
+  background-size: 6.5rem 10.58rem;
+  width: 100%;
+  height: 5.58rem;
+  overflow: hidden;
+}
+.smistress-service .chakan{
+  padding-top: .2rem;
+  padding-left: .6rem;
+}
 /* End : service - 能够提供的分离小三服务 */
 
 /* Start : example - 成功案例 */

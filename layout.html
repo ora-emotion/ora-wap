@@ -16,57 +16,16 @@
         line-height: .36rem;
       }
 
-      .smistress-example-main{
-      	background-color: #F1FFFA;
-      }
-      .smistress-example-main a{
-      	color: #DD1F1F;
-      }
-      .smistress-example-main div{
+      .smistress-service-main{
+      	background: url(images/smistress/service-bg.png) center 0.3rem no-repeat;
+      	background-size: 6.5rem 10.58rem;
       	width: 100%;
-      	height: 2.6rem;
+      	height: 5.58rem;
+      	overflow: hidden;
       }
-      .smistress-example-main div img{
-      	width: 2.4rem;
-      	height: 2.14rem;
+      .smistress-service-main .chakan{
       	padding-top: .2rem;
-      }
-      .smistress-example-main div .wen1 h3{
-      	font-size: .28rem;
-      	padding-top: .2rem;
-      }
-      .smistress-example-main div .wen1 p{
-
-      	line-height: .35rem;
-      }
-      .smistress-example-main .top{
-      	border-bottom: 1px solid #B0E7D4;
-      }
-      .smistress-example-main .top img{
-      	float: left;
-      	padding-left: .1rem;
-      }
-      .smistress-example-main .top h3{
-      	margin-left: 2.7rem;
-      }
-      .smistress-example-main .top p{
-      	margin-left: 2.7rem;
-      	padding-right: .1rem;
-      }
-      .smistress-example-main .bottom{
-      	height: 2.8rem;
-      }
-      .smistress-example-main .bottom img{
-      	float: right;
-      	padding-right: .1rem;
-      	padding-top: .4rem;
-      }
-      .smistress-example-main .bottom h3{
-      	padding-left: .1rem;
-      	padding-top: .4rem;
-      }
-      .smistress-example-main .bottom p{
-      	padding-left: .1rem;
+      	padding-left: .6rem;
       }
     </style>
 
@@ -74,37 +33,10 @@
     <script src="js/swiper/swiper.js"   charset="utf-8"></script>
   </head>
   <body>
-    <div class="smistress-example-main">
-
-      <div class="top">
-  			<img src="images/smistress/example-pic01.png" />
-  			<div class="wen1">
-  				<h3>老公在外找小三，教你见招拆招</h3>
-  				<p>
-  					我其实隐约感觉到老公在外面有了人，但是苦于没有证据，老公每次回家都一副不耐烦
-  					的样子，如果不是还要在外人面前做做样子，恐怕他连这个家都不回了……
-  				</p>
-  				<p>
-  					<a href="##">查看更多>>></a>
-  				</p>
-  			</div>
-  		</div>
-
-  		<div class="bottom">
-  			<img src="images/smistress/example-pic02.png" />
-  			<div class="wen1">
-  				<h3>从恩爱夫妻到仇人，都是小三搞得鬼</h3>
-  				<p>
-  					我跟老公一直是朋友眼中的模范夫妻，但是心里苦不苦只有我自己知道。都是因为老公
-  					在办公室跟一个狐狸精看对了眼，从此我们在家里天天吵架，但是由于害怕外面的流言
-  					蜚语……
-  				</p>
-  				<p>
-  					<a href="##">查看更多>>></a>
-  				</p>
-  			</div>
-  		</div>
-
+    <div class="smistress-service-main">
+    	<div class="chakan">
+    		<p>查看更多>>></p>
+    	</div>
     </div>
 
     <script type="text/javascript">
@@ -122,24 +54,12 @@
           root_ele.style.fontSize = device_width / 7.5 + 'px';
         };
 
-
-        var configMap = {
-          item_normal : {
-            height : '0'
-          },
-          item_active : {
-            height : '1.8rem',
-            width : '5.26rem',
-            background : 'url(images/smarriage/method-bg.png) center center no-repeat',
-            backgroundSize : '100% 100%'
-          }
-        }
-
-
-      var mySwiper = new Swiper('.smistress-method-main .swiper-container', {
-        autoplay: 10000,                     // 禁止自动播放
-        pagination : '.swiper-pagination'    // 显示分页器
-      });
+        $(function(){
+        	$(".chakan").click(function(){
+        		$(".smistress-service-main").css({"height":"10.88rem","overflow":""});
+        		$(".chakan").hide();
+        	});
+        });
 
       }());
     </script>

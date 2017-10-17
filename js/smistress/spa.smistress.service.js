@@ -21,11 +21,37 @@ spa.smistress.service = (function () {
         + '<p class="spa-module-title-txt">能够提供的分离小三服务</p>'
         + '<span class="spa-module-title-line"></span>'
       +  '</div>'
+
+      + '<div class="smistress-service-main"></div>'
+      + '<div class="chakan"><p>查看更多>>></p></div>'
     },
-    initModule;
+    stateMap = { $service : null },
+    jqueryMap = {},
+    setJqueryMap, viewMore, initModule;
+
+  setJqueryMap = function () {
+    var $service = stateMap.$service;
+
+    jqueryMap = {
+      $service   : $service,
+      $main      : $service.find('.smistress-service-main'),
+      $check_btn : $service.find('.chakan')
+    };
+  };
+
+  viewMore = function () {
+    jqueryMap.$check_btn.click(function(){
+      jqueryMap.$main.animate({ height   : '10.88rem' }, 300);
+      jqueryMap.$check_btn.animate({ opacity : '0' });
+    });
+  };
 
   initModule = function ($service) {
+    stateMap.$service = $service;
     $service.html(configMap.main_html);
+
+    setJqueryMap();
+    viewMore();
   };
 
   return { initModule : initModule };
