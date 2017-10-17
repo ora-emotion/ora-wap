@@ -23,7 +23,7 @@ spa.clove = (function () {
         + '<div class="clove-advantage"></div>'
         + '<div class="clove-mentor"></div>'
         + '<div class="clove-instruction"></div>'
-        + '<div class="clove-step"></div>'
+        + '<div class="clove-progress"></div>'
     },
     stateMap = { $container : null, $clove : null },
     jqueryMap = {},
@@ -43,7 +43,7 @@ spa.clove = (function () {
       $advantage   : $clove.find('.clove-advantage'),
       $mentor      : $clove.find('.clove-mentor'),
       $instruction : $clove.find('.clove-instruction'),
-      $step        : $clove.find('.clove-step')
+      $progress        : $clove.find('.clove-progress')
     };
   };
 
@@ -61,7 +61,7 @@ spa.clove = (function () {
     spa.clove.advantage.initModule(jqueryMap.$advantage);
     spa.clove.mentor.initModule(jqueryMap.$mentor);
     spa.clove.instruction.initModule(jqueryMap.$instruction);
-    spa.clove.step.initModule(jqueryMap.$step);
+    spa.clove.progress.initModule(jqueryMap.$progress);
   };
 
   initModule = function ($container, $clove) {
