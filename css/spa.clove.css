@@ -26,4 +26,10 @@
 /* End : instruction - 用户须知 */
 
 /* Start : step - 服务流程 */
+.clove-progress-main {
+	background: url(../images/util/progress-bg.png) no-repeat center center;
+  background-size: 7.04rem 100%;
+  height: 7.67rem;
+  margin-top: .3rem;
+}
 /* End : step - 服务流程 */
