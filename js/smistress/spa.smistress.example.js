@@ -1,7 +1,7 @@
 /*
  * spa.smistress.example.js
  * Example module for Separate Mistress
- * 成功案例
+ * 分离小三 - 成功案例
 */
 
 /*jslint           browser : true,   continue : true,

@@ -1,7 +1,7 @@
 /*
  * spa.smistress.kind.js
  * Kind module for Separate Mistress
- * 擅长分离的小三类型
+ * 分离小三 - 擅长分离的小三类型
 */
 
 /*jslint           browser : true,   continue : true,

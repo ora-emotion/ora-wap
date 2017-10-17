@@ -1,7 +1,7 @@
 /*
  * spa.smistress.service.js
  * Service module for Separate Mistress
- * 能够提供的分离小三服务
+ * 分离小三 - 能够提供的分离小三服务
 */
 
 /*jslint           browser : true,   continue : true,

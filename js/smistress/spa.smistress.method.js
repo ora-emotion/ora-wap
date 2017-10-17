@@ -1,7 +1,7 @@
 /*
  * spa.smistress.method.js
  * Method module for Separate Mistress
- * 错误应对方式
+ * 分离小三 - 错误应对方式
 */
 
 /*jslint           browser : true,   continue : true,

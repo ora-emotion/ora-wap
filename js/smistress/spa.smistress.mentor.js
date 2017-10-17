@@ -1,7 +1,7 @@
 /*
  * spa.smistress.mentor.js
  * Mentor module for Separate Mistress
- * 导师团队
+ * 分离小三 - 导师团队
 */
 
 /*jslint           browser : true,   continue : true,

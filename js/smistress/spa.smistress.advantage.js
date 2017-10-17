@@ -1,7 +1,7 @@
 /*
  * spa.smistress.advantage.js
  * Advantage module for Separate Mistress
- * 橘子情感优势
+ * 分离小三 - 橘子情感优势
 */
 
 /*jslint           browser : true,   continue : true,

@@ -1,7 +1,7 @@
 /*
  * spa.smistress.progress.js
  * Progress module for Separate Mistress
- * 分离小三服务流程
+ * 分离小三 - 分离小三服务流程
 */
 
 /*jslint           browser : true,   continue : true,

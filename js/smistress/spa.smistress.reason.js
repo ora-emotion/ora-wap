@@ -1,7 +1,7 @@
 /*
  * spa.smistress.reason.js
  * Reason module for Separate Mistress
- * 出现第三者的原因
+ * 分离小三 - 出现第三者的原因
 */
 
 /*jslint           browser : true,   continue : true,
