@@ -53,10 +53,35 @@ spa.smistress.example = (function () {
         + '</div>'
       + '</div>'
     },
-    initModule;
+    stateMap = { $example : null },
+    jqueryMap = {},
+    setJqueryMap, onClickLink, initModule;
+
+  setJqueryMap = function () {
+    var $example = stateMap.$example;
+
+    jqueryMap = {
+      $example : $example,
+      $top     : $example.find('.top'),
+      $bottom  : $example.find('.bottom')
+    };
+  };
+
+  onClickLink = function () {
+    jqueryMap.$top.click(function () {
+      $.uriAnchor.setAnchor({ case : 'case_01' });
+    });
+    jqueryMap.$bottom.click(function () {
+      $.uriAnchor.setAnchor({ case : 'case_02' });
+    });
+  };
 
   initModule = function ($example) {
+    stateMap.$example = $example;
     $example.html(configMap.main_html);
+
+    setJqueryMap();
+    onClickLink();
   };
 
   return { initModule : initModule };
