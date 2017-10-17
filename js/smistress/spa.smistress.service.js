@@ -22,8 +22,8 @@ spa.smistress.service = (function () {
         + '<span class="spa-module-title-line"></span>'
       +  '</div>'
 
-      + '<div class="smistress-service-main"></div>'
-      + '<div class="chakan"><p>查看更多>>></p></div>'
+      // + '<div class="smistress-service-main"></div>'
+      // + '<div class="chakan"><p>查看更多>>></p></div>'
     },
     stateMap = { $service : null },
     jqueryMap = {},
