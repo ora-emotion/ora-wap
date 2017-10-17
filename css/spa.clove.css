@@ -17,6 +17,62 @@
 /* End : example - 成功案例 */
 
 /* Start : advantage - 橘子优势 */
+.clove-advantage-main {
+    background: #e1fef8;
+}
+.clove-advantage-main .split-line {
+    width: 100%;
+    height: .01rem;
+    background: #313131;
+}
+
+.clove-advantage-main .swiper-container .swiper-wrapper .swiper-slide {
+    display: flex;
+    justify-content: center;
+
+    padding: .3rem 0;
+}
+.clove-advantage-main .swiper-container .swiper-wrapper .swiper-slide .img {
+    width: 2.39rem;
+    height: 1.44rem;
+
+    padding-left: .13rem;
+}
+.clove-advantage-main .swiper-container .swiper-wrapper .swiper-slide .img img {
+
+    width: 100%;
+    height: 100%;
+}
+.clove-advantage-main .swiper-container .swiper-wrapper .swiper-slide .txt {
+    width: 4.06rem;
+
+    padding-left: .11rem;
+}
+.clove-advantage-main .swiper-container .swiper-wrapper .swiper-slide .txt p {
+    line-height: .4rem;
+}
+
+.clove-advantage-main .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: .18rem 0;
+}
+.clove-advantage-main .tabs span {
+    display: inline-block;
+    width: .17rem;
+    height: .17rem;
+    border-radius: 50%;
+
+    background: #78d8c5;
+}
+.clove-advantage-main .tabs span.active {
+    background: #4dbaa4;
+}
+.clove-advantage-main .tabs span {
+    margin: 0 5px;
+}
 /* End : advantage - 橘子优势 */
 
 /* Start : mentor - 导师团队 */
