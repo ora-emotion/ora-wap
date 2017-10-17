@@ -21,7 +21,7 @@ spa.clove.progress = (function () {
           + '<p class="spa-module-title-txt">服务流程</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
-        + '<div class="clove-progress-main"></div>'
+        // + '<div class="clove-progress-main"></div>'
     },
     initModule;
 
