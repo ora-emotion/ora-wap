@@ -1,0 +1,156 @@
+/*
+ * spa.clove.css
+ * Customize Love namespace styles
+ * 定制爱情样式表
+*/
+
+/* Start : reason - 单身原因 */
+/* End : reason - 单身原因 */
+
+/* Start : consequence - 错误做法导致后果 */
+/* End : consequence - 错误做法导致后果 */
+
+/* Start : customize - 橘子情感定制服务 */
+/* End : customize - 橘子情感定制服务 */
+
+/* Start : example - 成功案例 */
+/* End : example - 成功案例 */
+
+/* Start : advantage - 橘子优势 */
+.clove-advantage-main {
+    background: #e1fef8;
+}
+.clove-advantage-main .split-line {
+    width: 100%;
+    height: .01rem;
+    background: #313131;
+}
+
+.clove-advantage-main .swiper-container .swiper-wrapper .swiper-slide {
+    display: flex;
+    justify-content: center;
+
+    padding: .3rem 0;
+}
+.clove-advantage-main .swiper-container .swiper-wrapper .swiper-slide .img {
+    width: 2.39rem;
+    height: 1.44rem;
+
+    padding-left: .13rem;
+}
+.clove-advantage-main .swiper-container .swiper-wrapper .swiper-slide .img img {
+
+    width: 100%;
+    height: 100%;
+}
+.clove-advantage-main .swiper-container .swiper-wrapper .swiper-slide .txt {
+    width: 4.06rem;
+
+    padding-left: .11rem;
+}
+.clove-advantage-main .swiper-container .swiper-wrapper .swiper-slide .txt p {
+    line-height: .4rem;
+}
+
+.clove-advantage-main .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: .18rem 0;
+}
+.clove-advantage-main .tabs span {
+    display: inline-block;
+    width: .17rem;
+    height: .17rem;
+    border-radius: 50%;
+
+    background: #78d8c5;
+}
+.clove-advantage-main .tabs span.active {
+    background: #4dbaa4;
+}
+.clove-advantage-main .tabs span {
+    margin: 0 5px;
+}
+/* End : advantage - 橘子优势 */
+
+/* Start : mentor - 导师团队 */
+.clove-mentor-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.clove-mentor-main .item {
+    display: flex;
+    justify-content: flex-start;
+    padding: .18rem 0;
+}
+.clove-mentor-main .item img {
+    width: 2.07rem;
+    height: 2.74rem;
+}
+.clove-mentor-main .item .txt-group {
+    width: 4.2rem;
+    padding-left: .2rem;
+}
+.clove-mentor-main .item .txt-group p {
+    color: #202020;
+    line-height: .36rem;
+}
+.clove-mentor-main .item .txt-group .mentor-name {
+    font-weight: bold;
+    height: .36rem;
+    padding-top: .3rem;
+    padding-bottom: .05rem;
+}
+/* End : mentor - 导师团队 */
+
+/* Start : instruction - 用户须知 */
+.clove-instruction-main {
+		background: url("../images/clove/instruction-bg.png") no-repeat center center;
+		-webkit-background-size: cover;
+		background-size: cover;
+		width: 100%;
+		height: 3.74rem;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		padding: .15rem 0;
+}
+.clove-instruction-main .txt-para {
+		width: 6.6rem;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+
+		margin: 0 auto;
+}
+.clove-instruction-main .txt-para .icon {
+		display: inline-block;
+		width: .41rem;
+		height: .41rem;
+		background: url("../images/clove/instruction-icon.png") no-repeat left center;
+		-webkit-background-size: contain;
+		background-size: contain;
+}
+.clove-instruction-main .txt-para p {
+		color: #202020;
+		line-height: .36rem;
+		width: 100%;
+
+		padding-left: .15rem;
+}
+/* End : instruction - 用户须知 */
+
+/* Start : step - 服务流程 */
+.clove-progress-main {
+	background: url(../images/util/progress-bg.png) no-repeat center center;
+  background-size: 7.04rem 100%;
+  height: 7.67rem;
+  margin-top: .3rem;
+}
+/* End : step - 服务流程 */

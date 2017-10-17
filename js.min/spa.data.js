@@ -1,1 +1,0 @@
-spa.data={initModule:function(a){spa.data.new.initModule(a)}};
