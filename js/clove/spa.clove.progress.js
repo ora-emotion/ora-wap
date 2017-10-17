@@ -1,6 +1,6 @@
 /*
- * spa.clove.step.js
- * Instruction module for Customize Love
+ * spa.clove.progress.js
+ * Progress module for Customize Love
  * 定制爱情 - 服务流程
 */
 
@@ -12,7 +12,7 @@
 */
 /*global $, spa */
 
-spa.clove.step = (function () {
+spa.clove.progress = (function () {
   var
     configMap = {
       main_html : String()
@@ -21,11 +21,12 @@ spa.clove.step = (function () {
           + '<p class="spa-module-title-txt">服务流程</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
+        // + '<div class="clove-progress-main"></div>'
     },
     initModule;
 
-  initModule = function ($step) {
-    $step.html(configMap.main_html);
+  initModule = function ($progress) {
+    $progress.html(configMap.main_html);
   };
 
   return { initModule : initModule };

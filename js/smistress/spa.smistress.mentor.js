@@ -1,7 +1,7 @@
 /*
  * spa.smistress.mentor.js
  * Mentor module for Separate Mistress
- * 导师团队
+ * 分离小三 - 导师团队
 */
 
 /*jslint           browser : true,   continue : true,
@@ -21,6 +21,7 @@ spa.smistress.mentor = (function () {
         + '<p class="spa-module-title-txt">导师团队</p>'
         + '<span class="spa-module-title-line"></span>'
       +  '</div>'
+      // + '<div class="smistress-mentor-main"></div>'
     },
     initModule;
 

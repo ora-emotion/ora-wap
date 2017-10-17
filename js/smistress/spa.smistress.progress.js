@@ -1,7 +1,7 @@
 /*
  * spa.smistress.progress.js
  * Progress module for Separate Mistress
- * 分离小三服务流程
+ * 分离小三 - 分离小三服务流程
 */
 
 /*jslint           browser : true,   continue : true,
@@ -21,6 +21,7 @@ spa.smistress.progress = (function () {
         + '<p class="spa-module-title-txt">分离小三服务流程</p>'
         + '<span class="spa-module-title-line"></span>'
       +  '</div>'
+      // + '<div class="smistress-progress-main"></div>'
     },
     initModule;
 
