@@ -11,6 +11,53 @@
 /* End : consequence - 错误做法导致后果 */
 
 /* Start : customize - 橘子情感定制服务 */
+.clove-customize-main {
+    position: relative;
+    width: 100%;
+    height: 4.1rem;
+    overflow: hidden;
+}
+.clove-customize-main .column-line {
+    width: .02rem;
+    height: 7.4rem;
+    background: #fa3232;
+    position: absolute;
+    top: .12rem;
+    left: .64rem;
+}
+.clove-customize-main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+.clove-customize-main-content-item {
+    padding-left: .48rem;
+    padding-top: .05rem;
+    padding-bottom: .05rem;
+}
+.clove-customize-main-content-item .txt-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+    line-height: .43rem;
+    height: .43rem;
+}
+.clove-customize-main-content-item .txt-title p {
+    padding-left: .4rem;
+}
+.clove-customize-main-content-item .txt-des {
+    width: 5.78rem;
+    padding-left: .73rem;
+    line-height: .36rem;
+}
+.clove-customize .more {
+    padding-top: .3rem;
+    padding-left: 1.22rem;
+}
 /* End : customize - 橘子情感定制服务 */
 
 /* Start : example - 成功案例 */
