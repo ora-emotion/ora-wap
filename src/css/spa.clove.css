@@ -8,6 +8,72 @@
 /* End : reason - 单身原因 */
 
 /* Start : consequence - 错误做法导致后果 */
+.clove-consequence-main {
+    background: #e1e6fe;
+}
+.clove-consequence-main .split-line {
+    width: 100%;
+    height: .01rem;
+    background: #313131;
+}
+
+.clove-consequence-main .swiper-container .swiper-wrapper .swiper-slide {
+    width: 3.15rem;
+    display: flex;
+    justify-content: center;
+
+    padding: .3rem 0;
+}
+
+.clove-consequence-main .swiper-container .swiper-wrapper .swiper-slide .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 .3rem;
+}
+.clove-consequence-main .swiper-container .swiper-wrapper .swiper-slide .item .img {
+    width: 2.19rem;
+    height: 1.4rem;
+}
+.clove-consequence-main .swiper-container .swiper-wrapper .swiper-slide .item .img img {
+    width: 100%;
+}
+.clove-consequence-main .swiper-container .swiper-wrapper .swiper-slide .item .txt .title {
+    padding: .12rem 0;
+    font-weight: bold;
+    line-height: .36rem;
+    height: .36rem;
+    text-align: center;
+}
+.clove-consequence-main .swiper-container .swiper-wrapper .swiper-slide .item .txt .para {
+    width: 3.16rem;
+    line-height: .36rem;
+}
+
+.clove-consequence-main .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: .18rem 0;
+}
+.clove-consequence-main .tabs span {
+    display: inline-block;
+    width: .42rem;
+    height: .07rem;
+    border-radius: 10px;
+    margin: 0 .13rem;
+
+    background: #bbc4f4;
+}
+.clove-consequence-main .tabs span.active {
+    background: #8f9ce6;
+}
+.clove-consequence-main .tabs span {
+    margin: 0 5px;
+}
 /* End : consequence - 错误做法导致后果 */
 
 /* Start : customize - 橘子情感定制服务 */
