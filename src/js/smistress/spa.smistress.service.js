@@ -23,7 +23,10 @@ spa.smistress.service = (function () {
       +  '</div>'
 
       // + '<div class="smistress-service-main"></div>'
-      // + '<div class="chakan"><p>查看更多>>></p></div>'
+      // + '<div class="chakan"><p>查看更多>>></p></div>',
+
+      extend_height : '10.88rem',
+      extend_time   : 300
     },
     stateMap = { $service : null },
     jqueryMap = {},
@@ -41,8 +44,11 @@ spa.smistress.service = (function () {
 
   viewMore = function () {
     jqueryMap.$check_btn.click(function(){
-      jqueryMap.$main.animate({ height   : '10.88rem' }, 300);
-      jqueryMap.$check_btn.animate({ opacity : '0' });
+      jqueryMap.$main.animate(
+        { height   : configMap.extend_height },
+        configMap.extend_time
+      );
+      $(this).animate({ opacity : '0' });
     });
   };
 
