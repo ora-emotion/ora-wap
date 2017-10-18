@@ -5,6 +5,31 @@
 */
 
 /* Start : reason - 单身原因 */
+.clove-reason-main {
+    padding-top: .35rem;
+}
+.clove-reason-main .swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.clove-reason-main .swiper-container .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.clove-reason-main .swiper-container .swiper-slide .txt-title {
+    font-weight: bold;
+    line-height: .36rem;
+    height: .36rem;
+
+    padding-top: .15rem;
+    padding-bottom: .05rem;
+}
+.clove-reason-main .swiper-container .swiper-slide .txt-des {
+    width: 2.62rem;
+}
 /* End : reason - 单身原因 */
 
 /* Start : consequence - 错误做法导致后果 */
