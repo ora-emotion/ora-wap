@@ -67,18 +67,18 @@
 
 /* Start : method - 错误应对方式 */
 .smistress-method-main {
-    position: relative;
-    background: #D7E3F1;
-    padding-top: .32rem;
-    padding-bottom: .92rem;
-    height: 1.8rem;
+  position: relative;
+  background: #D7E3F1;
+  padding-top: .32rem;
+  padding-bottom: .92rem;
+  height: 1.8rem;
 }
 .smistress-method-main .swiper-container .swiper-wrapper .swiper-slide .item {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .smistress-method-main .swiper-container .swiper-wrapper .item h3{
   font-size: .28rem;
@@ -100,13 +100,13 @@
   right: 35%;
 }
 .smistress-method-main .swiper-pagination .swiper-pagination-bullet {
-    width: .17rem;
-    height: .17rem;
-    background: #96B2C9;
-    margin: 0 .05rem;
+  width: .17rem;
+  height: .17rem;
+  background: #96B2C9;
+  margin: 0 .05rem;
 }
 .smistress-method-main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: #6086A5;
+  background: #6086A5;
 }
 /* End : method - 错误应对方式 */
 

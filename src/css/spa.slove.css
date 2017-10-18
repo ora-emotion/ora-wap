@@ -18,120 +18,120 @@
 
 /* Start : sperate - 分手状态 - */
 .slove-separate-main {
-    background: #eaedf8;
+  background: #eaedf8;
 }
 .slove-separate-main .split-line {
-    width: 100%;
-    height: .01rem;
-    background: #313131;
+  width: 100%;
+  height: .01rem;
+  background: #313131;
 }
 .slove-separate-main .swiper-container .swiper-wrapper .swiper-slide {
-    display: flex;
-    justify-content: flex-start;
-    padding-top: .24rem;
-    padding-bottom: .27rem;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: .24rem;
+  padding-bottom: .27rem;
 }
 .slove-separate-main .swiper-container .swiper-wrapper .swiper-slide .img {
-    width: 2.62rem;
-    height: 1.93rem;
-    padding-left: .13rem;
+  width: 2.62rem;
+  height: 1.93rem;
+  padding-left: .13rem;
 }
 .slove-separate-main .swiper-container .swiper-wrapper .swiper-slide .img img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 .slove-separate-main .swiper-container .swiper-wrapper .swiper-slide .txt {
-    width: 4.46rem;
-    padding-left: .11rem;
+  width: 4.46rem;
+  padding-left: .11rem;
 }
 .slove-separate-main .swiper-container .swiper-wrapper .swiper-slide .txt p {
-    line-height: .4rem;
+  line-height: .4rem;
 }
 
 .slove-separate-main .tabs {
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: .11rem;
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: .11rem;
 }
 .slove-separate-main .tabs p {
-    height: .64rem;
-    line-height: .64rem;
-    color: #415580;
+  height: .64rem;
+  line-height: .64rem;
+  color: #415580;
 }
 .slove-separate-main .tabs p.active {
-    font-weight: bold;
+  font-weight: bold;
 }
 .slove-separate-main .tabs p:first-child {
-    padding-left: .335rem;
+  padding-left: .335rem;
 }
 .slove-separate-main .tabs p:last-child {
-    padding-right: .335rem;
+  padding-right: .335rem;
 }
 /* End : sperate - 分手状态 - */
 
 /* Start : wrong - 错误做法 */
 .slove-wrong-main {
-    position: relative;
-    background: #f9f9f9;
+  position: relative;
+  background: #f9f9f9;
 
-    padding-top: .32rem;
-    padding-bottom: .92rem;
+  padding-top: .32rem;
+  padding-bottom: .92rem;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide .item {
-    width: 1.6rem;
+  width: 1.6rem;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    padding: 0 .22rem;
+  padding: 0 .22rem;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide .item .icon {
-    width: 1.4rem;
-    height: 1.4rem;
+  width: 1.4rem;
+  height: 1.4rem;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(1) .icon {
-    background: url("../images/slove//wrong-icon01.png") no-repeat center center;
+  background: url("../images/slove//wrong-icon01.png") no-repeat center center;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(2) .icon {
-    background: url("../images/slove//wrong-icon02.png") no-repeat center center;
+  background: url("../images/slove//wrong-icon02.png") no-repeat center center;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(3) .icon {
-    background: url("../images/slove//wrong-icon03.png") no-repeat center center;
+  background: url("../images/slove//wrong-icon03.png") no-repeat center center;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:last-child .item:nth-child(1) .icon {
-    background: url("../images/slove//wrong-icon04.png") no-repeat center center;
+  background: url("../images/slove//wrong-icon04.png") no-repeat center center;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:last-child .item:nth-child(2) .icon {
-    background: url("../images/slove//wrong-icon05.png") no-repeat center center;
+  background: url("../images/slove//wrong-icon05.png") no-repeat center center;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:last-child .item:nth-child(3) .icon {
-    background: url("../images/slove//wrong-icon06.png") no-repeat center center;
+  background: url("../images/slove//wrong-icon06.png") no-repeat center center;
 }
 
 .slove-wrong-main .swiper-pagination {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    position: absolute;
-    bottom: .15rem;
-    left: 40%;
-    right: 40%;
+  position: absolute;
+  bottom: .15rem;
+  left: 40%;
+  right: 40%;
 }
 .slove-wrong-main .swiper-pagination .swiper-pagination-bullet {
-    width: .16rem;
-    height: .16rem;
-    background: #b8b8b8;
+  width: .16rem;
+  height: .16rem;
+  background: #b8b8b8;
 
-    margin: 0 .08rem;
+  margin: 0 .08rem;
 }
 .slove-wrong-main .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: #b1b1b1;
+  background: #b1b1b1;
 }
 /* End : wrong - 错误做法 */
 
