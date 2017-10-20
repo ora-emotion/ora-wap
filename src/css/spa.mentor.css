@@ -1,0 +1,52 @@
+/*
+ * spa.mentor.css
+ * Mentor mentor namespace styles
+ * 橘子情感首席导师
+*/
+
+/* Start : common styles - 本页面公共样式 */
+.mentor-para {
+  font-size: .26rem;
+  line-height: .36rem;
+  color: #333;
+  height: 100%;
+}
+.mentor-para-indent {
+  text-indent: .5rem;
+}
+/* End : common styles - 本页面公共样式 */
+
+/* Start : 专注卓越 */
+/* End : 专注卓越 */
+
+/* Start : 橘子情感导师团队 */
+/* End : 橘子情感导师团队 */
+
+/* Start : 橘子情感首席导师 */
+.mentor-tutor-main .swiper-container .swiper-wrapper .swiper-slide img {
+	width: 100%;
+}
+.mentor-tutor-main .swiper-container .swiper-button-prev,
+.mentor-tutor-main .swiper-container .swiper-button-next {
+	width: .32rem;
+	height: .54rem;
+}
+.mentor-tutor-main .swiper-container .swiper-button-prev {
+	background: url("../images/mentor/button-prev.png") no-repeat;
+}
+.mentor-tutor-main .swiper-container .swiper-button-next {
+	background: url("../images/mentor/button-next.png") no-repeat;
+}
+.mentor-tutor-main .swiper-container .swiper-pagination-bullet {
+  width: .2rem;
+	height: .2rem;
+	border-radius: .2rem;
+	background: rgba(0, 0, 0, .5);
+	margin: 0 .12rem;
+	transition: all 1s;
+}
+.mentor-tutor-main .swiper-container .swiper-pagination-bullet-active {
+	width: .5rem;
+	background: rgba(184, 185, 182, .7);
+}
+/* End : 橘子情感首席导师 */
