@@ -1,0 +1,26 @@
+{
+  "name": "ora-wap",
+  "version": "2.0.0",
+  "description": "移动端项目",
+  "main": "spa.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smpower/ora-wap.git"
+  },
+  "author": "jserweb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smpower/ora-wap/issues"
+  },
+  "homepage": "https://github.com/smpower/ora-wap#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-uglify": "^3.0.0",
+    "minify": "^3.0.2",
+    "pump": "^1.0.2"
+  }
+}
