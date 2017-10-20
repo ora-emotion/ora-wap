@@ -23,7 +23,8 @@ spa.smistress.service = (function () {
       +  '</div>'
 
       // + '<div class="smistress-service-main"></div>'
-      // + '<div class="chakan"><p>查看更多>>></p></div>',
+      // + '<div class="chakan"><p>查看更多>>></p></div>'
+      ,
 
       extend_height : '10.88rem',
       extend_time   : 300

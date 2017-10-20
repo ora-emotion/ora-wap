@@ -96,22 +96,22 @@
   height: 1.4rem;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(1) .icon {
-  background: url("../images/slove//wrong-icon01.png") no-repeat center center;
+  background: url("../images/slove/wrong-icon01.png") no-repeat center center;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(2) .icon {
-  background: url("../images/slove//wrong-icon02.png") no-repeat center center;
+  background: url("../images/slove/wrong-icon02.png") no-repeat center center;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:first-child .item:nth-child(3) .icon {
-  background: url("../images/slove//wrong-icon03.png") no-repeat center center;
+  background: url("../images/slove/wrong-icon03.png") no-repeat center center;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:last-child .item:nth-child(1) .icon {
-  background: url("../images/slove//wrong-icon04.png") no-repeat center center;
+  background: url("../images/slove/wrong-icon04.png") no-repeat center center;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:last-child .item:nth-child(2) .icon {
-  background: url("../images/slove//wrong-icon05.png") no-repeat center center;
+  background: url("../images/slove/wrong-icon05.png") no-repeat center center;
 }
 .slove-wrong-main .swiper-container .swiper-wrapper .swiper-slide:last-child .item:nth-child(3) .icon {
-  background: url("../images/slove//wrong-icon06.png") no-repeat center center;
+  background: url("../images/slove/wrong-icon06.png") no-repeat center center;
 }
 
 .slove-wrong-main .swiper-pagination {
