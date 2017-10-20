@@ -97,7 +97,7 @@ spa.clove.reason = (function () {
     $reason.html(configMap.main_html);
 
     setJqueryMap();
-    swiper();
+    // swiper();
   };
 
   return { initModule : initModule };
