@@ -16,14 +16,64 @@
         line-height: .36rem;
       }
 
-
+      .mentor-excellent-main {
+        padding: .2rem 0;
+        background: #E8F2FF;
+      }
+      .mentor-excellent-main-item {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: .1rem;
+      }
+      .mentor-excellent-main-item:nth-child(2) {
+        padding-top: .2rem;
+        padding-bottom: .2rem;
+      }
+      .mentor-excellent-main-item img {
+        width: 2.98rem;
+        height: 1.78rem;
+      }
+      .mentor-excellent-main-item-txt {
+        padding-left: .2rem;
+      }
     </style>
 
     <script src="js/jq/jquery-3.2.1.js" charset="utf-8"></script>
     <script src="js/swiper/swiper.js"   charset="utf-8"></script>
   </head>
   <body>
-      
+    <div class="mentor-excellent-main">
+      <div class="mentor-excellent-main-item">
+        <img src="images/mentor/excellent-pic01.png">
+        <div class="mentor-excellent-main-item-txt">
+          <p>专注</p>
+          <p>
+					  每一个学员的计划，都会经过责任导师组严谨全面的分析，集中讨论后，给出风险最小、效率最高的执行方案
+          </p>
+          <p>每位用户严谨对待</p>
+        </div>
+      </div>
+      <div class="mentor-excellent-main-item">
+        <img src="images/mentor/excellent-pic01.png">
+        <div class="mentor-excellent-main-item-txt">
+          <p>专业</p>
+          <p>
+					  每一位导师、助教，均为资深全职人员，高效指导学员用户。用户出现问题，将在第一时间得到完善解决
+          </p>
+          <p>内部理论系统研发</p>
+        </div>
+      </div>
+      <div class="mentor-excellent-main-item">
+        <img src="images/mentor/excellent-pic01.png">
+        <div class="mentor-excellent-main-item-txt">
+          <p>专心</p>
+          <p>
+					  在多年的执教，及实践指导中，导师团队不断根据经验，从两性心理角度出发，总结整理更多高效理论和方法
+          </p>
+          <p>高效的办公状态</p>
+        </div>
+      </div>
+    </div>
 
     <script type="text/javascript">
       fontAutomatic = (function () {
@@ -39,13 +89,6 @@
           device_width = root_ele.clientWidth;
           root_ele.style.fontSize = device_width / 7.5 + 'px';
         };
-
-        $(function(){
-        	$(".chakan").click(function(){
-        		$(".smistress-service-main").css({"height":"10.88rem","overflow":""});
-        		$(".chakan").hide();
-        	});
-        });
 
       }());
     </script>
