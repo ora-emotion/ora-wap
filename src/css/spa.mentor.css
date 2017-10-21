@@ -53,6 +53,19 @@
 /* End : 专注卓越 */
 
 /* Start : 橘子情感导师团队 */
+.mentor-team-main {
+  width: 100%;
+  height: 6.69rem;
+  background: url("../images/mentor/team-bg.png") no-repeat center center;
+  background-size: 100%;
+}
+.mentor-team-main {
+  padding: .2rem 0;
+}
+.mentor-team-main .team-para {
+  text-indent: .55rem;
+  padding: .2rem .4rem;
+}
 /* End : 橘子情感导师团队 */
 
 /* Start : 橘子情感首席导师 */
