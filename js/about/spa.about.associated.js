@@ -21,6 +21,9 @@ spa.about.associated = (function () {
           + '<p class="spa-module-title-txt">合作保障</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
+        + '<div class="about-associated-main">'
+          + '<div class="about-associated-main-bg"></div>'
+        + '</div>'
     },
     initModule;
 
