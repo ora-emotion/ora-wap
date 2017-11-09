@@ -21,6 +21,9 @@ spa.about.step = (function () {
           + '<p class="spa-module-title-txt">服务步骤内容</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
+        + '<div class="about-step-main">'
+          + '<div class="about-step-main-bg"></div>'
+        + '</div>'
     },
     initModule;
 
