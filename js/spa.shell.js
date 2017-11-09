@@ -144,6 +144,9 @@ spa.shell = (function () {
         case 'about_us' :           // 关于我们
           spa.about.initModule(jqueryMap.$container, jqueryMap.$main);
           break;
+        case 'book' :               // 嘉伟导师十本好书推荐
+          spa.book.initModule(jqueryMap.$container, jqueryMap.$main);
+          break;
         default:
           break;
       }

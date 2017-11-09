@@ -33,19 +33,19 @@ spa.forum = (function () {
                 + '<div class="swiper-wrapper">'
                   + '<div class="swiper-slide">'
                     + '<div class="item">'
-                      + '<a href="##"><img src="images/forum/swiper-pic01.png" alt="橘子情感" />'
+                      + '<a href="#!page=book"><img src="images/forum/swiper-pic01.png" alt="橘子情感" />'
                       + '</a>'
                     + '</div>'
                   + '</div>'
                   + '<div class="swiper-slide">'
                     + '<div class="item">'
-                      + '<a href="./spa.html#!case=case_02"><img src="images/forum/swiper-pic02.png" alt="橘子情感" />'
+                      + '<a href="#!case=case_31"><img src="images/forum/swiper-pic02.png" alt="橘子情感" />'
                       + '</a>'
                     + '</div>'
                   + '</div>'
                   + '<div class="swiper-slide">'
                     + '<div class="item">'
-                      + '<a href="##"><img src="images/forum/swiper-pic03.png" alt="橘子情感" />'
+                      + '<a href="#!case=case_32"><img src="images/forum/swiper-pic03.png" alt="橘子情感" />'
                       + '</a>'
                     + '</div>'
                   + '</div>'
@@ -56,7 +56,9 @@ spa.forum = (function () {
             // 页面上部分右侧内容
             + '<div class="forum-main-top-right">'
               + '<div class="forum-main-top-right-top">'
-                + '<img src="images/forum/save-plan.png" alt="橘子情感--挽爱计划" />'
+                + '<a href="#!page=service_intro">'
+                  + '<img src="images/forum/save-plan.png" alt="橘子情感--挽爱计划" />'
+                + '</a>'
               + '</div>'
               + '<div class="forum-main-top-right-bottom">'
                 + '<div class="biaoti">'
@@ -64,10 +66,10 @@ spa.forum = (function () {
                   + '<span>推荐干货</span>'
                 + '</div>'
                 + '<p>'
-                  + '<a href="##">如何跟女友复联</a>'
+                  + '<a href="#!case=case_30">如何跟女友复联</a>'
                 + '</p>'
                 + '<p>'
-                  + '<a href="##">如何赢取白富美</a>'
+                  + '<a href="#!case=case_26">如何赢取白富美</a>'
                 + '</p>'
               + '</div>'
             + '</div>'
@@ -325,6 +327,7 @@ spa.forum = (function () {
     jqueryMap = {
       $container  : $container,
       $forum      : $forum,
+      $slove      : $forum.find('.forum-main-top-right-top img'),
       $swiper_two : $forum.find('.swiper-slide:nth-child(2) img'),
       $anli_group : $forum.find('.anli-group'),
       $view_more  : $forum.find('.more')
@@ -357,14 +360,7 @@ spa.forum = (function () {
       e = event || window.event;
       target = e.target;
 
-      console.log(target);
-      console.log($(jqueryMap.$view_more)[0].className.toLowerCase());
-
       switch ($(target)[0].className) {
-        // 轮播图超链接
-        case $(jqueryMap.$swiper_two)[0].className :
-          $.uriAnchor.setAnchor({ case : 'case_31' });
-          break;
         // 查看更多
         case $(jqueryMap.$view_more)[0].className :
           jqueryMap.$anli_group.css({ height : '100%' });
