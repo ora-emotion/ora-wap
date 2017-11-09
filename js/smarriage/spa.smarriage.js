@@ -1,1 +1,81 @@
-spa.smarriage=function(){var a,e,i,r={main_html:String()+'<div class="smarriage-state"></div><div class="smarriage-reason"></div><div class="smarriage-advantage"></div><div class="smarriage-method"></div><div class="smarriage-kind"></div><div class="smarriage-service"></div><div class="smarriage-example"></div><div class="smarriage-mentor"></div><div class="smarriage-progress"></div>'},s={$container:null,$smarriage:null},n={};return a=function(){var a=s.$smarriage,e=s.$container;n={$container:e,$smarriage:a,$state:a.find(".smarriage-state"),$reason:a.find(".smarriage-reason"),$advantage:a.find(".smarriage-advantage"),$method:a.find(".smarriage-method"),$kind:a.find(".smarriage-kind"),$service:a.find(".smarriage-service"),$example:a.find(".smarriage-example"),$mentor:a.find(".smarriage-mentor"),$progress:a.find(".smarriage-progress")}},e=function(){var a=n.$container.find(".spa-preface img");$("title").text("橘子情感 - 挽救婚姻"),a.attr("src","images/smarriage/preface.png"),spa.smarriage.state.initModule(n.$state),spa.smarriage.reason.initModule(n.$reason),spa.smarriage.advantage.initModule(n.$advantage),spa.smarriage.method.initModule(n.$method),spa.smarriage.kind.initModule(n.$kind),spa.smarriage.service.initModule(n.$service),spa.smarriage.example.initModule(n.$container,n.$example),spa.smarriage.mentor.initModule(n.$mentor),spa.smarriage.progress.initModule(n.$progress)},i=function(i,n,t){s.$container=i,s.$smarriage=n,n.html(r.main_html),a(),e()},{initModule:i}}();
+/*
+ * spa.slove.js
+ * save marriage module for SPA
+ * 挽救婚姻
+*/
+
+/*jslint           browser : true,   continue : true,
+  devel  : true,    indent : 2,       maxerr  : 50,
+  newcap : true,     nomen : true,   plusplus : true,
+  regexp : true,    sloppy : true,       vars : false,
+  white  : true
+*/
+/*global $, spa */
+
+spa.smarriage = (function () {
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="smarriage-state"></div>'
+        + '<div class="smarriage-reason"></div>'
+        + '<div class="smarriage-advantage"></div>'
+        + '<div class="smarriage-method"></div>'
+        + '<div class="smarriage-kind"></div>'
+        + '<div class="smarriage-service"></div>'
+        + '<div class="smarriage-example"></div>'
+        + '<div class="smarriage-mentor"></div>'
+        + '<div class="smarriage-progress"></div>'
+    },
+    stateMap = { $container : null, $smarriage : null },
+    jqueryMap = {},
+    setJqueryMap, loadModule, initModule;
+
+  setJqueryMap = function () {
+    var
+      $smarriage = stateMap.$smarriage,
+      $container = stateMap.$container;
+
+    jqueryMap = {
+      $container : $container,
+      $smarriage : $smarriage,
+      $state     : $smarriage.find('.smarriage-state'),
+      $reason    : $smarriage.find('.smarriage-reason'),
+      $advantage : $smarriage.find('.smarriage-advantage'),
+      $method    : $smarriage.find('.smarriage-method'),
+      $kind      : $smarriage.find('.smarriage-kind'),
+      $service   : $smarriage.find('.smarriage-service'),
+      $example   : $smarriage.find('.smarriage-example'),
+      $mentor    : $smarriage.find('.smarriage-mentor'),
+      $progress  : $smarriage.find('.smarriage-progress')
+    };
+  };
+
+  loadModule = function () {
+    var preface_img = jqueryMap.$container.find('.spa-preface img');
+
+    $('title').text('橘子情感 - 挽救婚姻');
+    preface_img.attr('src', 'images/smarriage/preface.png');
+
+    // 加载模块
+    spa.smarriage.state.initModule(jqueryMap.$state);
+    spa.smarriage.reason.initModule(jqueryMap.$reason);
+    spa.smarriage.advantage.initModule(jqueryMap.$advantage);
+    spa.smarriage.method.initModule(jqueryMap.$method);
+    spa.smarriage.kind.initModule(jqueryMap.$kind);
+    spa.smarriage.service.initModule(jqueryMap.$service);
+    spa.smarriage.example.initModule(jqueryMap.$container, jqueryMap.$example);
+    spa.smarriage.mentor.initModule(jqueryMap.$mentor);
+    spa.smarriage.progress.initModule(jqueryMap.$progress);
+  };
+
+  initModule = function ($container, $smarriage, key_name_value) {
+    stateMap.$container = $container;
+    stateMap.$smarriage = $smarriage;
+    $smarriage.html(configMap.main_html);
+
+    setJqueryMap();
+    loadModule();
+  };
+
+  return { initModule : initModule };
+}());

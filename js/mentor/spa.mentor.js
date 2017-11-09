@@ -1,1 +1,63 @@
-spa.mentor=function(){var t,n,e,r={main_html:String()+'<div class="mentor-excellent"></div><div class="mentor-team"></div><div class="mentor-tutor"></div>'},i={$container:null,$mentor:null},o={};return t=function(){var t=i.$container,n=i.$mentor;o={$container:t,$mentor:n,$excellent:n.find(".mentor-excellent"),$team:n.find(".mentor-team"),$tutor:n.find(".mentor-tutor")}},n=function(){var t=o.$container.find(".spa-preface img");$("title").text("橘子情感 - 权威专家"),t.attr("src","images/mentor/preface.png"),spa.mentor.excellent.initModule(o.$excellent),spa.mentor.team.initModule(o.$team),spa.mentor.tutor.initModule(o.$tutor)},e=function(e,o){i.$container=e,i.$mentor=o,o.html(r.main_html),t(),n()},{initModule:e}}();
+/*
+ * spa.mentor.js
+ * mentor team module for SPA
+ * 权威专家
+*/
+
+/*jslint           browser : true,   continue : true,
+  devel  : true,    indent : 2,       maxerr  : 50,
+  newcap : true,     nomen : true,   plusplus : true,
+  regexp : true,    sloppy : true,       vars : false,
+  white  : true
+*/
+/*global $, spa */
+
+spa.mentor = (function () {
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="mentor-excellent"></div>'
+        + '<div class="mentor-team"></div>'
+        + '<div class="mentor-tutor"></div>'
+    },
+    stateMap = { $container : null, $mentor : null },
+    jqueryMap = {},
+    setJqueryMap, loadModule, initModule;
+
+  setJqueryMap = function () {
+    var
+      $container = stateMap.$container,
+      $mentor    = stateMap.$mentor;
+
+    jqueryMap = {
+      $container : $container,
+      $mentor    : $mentor,
+      $excellent : $mentor.find('.mentor-excellent'),
+      $team      : $mentor.find('.mentor-team'),
+      $tutor     : $mentor.find('.mentor-tutor')
+    };
+  };
+
+  loadModule = function () {
+    var preface_img = jqueryMap.$container.find('.spa-preface img');
+
+    $('title').text('橘子情感 - 权威专家');
+    preface_img.attr('src', 'images/mentor/preface.png');
+
+    // 加载模块
+    spa.mentor.excellent.initModule(jqueryMap.$excellent);
+    spa.mentor.team.initModule(jqueryMap.$team);
+    spa.mentor.tutor.initModule(jqueryMap.$tutor);
+  };
+
+  initModule = function ($container, $mentor) {
+    stateMap.$container = $container;
+    stateMap.$mentor    = $mentor;
+    $mentor.html(configMap.main_html);
+
+    setJqueryMap();
+    loadModule();
+  };
+
+  return { initModule : initModule };
+}());

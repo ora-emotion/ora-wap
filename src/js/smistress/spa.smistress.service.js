@@ -21,10 +21,8 @@ spa.smistress.service = (function () {
         + '<p class="spa-module-title-txt">能够提供的分离小三服务</p>'
         + '<span class="spa-module-title-line"></span>'
       +  '</div>'
-
-      // + '<div class="smistress-service-main"></div>'
-      // + '<div class="chakan"><p>查看更多>>></p></div>'
-      ,
+      + '<div class="smistress-service-main"></div>'
+      + '<div class="chakan"><p>查看更多>>></p></div>',
 
       extend_height : '10.88rem',
       extend_time   : 300
