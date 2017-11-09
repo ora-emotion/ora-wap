@@ -194,4 +194,10 @@
 /* End : 四大保障 */
 
 /* Start : 合作媒体 */
+.about-associated-main-bg {
+  background: url("../images/about/associated-bg.png") no-repeat center center;
+  width: 6.85rem;
+  height: 2.1rem;
+  margin: 0 auto;
+}
 /* End : 合作媒体 */
