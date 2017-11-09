@@ -170,6 +170,12 @@ p{
 /* End : 首席主导师 */
 
 /* Start : 服务步骤内容 */
+.service-step-main {
+	background: url(../images/util/progress-bg.png) no-repeat center center;
+  background-size: 7.04rem 100%;
+  height: 7.67rem;
+  margin-top: .3rem;
+}
 /* End : 服务步骤内容 */
 
 /* Start : 给您的保障 */

@@ -21,6 +21,7 @@ spa.service.step = (function () {
           + '<p class="spa-module-title-txt">服务步骤内容</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
+        + '<div class="service-step-main"></div>'
     },
     initModule;
 
