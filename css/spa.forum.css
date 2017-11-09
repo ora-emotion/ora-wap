@@ -52,7 +52,8 @@
 	width: 100%;
 	height: 60%;
 }
-.forum-main-top-right-top>img {
+.forum-main-top-right-top a,
+.forum-main-top-right-top img {
 	width: 100%;
 	height: 100%;
 }
