@@ -1,0 +1,61 @@
+/*
+ * spa.service.css
+ * Service Introduction namespace styles
+ * 服务介绍样式表
+*/
+
+
+/* Start : "挽爱计划"私人定制服务 */
+.service-customize-main {
+	width: 100%;
+}
+.service-customize-main-top {
+	width: 90%;
+	height: 1.1rem;
+	margin: 0 auto;
+}
+.service-customize-main-top p {
+	text-indent: .52rem;
+}
+.service-customize-main-bottom {
+	width: 90%;
+	height: 3.2rem;
+	margin: 0 auto;
+}
+.service-customize-main-bottom-group {
+	display: flex;
+	justify-content: space-around;
+}
+.service-customize-main-bottom-group-item {
+	width: 1.3rem;
+}
+.service-customize-main-bottom-group-item p {
+	text-align: center;
+}
+.service-customize-main-bottom-group-item img {
+	padding-left: .2rem;
+	width: .85rem;
+	height: .85rem;
+}
+/* End : "挽爱计划"私人定制服务 */
+
+/* Start : 当今社会情感现状 */
+/* End : 当今社会情感现状 */
+
+/* Start : “挽爱计划”九维帮助服务体系 */
+/* End : “挽爱计划”九维帮助服务体系 */
+
+/* Start : 视频课程 */
+/* End : 视频课程 */
+
+/* Start : 橘子情感导师团队 */
+/* End : 橘子情感导师团队 */
+
+/* Start : 首席主导师 */
+/* End : 首席主导师 */
+
+/* Start : 服务步骤内容 */
+/* End : 服务步骤内容 */
+
+/* Start : 给您的保障 */
+/* End : 给您的保障 */
