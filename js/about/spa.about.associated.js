@@ -1,1 +1,31 @@
-spa.about.associated=function(){var t,a={main_html:String()+'<div class="spa-module-title"><span class="spa-module-title-line"></span><p class="spa-module-title-txt">合作保障</p><span class="spa-module-title-line"></span></div>'};return t=function(t){t.html(a.main_html)},{initModule:t}}();
+/*
+ * spa.about.associated.js
+ * Associated module for ABOUT
+ * 关于我们 - 合作媒体
+*/
+
+/*jslint           browser : true,   continue : true,
+  devel  : true,    indent : 2,       maxerr  : 50,
+  newcap : true,     nomen : true,   plusplus : true,
+  regexp : true,    sloppy : true,       vars : false,
+  white  : true
+*/
+/*global $, spa */
+
+spa.about.associated = (function () {
+  var
+    configMap = {
+      main_html : String()
+        + '<div class="spa-module-title">'
+          + '<span class="spa-module-title-line"></span>'
+          + '<p class="spa-module-title-txt">合作保障</p>'
+          + '<span class="spa-module-title-line"></span>'
+        +  '</div>'
+    },
+    initModule;
+
+  initModule = function ($associated) {
+    $associated.html(configMap.main_html);
+  };
+  return { initModule : initModule };
+}());

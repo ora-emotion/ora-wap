@@ -1,1 +1,157 @@
-.about-ora-main{background:url(../images/about/ora-bg.png) center center no-repeat;width:100%;height:6.36rem;background-size:cover;position:relative}.about-ora-main .para{line-height:.36rem;position:absolute;text-indent:.52rem}.about-ora-main .para:first-child{top:0;right:0;width:3.28rem;padding-top:.26rem;padding-right:.24rem}.about-ora-main .para:last-child{bottom:-.1rem;padding:0 .24rem .26rem}
+/*
+ * spa.about.css
+ * About Us namespace styles
+ * 关于我们样式表
+*/
+
+.text-right {
+  text-align: right;
+}
+
+/* Start : 橘子情感 */
+.about-ora-main {
+  background: url("../images/about/ora-bg.png") no-repeat center center;
+  width: 100%;
+  height: 6.36rem;
+  background-size: cover;
+  position: relative;
+}
+.about-ora-main .para {
+  line-height: .36rem;
+  position: absolute;
+  text-indent: .52rem;
+}
+.about-ora-main .para:first-child {
+  top: 0;
+  right: 0;
+  width: 3.28rem;
+  padding-top: .26rem;
+  padding-right: .24rem;
+}
+.about-ora-main .para:last-child {
+  bottom: -.1rem;
+  padding: 0 .24rem .26rem;
+}
+/* End : 橘子情感 */
+
+/* Start : 橘子情感发展历程 */
+.about-history-main {
+  padding-top: .2rem;
+}
+.about-history-main-content {
+  display: flex;
+  justify-content: center;
+}
+
+.about-history-main-content .mid.bg {
+  padding-top: .1rem;
+  width: .38rem;
+  height: 16.76rem;
+  background: url("../images/about/history-icon03.png") no-repeat center center;
+  background-size: cover;
+}
+
+.about-history-main-content .left,
+.about-history-main-content .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-history-main-content .left .item,
+.about-history-main-content .right .item {
+  position: relative;
+}
+.about-history-main-content .left .item {
+  right: -.05rem;
+}
+  .about-history-main-content .left .item:first-child {
+    top: .9rem;
+  }
+  .about-history-main-content .left .item:nth-child(2) {
+    top: .5rem;
+  }
+  .about-history-main-content .left .item:last-child {
+    top: .15rem;
+  }
+.about-history-main-content .right .item {
+  left: -.4rem;
+}
+  .about-history-main-content .right .item:first-child {
+    top: -.15rem;
+  }
+  .about-history-main-content .right .item:nth-child(2) {
+    bottom: .7rem;
+  }
+  .about-history-main-content .right .item:last-child {
+    bottom: 1.26rem;
+  }
+
+.about-history-main-content .left .item .txt-group,
+.about-history-main-content .right .item .txt-group {
+  width: 2.98rem;
+}
+
+.about-history-main-content .left .item .txt-group .year .icon,
+.about-history-main-content .right .item .txt-group .year .icon {
+  display: inline-block;
+  width: .34rem;
+  background-size: 100%;
+  position: relative;
+  vertical-align: bottom;
+  top: .13rem;
+}
+
+.about-history-main-content .left .item .txt-group .year,
+.about-history-main-content .right .item .txt-group .year {
+  line-height: .41rem;
+  height: .41rem;
+  font-weight: bold;
+  color: #333333;
+}
+
+.about-history-main-content .left .item .txt-group .year .icon {
+  height: .41rem;
+  background: url("../images/about/history-icon01.png") no-repeat center center;
+}
+.about-history-main-content .right .item .txt-group .year .icon {
+  padding-right: .1rem;
+  height: .4rem;
+  background: url("../images/about/history-icon02.png") no-repeat center center;
+}
+
+.about-history-main-content .left img,
+.about-history-main-content .left .item .txt-group .para,
+.about-history-main-content .right img,
+.about-history-main-content .right .item .txt-group .para {
+  position: relative;
+}
+.about-history-main-content .left .item .txt-group .para,
+.about-history-main-content .left .item img {
+  right: .25rem;
+}
+.about-history-main-content .right .item .txt-group .para,
+.about-history-main-content .right .item img {
+  left: .4rem;
+}
+.about-history-main-content .left .item img,
+.about-history-main-content .right .item img {
+  width: 100%;
+  top: .1rem;
+}
+/* End : 橘子情感发展历程 */
+
+/* Start : 橘子环境 */
+/* End : 橘子环境 */
+
+/* Start : 橘子动态 */
+/* End : 橘子动态 */
+
+/* Start : 服务步骤内容 */
+/* End : 服务步骤内容 */
+
+/* Start : 四大保障 */
+/* End : 四大保障 */
+
+/* Start : 合作媒体 */
+/* End : 合作媒体 */
