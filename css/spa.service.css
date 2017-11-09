@@ -134,6 +134,36 @@ p{
 /* End : 视频课程 */
 
 /* Start : 橘子情感导师团队 */
+.service-mentor-main {
+	width: 100%;
+	height: 5.65rem;
+	position: relative;
+}
+.service-mentor-main .left {
+	width: 3.87rem;
+	height: 100%;
+	float: left;
+}
+.service-mentor-main .left img {
+	width: 100%;
+	height: 100%;
+}
+.service-mentor-main .right {
+	position: absolute;
+	width: 4.5rem;
+	top: .5rem;
+	left: 2.85rem;
+}
+.service-mentor-main .right p {
+	text-indent: .52rem;
+	line-height: .35rem;
+}
+.service-mentor-main .right .top {
+	margin: 0 auto;
+}
+.service-mentor-main .right .bottom {
+	margin: .3rem auto;
+}
 /* End : 橘子情感导师团队 */
 
 /* Start : 首席主导师 */
