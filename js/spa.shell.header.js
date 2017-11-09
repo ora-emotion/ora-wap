@@ -15,7 +15,7 @@ spa.shell.header = (function () {
   var
     configMap = {
       header_html : String()
-        + '<a href="./">'
+        + '<a href="spa.html">'
           + '<div class="spa-header-logo"></div>'
         + '</a>'
         + '<div class="spa-header-contact">'
