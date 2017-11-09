@@ -32,7 +32,7 @@ spa.shell.footer = (function () {
           + '</div>'
           + '<div class="spa-footer-column-address">'
             + '<p>地址：</p>'
-            + '<p>青岛市市南区银川西路67号动漫产业园A座212B</p>'
+            + '<p>青岛市市南区银川西路 67 号动漫产业园</p>'
           + '</div>'
           + '<div class="spa-footer-column-name">'
             + '<p></p>'
@@ -40,7 +40,7 @@ spa.shell.footer = (function () {
           + '</div>'
           + '<div class="spa-footer-column-record">'
             + '<p>备案号：</p>'
-            + '<p>鲁ICP备17023741号</p>'
+            + '<p>鲁 ICP 备 17023741 号</p>'
           + '</div>'
         + '</div>'
     },
