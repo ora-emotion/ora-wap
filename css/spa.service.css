@@ -77,6 +77,57 @@ p{
 /* End : 当今社会情感现状 */
 
 /* Start : “挽爱计划”九维帮助服务体系 */
+.service-system-main {
+	width: 100%;
+	background-color: #F9F9F9;
+}
+.service-system-main-top {
+	width: 90%;
+	margin: 0 auto;
+	padding-top: .2rem;
+}
+.service-system-main-top-text p {
+	text-indent: .52rem;
+}
+.service-system-main-top-icons-group {
+	display: flex;
+	justify-content: space-around;
+	height: 2.1rem;
+	padding-top: .2rem;
+	width: 100%;
+}
+.service-system-main-top-icons-group-item {
+	width: 1.7rem;
+	height: 100%;
+}
+.service-system-main-top-icons-group-item img {
+	padding-left: .3rem;
+}
+.service-system-main-top-icons-group-item p {
+	text-align: center;
+}
+.service-system-main-mid {
+	width: 100%;
+	height: .1rem;
+	border-bottom: .03rem dashed #535353;
+}
+.service-system-main-bottom {
+	width: 90%;
+	margin: 0 auto;
+	padding-top: .3rem;
+}
+.service-system-main-bottom-item {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	height: 2rem;
+}
+.service-system-main-bottom-item .left {
+	width: 3.2rem;
+}
+.service-system-main-bottom-item .right {
+	padding-left: .2rem;
+}
 /* End : “挽爱计划”九维帮助服务体系 */
 
 /* Start : 视频课程 */
