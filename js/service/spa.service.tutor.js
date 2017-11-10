@@ -21,7 +21,7 @@ spa.service.tutor = (function () {
           + '<p class="spa-module-title-txt">首席主导师</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
-        + '<div class="main">'
+        + '<div class="service-tutor-main">'
           + '<div class="swiper-container">'
               + '<div class="swiper-wrapper">'
                 + '<div class="swiper-slide">'
