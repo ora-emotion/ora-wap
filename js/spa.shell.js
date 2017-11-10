@@ -151,6 +151,9 @@ spa.shell = (function () {
           break;
       }
     }
+    else if (key_name === 'video') {
+      console.log(key_name);
+    }
     else if (key_name === 'case') {
       spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
     }
@@ -179,6 +182,9 @@ spa.shell = (function () {
           checkAnchor(key_name);
           break;
         case 'page' :
+          checkAnchor(key_name);
+          break;
+        case 'video' :
           checkAnchor(key_name);
           break;
         case 'case' :
