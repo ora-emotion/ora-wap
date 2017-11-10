@@ -26,17 +26,17 @@ spa.about.dynamic = (function () {
             + '<div class="swiper-container">'
                 + '<div class="swiper-wrapper">'
                     + '<div class="swiper-slide">'
-                      + '<img src="images/about/dynamic-swiper-pic01.png">'
+                      + '<img class="swiper-slide-img" src="images/about/dynamic-swiper-pic01.png">'
                       + '<p class="swiper-slide-title">联合青岛大学举办分享讲座</p>'
                       + '<!-- <img src="images/about/dynamic-swiper-pic01.png"> -->'
                       + '<!-- <p class="swiper-slide-title">荣获杰出诚信企业称号</p> -->'
                     + '</div>'
                     + '<div class="swiper-slide">'
-                      + '<img src="images/about/dynamic-swiper-pic02.png">'
+                      + '<img class="swiper-slide-img" src="images/about/dynamic-swiper-pic02.png">'
                       + '<p class="swiper-slide-title">社会各界人士交流会</p>'
                     + '</div>'
                     + '<div class="swiper-slide">'
-                      + '<img src="images/about/dynamic-swiper-pic03.png">'
+                      + '<img class="swiper-slide-img" src="images/about/dynamic-swiper-pic03.png">'
                       + '<p class="swiper-slide-title">凤凰网人物访谈</p>'
                     + '</div>'
                 + '</div>'
@@ -105,15 +105,18 @@ spa.about.dynamic = (function () {
     stateMap = { $dynamic : null },
     jqueryMap = {},
 
-    setJqueryMap, swiper, initModule;
+    setJqueryMap, swiper, onClick, initModule;
 
   setJqueryMap = function () {
     var $dynamic = stateMap.$dynamic;
 
     jqueryMap = {
-      $dynamic    : $dynamic,
-      $swiper     : $dynamic.find('.swiper-container'),
-      $pagination : $dynamic.find('.swiper-pagination')
+      $dynamic      : $dynamic,
+      $swiper       : $dynamic.find('.swiper-container'),
+      $pagination   : $dynamic.find('.swiper-pagination'),
+      $swiper_slide : $dynamic.find('.swiper-slide'),
+      $news_group   : $dynamic.find('.about-dynamic-main-bottom .top .item-group'),
+      $news_list    : $dynamic.find('.about-dynamic-main-bottom .bottom .item-group')
     };
   };
 
@@ -127,12 +130,142 @@ spa.about.dynamic = (function () {
     });
   };
 
+  onClick = function () {
+    $(document).click(function (e) {
+      var target, news_group, news_list;
+
+      e = event || window.event;
+      target = e.target;
+      $news_group = $('.about-dynamic-main-bottom .top .item-group');
+      $news_list  = $('.about-dynamic-main-bottom .bottom .item-group');
+
+      switch ( $(target)[0] ) {
+        // 联合青岛大学举办分享讲座
+        case $($('.swiper-slide')[0]).find('img')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_13' });
+          break;
+        case $($('.swiper-slide')[0]).find('.swiper-slide-title')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_13' });
+          break;
+
+        // 社会各界人士交流会
+        case $($('.swiper-slide')[1]).find('img')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_09' });
+          break;
+        case $($('.swiper-slide')[1]).find('.swiper-slide-title')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_09' });
+          break;
+
+        // 凤凰网人物访谈
+        case $($('.swiper-slide')[2]).find('img')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_12' });
+          break;
+        case $($('.swiper-slide')[2]).find('.swiper-slide-title')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_12' });
+          break;
+
+        // 第六届情感导师行业交流指导会
+        case $($news_group[0]).find('.item:first-child')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_01' });
+          break;
+        case $($news_group[0]).find('.item:first-child .item-img')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_01' });
+          break;
+        case $($news_group[0]).find('.item:first-child p')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_01' });
+          break;
+        case $($news_group[0]).find('.item:first-child p')[1] :
+          $.uriAnchor.setAnchor({ news : 'new_01' });
+          break;
+
+        // 橘子情感联合山东省创业中心举办中俄新兴行业交流会
+        case $($news_group[0]).find('.item:last-child')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_14' });
+          break;
+        case $($news_group[0]).find('.item:last-child .item-img')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_14' });
+          break;
+        case $($news_group[0]).find('.item:last-child p')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_14' });
+          break;
+        case $($news_group[0]).find('.item:last-child p')[1] :
+          $.uriAnchor.setAnchor({ news : 'new_14' });
+          break;
+
+        // 橘子情感，行业导师培植计划
+        case $($news_group[1]).find('.item:first-child')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_05' });
+          break;
+        case $($news_group[1]).find('.item:first-child .item-img')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_05' });
+          break;
+        case $($news_group[1]).find('.item:first-child p')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_05' });
+          break;
+        case $($news_group[1]).find('.item:first-child p')[1] :
+          $.uriAnchor.setAnchor({ news : 'new_05' });
+          break;
+
+        // “暖爱计划”婚恋知识公益讲座
+        case $($news_group[1]).find('.item:last-child')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_06' });
+          break;
+        case $($news_group[1]).find('.item:last-child .item-img')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_06' });
+          break;
+        case $($news_group[1]).find('.item:last-child p')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_06' });
+          break;
+        case $($news_group[1]).find('.item:last-child p')[1] :
+          $.uriAnchor.setAnchor({ news : 'new_06' });
+          break;
+
+        // 客户远道而来，送来锦旗向导师团队致谢
+        case $($news_list[0]).find('.item:first-child')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_07' });
+          break;
+        case $($news_list[0]).find('.item:first-child .item-title')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_07' });
+          break;
+        case $($news_list[0]).find('.item:first-child .item-link')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_07' });
+          break;
+
+        // 正确恋爱观讲座
+        case $($news_list[0]).find('.item:nth-child(2)')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_08' });
+          break;
+        case $($news_list[0]).find('.item:nth-child(2) .item-title')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_08' });
+          break;
+        case $($news_list[0]).find('.item:nth-child(2) .item-link')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_08' });
+          break;
+
+        // 团队理论研发
+        case $($news_list[0]).find('.item:last-child')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_14' });
+          break;
+        case $($news_list[0]).find('.item:last-child .item-title')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_14' });
+          break;
+        case $($news_list[0]).find('.item:last-child .item-link')[0] :
+          $.uriAnchor.setAnchor({ news : 'new_14' });
+          break;
+
+        default:
+          break;
+      }
+    });
+  };
+
   initModule = function ($dynamic) {
     stateMap.$dynamic = $dynamic;
     $dynamic.html(configMap.main_html);
 
     setJqueryMap();
     swiper();
+    onClick();
   };
   return { initModule : initModule };
 }());
