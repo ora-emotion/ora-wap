@@ -21,11 +21,69 @@ spa.service.tutor = (function () {
           + '<p class="spa-module-title-txt">首席主导师</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
+        + '<div class="main">'
+          + '<div class="swiper-container">'
+              + '<div class="swiper-wrapper">'
+                + '<div class="swiper-slide">'
+                  + '<div>'
+                    + '<img src="images/service/tutor-jiawei.png" style="width: 4.72rem;height:2.81rem; padding-left: .2rem;" />'
+                  + '</div>'
+                + '</div>'
+                + '<div class="swiper-slide">'
+                  + '<div>'
+                    + '<img src="images/service/tutor-qianwu.png" style="width:4.72rem;height:2.81rem; padding-left: .2rem;" />'
+                  + '</div>'
+                + '</div>'
+                + '<div class="swiper-slide">'
+                  + '<div>'
+                    + '<img src="images/service/tutor-lujia.png" style="width:4.72rem;height:2.81rem; padding-left: .2rem;" />'
+                  + '</div>'
+                + '</div>'
+                + '<div class="swiper-slide">'
+                  + '<div>'
+                    + '<img src="images/service/tutor-asu.png" style="width:4.72rem;height:2.81rem; padding-left: .2rem;" />'
+                  + '</div>'
+                + '</div>'
+                + '<div class="swiper-slide">'
+                  + '<div>'
+                    + '<img src="images/service/tutor-haoyu.png" style="width:4.72rem;height:2.82rem; padding-left: .2rem;" />'
+                  + '</div>'
+                + '</div>'
+              + '</div>'
+            + '</div>'
+        + '</div>'
     },
-    initModule;
+    stateMap = { $tutor : null },
+    jqueryMap = {},
+
+    setJqueryMap, swiper, initModule;
+
+  setJqueryMap = function () {
+    var $tutor = stateMap.$tutor;
+    jqueryMap = {
+      $tutor  : $tutor,
+      $swiper : $tutor.find('.swiper-container')
+    };
+  };
+
+  // Start : swiper()
+  // des   : 轮播图，引入 swiper 插件
+  //
+  swiper = function () {
+    var mySwiper;
+
+    mySwiper = new Swiper(jqueryMap.$swiper, {
+      slidesPerView : 1.5
+    });
+  };
+  // End : swiper()
 
   initModule = function ($tutor) {
-    $tutor.html(configMap.main_html);
+    stateMap.$tutor = $tutor;
+    // $tutor.html(configMap.main_html);
+
+    setJqueryMap();
+    // swiper();
   };
 
   return { initModule : initModule };
