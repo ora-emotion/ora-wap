@@ -109,7 +109,7 @@ spa.service.course = (function () {
 
   initModule = function ($course) {
     stateMap.$course = $course;
-    $course.html(configMap.main_html);
+    // $course.html(configMap.main_html);
 
     setJqueryMap();
     loadVideo();
