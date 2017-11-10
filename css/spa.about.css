@@ -151,6 +151,118 @@
 /* End : 橘子环境 */
 
 /* Start : 橘子动态 */
+.about-dynamic-main-swiper .swiper-slide-title {
+  width: 470px;
+  text-align: center;
+  font-size: .26rem;
+  color: #2d2d2d;
+  height: .36rem;
+  line-height: .36rem;
+  position: relative;
+  top: -.15rem;
+}
+.about-dynamic-main-swiper .swiper-pagination.swiper-pagination-bullets {
+  bottom: .4rem;
+  height: .6rem;
+}
+.about-dynamic-main-swiper .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: .3;
+  position: relative;
+  top: -.6rem;
+}
+.about-dynamic-main-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: .8;
+}
+.about-dynamic-main-bottom {
+  width: 100%;
+}
+.about-dynamic-main-bottom .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: .22rem;
+}
+.about-dynamic-main-bottom .top .item-group {
+  display: flex;
+  justify-content: space-between;
+  margin: .11rem 0;
+  padding: 0 .21rem;
+}
+.about-dynamic-main-bottom .top .item-group .item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-dynamic-main-bottom .top .item-group .item .item-img {
+  width: 3.45rem;
+  height: 2.16rem;
+  color: #333333;
+}
+.about-dynamic-main-bottom .top .item-group .item .item-title {
+  width: 3.14rem;
+  font-size: .26rem;
+  line-height: .36rem;
+  padding-top: .08rem;
+}
+.about-dynamic-main-bottom .top .item-group .item .item-link {
+  width: 100%;
+  height: .36rem;
+  line-height: .36rem;
+  padding-top: .05rem;
+  padding-right: .02rem;
+  text-align: right;
+  font-size: .22rem;
+  color: #919191;
+  float: right;
+}
+.about-dynamic-main-bottom .bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #f8f8f8;
+  padding-top: .18rem;
+  padding-bottom: .08rem;  /* 添加新闻后，删除该语句 */
+}
+.about-dynamic-main-bottom .bottom .item-group .item {
+  display: none;
+}
+.about-dynamic-main-bottom .bottom .item-group .item.active {
+  display: block;
+  padding: 0 .17rem;
+  display: flex;
+  justify-content: space-between;
+  height: .52rem;
+  line-height: .52rem;
+}
+.about-dynamic-main-bottom .bottom .item-group .item .item-title {
+  font-size: .26rem;
+  color: #333;
+  width: 5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.about-dynamic-main-bottom .bottom .item-group .item .item-link {
+  font-size: .22rem;
+  color: #919191;
+  padding-right: .04rem;
+}
+.about-dynamic-main-bottom .bottom .more {
+  display: inline-block;
+  width: 100%;
+  height: .6rem;
+  line-height: .6rem;
+  padding-bottom: .06rem;
+  color: #fd3232;
+  text-align: center;
+  font-size: .26rem;
+}
 /* End : 橘子动态 */
 
 /* Start : 服务步骤内容 */

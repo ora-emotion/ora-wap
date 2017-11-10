@@ -22,12 +22,15 @@ spa.data.news = (function () {
         new_04 : { title : '“暖爱计划”婚恋知识公益讲座报道' },
         new_05 : { title : '十大杰出诚信企业' },
         new_06 : { title : '青岛市市南区区长，亲临视察工作' },
-        new_07 : { title : '' },
-        new_08 : { title : '' },
-        new_09 : { title : '' },
-        new_10 : { title : '' },
-        new_11 : { title : '' },
-        new_12 : { title : '' }
+        new_07 : { title : 'xxx' },
+        new_08 : { title : 'xxx' },
+        new_09 : { title : 'xxx' },
+        new_10 : { title : 'xxx' },
+        new_11 : { title : 'xxx' },
+        new_12 : { title : 'xxx' },
+        new_13 : { title : 'xxx' },
+        new_14 : { title : 'xxx' },
+        new_15 : { title : 'xxx' }
       },
       new_01 : String()
         + '<div class="module">'
@@ -90,7 +93,10 @@ spa.data.news = (function () {
       new_09 : String() + 'new_09',
       new_10 : String() + 'new_10',
       new_11 : String() + 'new_11',
-      new_12 : String() + 'new_12'
+      new_12 : String() + 'new_12',
+      new_13 : String() + 'new_13',
+      new_14 : String() + 'new_14',
+      new_15 : String() + 'new_15'
     },
     stateMap = { $container : null },
     jqueryMap = {},
