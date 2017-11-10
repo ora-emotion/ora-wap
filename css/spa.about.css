@@ -151,6 +151,32 @@
 /* End : 橘子环境 */
 
 /* Start : 橘子动态 */
+.about-dynamic-main-swiper .swiper-slide-title {
+  width: 470px;
+  text-align: center;
+  font-size: .26rem;
+  color: #2d2d2d;
+  height: .36rem;
+  line-height: .36rem;
+  position: relative;
+  top: -.15rem;
+}
+.about-dynamic-main-swiper .swiper-pagination.swiper-pagination-bullets {
+  bottom: .4rem;
+  height: .6rem;
+}
+.about-dynamic-main-swiper .swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: .3;
+  position: relative;
+  top: -.6rem;
+}
+.about-dynamic-main-swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  opacity: .8;
+}
 /* End : 橘子动态 */
 
 /* Start : 服务步骤内容 */
