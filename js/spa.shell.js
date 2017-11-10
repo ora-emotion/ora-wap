@@ -152,10 +152,10 @@ spa.shell = (function () {
       }
     }
     else if (key_name === 'video') {
-      console.log(key_name);
+      spa.video.initModule(jqueryMap.$main);
     }
     else if (key_name === 'case') {
-      spa.data.case.initModule(jqueryMap.$container, anchor_map[key_name]);
+      spa.data.case.initModule(jqueryMap.$main);
     }
 
     return false;

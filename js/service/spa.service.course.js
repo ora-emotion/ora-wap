@@ -79,6 +79,7 @@ spa.service.course = (function () {
     var $course = stateMap.$course;
 
     jqueryMap = {
+      $container  : $('#spa'),
       $course     : $course,
       $free_video : $course.find('.group:first-child'),
       $vip_video  : $course.find('.group:last-child')
@@ -89,11 +90,17 @@ spa.service.course = (function () {
     var $free_video = jqueryMap.$free_video;
 
     $free_video.click(function () {
-      console.log('ok');
+      $.uriAnchor.setAnchor({ video : 'free' });
     });
   };
 
-  vipVideo = function () {};
+  vipVideo = function () {
+    var $vip_video = jqueryMap.$vip_video;
+
+    $vip_video.click(function () {
+      $.uriAnchor.setAnchor({ video : 'vip' });
+    });
+  };
 
   loadVideo = function () {
     freeVideo();
