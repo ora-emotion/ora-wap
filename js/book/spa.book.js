@@ -175,7 +175,7 @@ spa.book = (function () {
   changePrefaceImg = function () {
     var preface_img = jqueryMap.$container.find('.spa-preface img');
 
-    $('title').text('橘子情感 - 定制爱情');
+    $('title').text('橘子情感 - 嘉伟导师十本好书推荐');
     preface_img.attr('src', 'images/books/preface.png');
   };
 
