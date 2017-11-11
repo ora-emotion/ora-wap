@@ -261,11 +261,11 @@ spa.about.dynamic = (function () {
 
   initModule = function ($dynamic) {
     stateMap.$dynamic = $dynamic;
-    $dynamic.html(configMap.main_html);
+    // $dynamic.html(configMap.main_html);
 
     setJqueryMap();
-    swiper();
-    onClick();
+    // swiper();
+    // onClick();
   };
   return { initModule : initModule };
 }());
