@@ -1,8 +1,9 @@
 CACHE MANIFEST
-# SPA Version 2.0.0.1
+# SPA Version 2.0.0.2
 # UPDATE TIME 2017.11.13
 # DETAILS
-#   1. 重构权威专家页面【橘子情感导师团队】模块;
+#   1. 重构权威专家页面【橘子情感导师团队】模块(静态内容);
+#   2. 重构服务介绍页面【服务步骤】模块(静态内容);
 
 
 ################################### C S S ######################################
@@ -99,38 +100,38 @@ js/clove/spa.clove.progress.js
 js/forum/spa.forum.js
 
 js/mentor/spa.mentor.js
-js/mentor/spa.mentor.excellent.js
+# js/mentor/spa.mentor.excellent.js
 js/mentor/spa.mentor.team.js
-js/mentor/spa.mentor.tutor.js
+# js/mentor/spa.mentor.tutor.js
 
 js/service/spa.service.js
-js/service/spa.service.customize.js
-js/service/spa.service.state.js
-js/service/spa.service.system.js
-js/service/spa.service.course.js
-js/service/spa.service.mentor.js
-js/service/spa.service.tutor.js
+# js/service/spa.service.customize.js
+# js/service/spa.service.state.js
+# js/service/spa.service.system.js
+# js/service/spa.service.course.js
+# js/service/spa.service.mentor.js
+# js/service/spa.service.tutor.js
 js/service/spa.service.step.js
-js/service/spa.service.guarantee.js
+# js/service/spa.service.guarantee.js
 
 js/about/spa.about.js
-js/about/spa.about.ora.js
-js/about/spa.about.history.js
-js/about/spa.about.environment.js
-js/about/spa.about.dynamic.js
-js/about/spa.about.step.js
-js/about/spa.about.guarantee.js
-js/about/spa.about.associated.js
+# js/about/spa.about.ora.js
+# js/about/spa.about.history.js
+# js/about/spa.about.environment.js
+# js/about/spa.about.dynamic.js
+# js/about/spa.about.step.js
+# js/about/spa.about.guarantee.js
+# js/about/spa.about.associated.js
 
 js/video/spa.video.js
-js/video/spa.video.free.js
-js/video/spa.video.vip.js
+# js/video/spa.video.free.js
+# js/video/spa.video.vip.js
 
-js/book/spa.book.js
+# js/book/spa.book.js
 
-js/spa.data.js
-js/spa.data.news.js
-js/spa.data.case.js
+# js/spa.data.js
+# js/spa.data.news.js
+# js/spa.data.case.js
 
 
 #################################### images ####################################
