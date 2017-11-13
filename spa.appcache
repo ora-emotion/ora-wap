@@ -4,6 +4,7 @@ CACHE MANIFEST
 # DETAILS
 #   1. 重构权威专家页面【橘子情感导师团队】模块(静态内容);
 #   2. 重构服务介绍页面【服务步骤】模块(静态内容);
+#   3. 重构权威专家页面【橘子情感首席导师】模块(轮播图);
 
 
 ################################### C S S ######################################
@@ -100,9 +101,9 @@ js/clove/spa.clove.progress.js
 js/forum/spa.forum.js
 
 js/mentor/spa.mentor.js
-# js/mentor/spa.mentor.excellent.js
+js/mentor/spa.mentor.excellent.js
 js/mentor/spa.mentor.team.js
-# js/mentor/spa.mentor.tutor.js
+js/mentor/spa.mentor.tutor.js
 
 js/service/spa.service.js
 # js/service/spa.service.customize.js
