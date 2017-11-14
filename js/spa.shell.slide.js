@@ -73,7 +73,7 @@ spa.shell.slide = (function () {
     },
     jqueryMap = {},
 
-  setJqueryMap, toggleSlide, onClickSlide, initModule;
+  setJqueryMap, toggleModal, toggleSlide, onClickSlide, initModule;
 
   setJqueryMap = function () {
     var $container = stateMap.$container;
@@ -82,11 +82,23 @@ spa.shell.slide = (function () {
       $container   : $container,
       $slide       : $container.find('.spa-slide'),
       $slide_list  : $container.find('.spa-slide-main'),
-      $slide_btn   : $container.find('.spa-slide-btn'),
-      $slide_modal : $container.find('.spa-slide-modal'),
       $btn_retract : $container.find('.spa-slide-btn-retract'),
       $btn_extend  : $container.find('.spa-slide-btn-extend')
     };
+  };
+
+  toggleModal = function (slide_state) {
+    var slide_modal;
+    slide_modal = document.createElement('div');
+    slide_modal.setAttribute('class', 'spa-slide-modal');
+
+    if (slide_state) {
+      $('.spa-slide-modal').animate({ opacity : 0 }, 150);
+      $('.spa-slide-modal').remove();
+    } else {
+      jqueryMap.$container.append($(slide_modal));
+      $('.spa-slide-modal').animate({ opacity : .5 }, 150);
+    }
   };
 
   toggleSlide = function (slide_state) {
@@ -101,6 +113,9 @@ spa.shell.slide = (function () {
 
       jqueryMap.$btn_retract.css({ display : 'inline-block' });
       jqueryMap.$btn_retract.animate({ opacity : 1 }, 150);
+
+      //
+      toggleModal(slide_state);
       return false;
     }
 
@@ -114,22 +129,28 @@ spa.shell.slide = (function () {
 
       jqueryMap.$btn_retract.animate({ opacity : 0 }, 150);
       jqueryMap.$btn_retract.css({ display : 'none' });
+
+      //
+      toggleModal(slide_state);
       return false;
     }
   };
 
   onClickSlide = function () {
-    jqueryMap.$slide.click(function (e) {
+    jqueryMap.$container.click(function (e) {
       var target;
 
       e = event || window.event;
       target = e.target;
 
       switch ( $(target)[0].className ) {
-        case 'spa-slide-btn-extend' :
+        case 'spa-slide-btn-extend' :   // 展开左侧导航
           toggleSlide(false);
           break;
-        case 'spa-slide-btn-retract' :
+        case 'spa-slide-btn-retract' :  // 收起左侧导航
+          toggleSlide(true);
+          break;
+        case 'spa-slide-modal' :        // 收起左侧导航
           toggleSlide(true);
           break;
         default:
