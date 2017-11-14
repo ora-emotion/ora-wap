@@ -80,10 +80,10 @@ spa.service.tutor = (function () {
 
   initModule = function ($tutor) {
     stateMap.$tutor = $tutor;
-    // $tutor.html(configMap.main_html);
+    $tutor.html(configMap.main_html);
 
     setJqueryMap();
-    // swiper();
+    swiper();
   };
 
   return { initModule : initModule };
