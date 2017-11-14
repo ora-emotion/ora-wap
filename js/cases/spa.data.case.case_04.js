@@ -18,12 +18,7 @@ spa.data.case.case_04 = (function () {
       main_html : String()
       + '爱情破碎女人绝情离开，坏男人帮你复联挽回爱情！'
     },
-    stateMap = { $container : null },
-    jqueryMap,
-
-    setJqueryMap, initModule;
-
-  setJqueryMap = function () {};
+    initModule;
 
   initModule = (function () {
     $('.spa-main').html(configMap.main_html);
