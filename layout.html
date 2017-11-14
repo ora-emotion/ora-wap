@@ -16,42 +16,137 @@
     <link rel="stylesheet" href="css/spa.header.css">
     <link rel="stylesheet" href="css/spa.preface.css">
     <link rel="stylesheet" href="css/spa.footer.css">
+    <link rel="stylesheet" href="css/spa.slide.css">
     <link rel="stylesheet" href="css/spa.title.css">
 
     <style media="screen">
-      .service-modal-main {
-        position: fixed;
+      body {
+        background: gray;
+      }
+      a {
+        display: inline-block;
+        color: #616161;
+        font-size: .3rem;
+      }
+
+      .spa-slide {
+        position: absolute;
+        top: 0;
+        left: -5.2rem;
+        width: 5.89rem;
+        height: 100%;
+        background: transparent;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+      }
+      .spa-slide-main {
+        position: relative;
         top: .77rem;
-        left: 10%;
-        right: 10%;
-        width: 80%;
-        height: 500px;
+        left: 0;
+        width: 5.2rem;
+        height: 100%;
         background: #fff;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: .4rem;
+        overflow: hidden;
       }
-      .service-modal-main span {
+      .spa-slide-main-item {
+        width: 100%;
+        padding: .15rem 0;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .spa-slide-main-item-icon {
         display: inline-block;
-        font-size: .3rem;
-        height: 36px;
-        line-height: 36px;
-        padding-bottom: .2rem;
+        width: .62rem;
+        height: .57rem;
+        vertical-align: middle;
+        margin-left: .45rem;
       }
-      .service-modal-main input {
-        width: 80%;
-        height: .3rem;
-        line-height: .3rem;
+      .spa-slide-main-item-txt {
+        margin-left: .70rem;
       }
-      .service-modal-main-btn button {
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        background: #ddd;
-        font-size: .26rem;
-        padding: .1rem .3rem;
+      .spa-slide-main-item:nth-child(1) .spa-slide-main-item-icon {
+        background: url("images/slide/icon-home.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .spa-slide-main-item:nth-child(2) .spa-slide-main-item-icon {
+        background: url("images/slide/icon-slove.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .spa-slide-main-item:nth-child(3) .spa-slide-main-item-icon {
+        background: url("images/slide/icon-smarriage.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .spa-slide-main-item:nth-child(4) .spa-slide-main-item-icon {
+        background: url("images/slide/icon-smistress.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .spa-slide-main-item:nth-child(5) .spa-slide-main-item-icon {
+        background: url("images/slide/icon-clove.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .spa-slide-main-item:nth-child(6) .spa-slide-main-item-icon {
+        background: url("images/slide/icon-forum.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .spa-slide-main-item:nth-child(7) .spa-slide-main-item-icon {
+        background: url("images/slide/icon-mentor.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .spa-slide-main-item:nth-child(8) .spa-slide-main-item-icon {
+        background: url("images/slide/icon-service.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .spa-slide-main-item:nth-child(9) .spa-slide-main-item-icon {
+        background: url("images/slide/icon-about.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .spa-slide-main-btn span {
+        display: inline-block;
+        width: .3rem;
+        height: .5rem;
+        background: url("images/slide/btn-retract.png") no-repeat center center;
+        background-size: 100%;
+        vertical-align: middle;
+        position: relative;
+        top: 0;
+        left: 5rem;
+      }
+      .spa-slide-btn {
+        position: relative;
+        top: .77rem;
+        right: 0;
+        width: .69rem;
+        height: 100%;
+        background: transparent;
+      }
+      .spa-slide-btn-extend,
+      .spa-slide-btn-retract {
+        display: inline-block;
+      }
+      .spa-slide-btn-extend {
+        position: absolute;
+        right: 0;
+        bottom: 2.62rem;
+        width: 100%;
+        height: 1rem;
+        background: url("images/slide/btn-extend.png") no-repeat center center;
+        background-size: 100%;
+      }
+      .spa-slide-btn-retract {
+        width: .3rem;
+        height: .5rem;
+        position: absolute;
+        right: 1rem;
+        bottom: 2.86rem;
+        background: url("images/slide/btn-retract.png") no-repeat center center;
+        background-size: 100%;
+        display: none;
       }
     </style>
 
@@ -69,14 +164,59 @@
     <script src="js/spa.shell.preface.js"           charset="utf-8"></script>
     <script src="js/spa.shell.footer.js"            charset="utf-8"></script>
 
+    <script src="js/spa.shell.slide.js"             charset="utf-8"></script>
+
+    <script type="text/javascript">
+      $(function () {
+        spa.shell.slide.initModule( $('.spa-slide') );
+      });
+    </script>
+
   </head>
   <body>
-    <div class="service-modal-main">
-      <span>请输入密码</span>
-      <input type="password" name="" value="">
-      <div class="service-modal-main-btn">
-        <button type="button" name="button">确定</button>
-        <button type="button" name="button">取消</button>
+    <div class="spa-slide">
+      <div class="spa-slide-main">
+        <a class="spa-slide-main-item" href="./spa.html">
+          <span class=>
+          <span class="spa-slide-main-item-icon"></span>
+          <span class="spa-slide-main-item-txt">返回首页</span>
+        </a>
+        <a class="spa-slide-main-item" href="./spa.html#!page=save_love">
+          <span class="spa-slide-main-item-icon"></span>
+          <span class="spa-slide-main-item-txt">挽回爱情</span>
+        </a>
+        <a class="spa-slide-main-item" href="./spa.html#!page=save_marriage">
+          <span class="spa-slide-main-item-icon"></span>
+          <span class="spa-slide-main-item-txt">挽救婚姻</span>
+        </a>
+        <a class="spa-slide-main-item" href="./spa.html#!page=separate_mistress">
+          <span class="spa-slide-main-item-icon"></span>
+          <span class="spa-slide-main-item-txt">分离小三</span>
+        </a>
+        <a class="spa-slide-main-item" href="./spa.html#!page=custom_love">
+          <span class="spa-slide-main-item-icon"></span>
+          <span class="spa-slide-main-item-txt">定制爱情</span>
+        </a>
+        <a class="spa-slide-main-item" href="./spa.html#!page=emotion_forum">
+          <span class="spa-slide-main-item-icon"></span>
+          <span class="spa-slide-main-item-txt">情感论坛</span>
+        </a>
+        <a class="spa-slide-main-item" href="./spa.html#!page=mentor_team">
+          <span class="spa-slide-main-item-icon"></span>
+          <span class="spa-slide-main-item-txt">权威专家</span>
+        </a>
+        <a class="spa-slide-main-item" href="./spa.html#!page=service_intro">
+          <span class="spa-slide-main-item-icon"></span>
+          <span class="spa-slide-main-item-txt">服务介绍</span>
+        </a>
+        <a class="spa-slide-main-item" href="./spa.html#!page=about_us">
+          <span class="spa-slide-main-item-icon"></span>
+          <span class="spa-slide-main-item-txt">关于我们</span>
+        </a>
+      </div>
+      <div class="spa-slide-btn">
+        <span class="spa-slide-btn-extend"></span>
+        <span class="spa-slide-btn-retract"></span>
       </div>
     </div>
 
@@ -94,7 +234,6 @@
           device_width = root_ele.clientWidth;
           root_ele.style.fontSize = device_width / 7.5 + 'px';
         };
-
       }());
     </script>
   </body>
