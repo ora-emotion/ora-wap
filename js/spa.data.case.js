@@ -247,7 +247,8 @@ spa.data.case = (function () {
         createScript(key_name_value, url);
 
         // update title
-        $('head title').text(configMap.title.case_01 + ' | 橘子情感干货案例 | 橘子情感');
+        $('head title')
+          .text(configMap.title[key_name_value] + ' | 橘子情感干货案例 | 橘子情感');
 
         // update keywords
 

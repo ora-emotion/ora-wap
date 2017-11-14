@@ -200,12 +200,7 @@ spa.data.case.case_02 = (function () {
       		+ '</h2>'
       	+ '</div>'
     },
-    stateMap = { $container : null },
-    jqueryMap,
-
-    setJqueryMap, initModule;
-
-  setJqueryMap = function () {};
+    initModule;
 
   initModule = (function () {
     $('.spa-main').html(configMap.main_html);
