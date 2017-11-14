@@ -119,7 +119,6 @@ spa.data.case = (function () {
       case_08 : String() + '干货案例 08',
       case_09 : String() + '干货案例 09',
       case_10 : String() + '干货案例 10',
-      case_10 : String() + '干货案例 10',
       case_11 : String() + '干货案例 11',
       case_12 : String() + '干货案例 12',
       case_13 : String() + '干货案例 13',
@@ -171,30 +170,32 @@ spa.data.case = (function () {
     };
   };
 
-  loadPage = function (key_name_value) {
+  loadPage = function () {
+    var anchor_map, key_name, key_name_value;
 
-    if (!configMap.hasOwnProperty(key_name_value)) {
-      $.uriAnchor.setAnchor({});
-      return false;
+    anchor_map = $.uriAnchor.makeAnchorMap();
+
+    KEYVAL:
+    for (key_name in anchor_map) {
+      if (anchor_map.hasOwnProperty(key_name)) {
+        if (key_name.indexOf('_') === 0) { continue KEYVAL; }
+
+        key_name_value = anchor_map[key_name];
+        // 动态更新 title
+        jqueryMap.$title
+          .text('橘子情感 - ' + configMap.case_info[key_name_value].title);
+        // 将对应内容更新到页面
+        jqueryMap.$container.html(configMap[key_name_value]);
+      }
     }
-
-    $.uriAnchor.setAnchor(configMap.case_anchor_map[key_name_value]);
-
-    jqueryMap.$title
-    .text('橘子情感 - ' + configMap.case_info[key_name_value].title);
-
-    $( document ).scrollTop( 0 );
-
-    jqueryMap.$case.html(configMap[key_name_value]);
-
     return false;
   };
 
-  initModule = function ($container, key_name_value) {
+  initModule = function ($container) {
     stateMap.$container = $container;
     setJqueryMap();
 
-    loadPage(key_name_value);
+    loadPage();
   };
 
   return { initModule : initModule };

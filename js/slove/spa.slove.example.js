@@ -67,7 +67,17 @@ spa.slove.example = (function () {
 
     jqueryMap.$case.click(function () {
       index = $(this).index() + 1;
-      spa.data.case.initModule(jqueryMap.$container, 'case_0' + index);
+
+      switch (index) {
+        case 1 :
+          $.uriAnchor.setAnchor({ case : 'case_43' });
+          break;
+        case 2 :
+          $.uriAnchor.setAnchor({ case : 'case_42' });
+          break;
+        default:
+          break;
+      }
     });
   };
 
