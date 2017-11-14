@@ -6,6 +6,7 @@ CACHE MANIFEST
 #   2. 重构服务介绍页面【服务步骤】模块(静态内容);
 #   3. 重构权威专家页面【橘子情感首席导师】模块(轮播图);
 #   4. 重构服务介绍页面【给您的保障】模块(静态内容);
+#   5. 重构侧导航;
 
 
 ################################### C S S ######################################
@@ -14,23 +15,23 @@ CACHE MANIFEST
 css/swiper/swiper.min.css
 
 # our styles
-css/spa.css
-css/spa.shell.css
-css/spa.header.css
-css/spa.preface.css
-css/spa.footer.css
-css/spa.title.css
-css/spa.index.css
-css/spa.slove.css
-css/spa.smarriage.css
-css/spa.smistress.css
-css/spa.clove.css
-css/spa.forum.css
-css/spa.mentor.css
-css/spa.service.css
-css/spa.about.css
-css/spa.video.css
-css/spa.book.css
+# css/spa.css
+# css/spa.shell.css
+# css/spa.header.css
+# css/spa.preface.css
+# css/spa.footer.css
+# css/spa.title.css
+# css/spa.index.css
+# css/spa.slove.css
+# css/spa.smarriage.css
+# css/spa.smistress.css
+# css/spa.clove.css
+# css/spa.forum.css
+# css/spa.mentor.css
+# css/spa.service.css
+# css/spa.about.css
+# css/spa.video.css
+# css/spa.book.css
 
 
 ################################## JavaScript ##################################
@@ -39,12 +40,13 @@ js/jq/jquery-3.2.1.min.js
 js/jq/jquery.uriAnchor.js
 js/swiper/swiper.min.js
 # our javascript
-js/spa.js
-js/spa.shell.js
+# js/spa.js
+# js/spa.shell.js
 
-js/spa.shell.header.js
-js/spa.shell.preface.js
-js/spa.shell.footer.js
+# js/spa.shell.header.js
+# js/spa.shell.preface.js
+# js/spa.shell.footer.js
+# js/spa.shell.slide.js
 
 js/index/spa.index.js
 js/index/spa.index.nav.js
