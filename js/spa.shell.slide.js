@@ -82,6 +82,7 @@ spa.shell.slide = (function () {
       $container   : $container,
       $slide       : $container.find('.spa-slide'),
       $slide_list  : $container.find('.spa-slide-main'),
+      $slide_btn   : $container.find('.spa-slide-btn'),
       $btn_retract : $container.find('.spa-slide-btn-retract'),
       $btn_extend  : $container.find('.spa-slide-btn-extend')
     };
@@ -90,27 +91,27 @@ spa.shell.slide = (function () {
   toggleSlide = function (slide_state) {
     // 收起左侧导航
     if (!slide_state) {
-      jqueryMap.$slide.animate({ left : configMap.slide.retract_width });
-      jqueryMap.$slide_list.animate({ opacity : 1 });
+      jqueryMap.$slide.animate({ left : configMap.slide.retract_width }, 150);
+      jqueryMap.$slide_list.animate({ opacity : 1 }, 150);
 
-      jqueryMap.$btn_extend.animate({ opacity : 0 }, function () {
+      jqueryMap.$btn_extend.animate({ opacity : 0 }, 150, function () {
         jqueryMap.$btn_extend.css({ display : 'none' });
       });
 
       jqueryMap.$btn_retract.css({ display : 'inline-block' });
-      jqueryMap.$btn_retract.animate({ opacity : 1 });
+      jqueryMap.$btn_retract.animate({ opacity : 1 }, 150);
       return false;
     }
 
     // 展开左侧导航
     if (slide_state) {
-      jqueryMap.$slide.animate({ left : configMap.slide.extend_width });
-      jqueryMap.$slide_list.animate({ opacity : 0 });
+      jqueryMap.$slide.animate({ left : configMap.slide.extend_width }, 150);
+      jqueryMap.$slide_list.animate({ opacity : 0 }, 150);
 
       jqueryMap.$btn_extend.css({ display : 'inline-block' });
-      jqueryMap.$btn_extend.animate({ opacity : 1 });
+      jqueryMap.$btn_extend.animate({ opacity : 1 }, 150);
 
-      jqueryMap.$btn_retract.animate({ opacity : 0 });
+      jqueryMap.$btn_retract.animate({ opacity : 0 }, 150);
       jqueryMap.$btn_retract.css({ display : 'none' });
       return false;
     }
