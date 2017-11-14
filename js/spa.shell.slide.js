@@ -83,13 +83,14 @@ spa.shell.slide = (function () {
       $slide       : $container.find('.spa-slide'),
       $slide_list  : $container.find('.spa-slide-main'),
       $slide_btn   : $container.find('.spa-slide-btn'),
+      $slide_modal : $container.find('.spa-slide-modal'),
       $btn_retract : $container.find('.spa-slide-btn-retract'),
       $btn_extend  : $container.find('.spa-slide-btn-extend')
     };
   };
 
   toggleSlide = function (slide_state) {
-    // 收起左侧导航
+    // 展开左侧导航
     if (!slide_state) {
       jqueryMap.$slide.animate({ left : configMap.slide.retract_width }, 150);
       jqueryMap.$slide_list.animate({ opacity : 1 }, 150);
@@ -103,7 +104,7 @@ spa.shell.slide = (function () {
       return false;
     }
 
-    // 展开左侧导航
+    // 收起左侧导航
     if (slide_state) {
       jqueryMap.$slide.animate({ left : configMap.slide.extend_width }, 150);
       jqueryMap.$slide_list.animate({ opacity : 0 }, 150);
