@@ -128,6 +128,11 @@ p{
 .service-system-main-bottom-item .right {
 	padding-left: .2rem;
 }
+.service-system-main-bottom-item .right img {
+  padding-right: .1rem;
+  position: relative;
+  top: .03rem;
+}
 /* End : “挽爱计划”九维帮助服务体系 */
 
 /* Start : 视频课程 */

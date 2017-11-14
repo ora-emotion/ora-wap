@@ -213,8 +213,12 @@ spa.shell = (function () {
   //
   onHashchange = function () {
     var anchor_map = $.uriAnchor.makeAnchorMap();
+
     $(document).scrollTop(0);
     loadPage(anchor_map);
+
+    // 每当 URI 变化时，加载左侧导航
+    spa.shell.slide.toggleSlide(true);
   };
   // End : onHashchange()
 
@@ -230,6 +234,8 @@ spa.shell = (function () {
 
     // 加载首页主内容区域
     spa.index.initModule(jqueryMap.$main);
+    // 加载左侧导航
+    spa.shell.slide.initModule(jqueryMap.$container);
 
     $(window)
       .bind('hashchange', onHashchange)
