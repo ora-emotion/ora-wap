@@ -1,7 +1,7 @@
 /*
- * spa.data.case.case_03.js
+ * spa.data.case.case_13.js
  * case for data
- * 干货案例 03 - 爱情没了被拉黑怎么办？教你急速挽回的攻略
+ * 干货案例 04 - 感情疲惫、拉黑失联算什么？我照样挽回了她
 */
 
 /*jslint           browser : true,   continue : true,
@@ -12,14 +12,14 @@
 */
 /*global $, spa */
 
-spa.data.case.case_03 = (function () {
+spa.data.case.case_13 = (function () {
   var
     configMap = {
       main_html : String()
-      + '爱情没了被拉黑怎么办？教你急速挽回的攻略'
+      + '感情疲惫、拉黑失联算什么？我照样挽回了她'
     },
     initModule;
-  
+
   initModule = (function () {
     $('.spa-main').html(configMap.main_html);
   }());

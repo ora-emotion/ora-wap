@@ -1,7 +1,7 @@
 /*
- * spa.data.case.case_03.js
+ * spa.data.case.case_19.js
  * case for data
- * 干货案例 03 - 爱情没了被拉黑怎么办？教你急速挽回的攻略
+ * 干货案例 04 - 坏男人教你：没有追不到的女生，只有不会聊天的愣头青
 */
 
 /*jslint           browser : true,   continue : true,
@@ -12,14 +12,14 @@
 */
 /*global $, spa */
 
-spa.data.case.case_03 = (function () {
+spa.data.case.case_19 = (function () {
   var
     configMap = {
       main_html : String()
-      + '爱情没了被拉黑怎么办？教你急速挽回的攻略'
+      + '坏男人教你：没有追不到的女生，只有不会聊天的愣头青'
     },
     initModule;
-  
+
   initModule = (function () {
     $('.spa-main').html(configMap.main_html);
   }());

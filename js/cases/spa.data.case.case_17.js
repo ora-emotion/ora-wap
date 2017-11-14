@@ -1,7 +1,7 @@
 /*
- * spa.data.case.case_03.js
+ * spa.data.case.case_17.js
  * case for data
- * 干货案例 03 - 爱情没了被拉黑怎么办？教你急速挽回的攻略
+ * 干货案例 04 - 警惕婚姻中的几大离婚前兆，解决情感危机
 */
 
 /*jslint           browser : true,   continue : true,
@@ -12,14 +12,14 @@
 */
 /*global $, spa */
 
-spa.data.case.case_03 = (function () {
+spa.data.case.case_17 = (function () {
   var
     configMap = {
       main_html : String()
-      + '爱情没了被拉黑怎么办？教你急速挽回的攻略'
+      + '警惕婚姻中的几大离婚前兆，解决情感危机'
     },
     initModule;
-  
+
   initModule = (function () {
     $('.spa-main').html(configMap.main_html);
   }());

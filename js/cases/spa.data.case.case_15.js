@@ -1,7 +1,7 @@
 /*
- * spa.data.case.case_03.js
+ * spa.data.case.case_15.js
  * case for data
- * 干货案例 03 - 爱情没了被拉黑怎么办？教你急速挽回的攻略
+ * 干货案例 04 - 坏男人简单一招教你读懂女人，成功挽回爱情
 */
 
 /*jslint           browser : true,   continue : true,
@@ -12,14 +12,14 @@
 */
 /*global $, spa */
 
-spa.data.case.case_03 = (function () {
+spa.data.case.case_15 = (function () {
   var
     configMap = {
       main_html : String()
-      + '爱情没了被拉黑怎么办？教你急速挽回的攻略'
+      + '坏男人简单一招教你读懂女人，成功挽回爱情'
     },
     initModule;
-  
+
   initModule = (function () {
     $('.spa-main').html(configMap.main_html);
   }());

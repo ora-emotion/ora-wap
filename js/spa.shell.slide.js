@@ -73,7 +73,7 @@ spa.shell.slide = (function () {
     },
     jqueryMap = {},
 
-  setJqueryMap, toggleSlide, onClickSlide, initModule;
+  setJqueryMap, toggleModal, toggleSlide, onClickSlide, initModule;
 
   setJqueryMap = function () {
     var $container = stateMap.$container;
@@ -87,47 +87,70 @@ spa.shell.slide = (function () {
     };
   };
 
-  toggleSlide = function (slide_state) {
-    // 收起左侧导航
-    if (!slide_state) {
-      jqueryMap.$slide.animate({ left : configMap.slide.retract_width });
-      jqueryMap.$slide_list.animate({ opacity : 1 });
+  toggleModal = function (slide_state) {
+    var slide_modal;
+    slide_modal = document.createElement('div');
+    slide_modal.setAttribute('class', 'spa-slide-modal');
 
-      jqueryMap.$btn_extend.animate({ opacity : 0 }, function () {
+    if (slide_state) {
+      $('.spa-slide-modal').animate({ opacity : 0 }, 150);
+      $('.spa-slide-modal').remove();
+    } else {
+      jqueryMap.$container.append($(slide_modal));
+      $('.spa-slide-modal').animate({ opacity : .5 }, 150);
+    }
+  };
+
+  toggleSlide = function (slide_state) {
+    // 展开左侧导航
+    if (!slide_state) {
+      jqueryMap.$slide.animate({ left : configMap.slide.retract_width }, 150);
+      jqueryMap.$slide_list.animate({ opacity : 1 }, 150);
+
+      jqueryMap.$btn_extend.animate({ opacity : 0 }, 150, function () {
         jqueryMap.$btn_extend.css({ display : 'none' });
       });
 
       jqueryMap.$btn_retract.css({ display : 'inline-block' });
-      jqueryMap.$btn_retract.animate({ opacity : 1 });
+      jqueryMap.$btn_retract.animate({ opacity : 1 }, 150);
+
+      //
+      toggleModal(slide_state);
       return false;
     }
 
-    // 展开左侧导航
+    // 收起左侧导航
     if (slide_state) {
-      jqueryMap.$slide.animate({ left : configMap.slide.extend_width });
-      jqueryMap.$slide_list.animate({ opacity : 0 });
+      jqueryMap.$slide.animate({ left : configMap.slide.extend_width }, 150);
+      jqueryMap.$slide_list.animate({ opacity : 0 }, 150);
 
       jqueryMap.$btn_extend.css({ display : 'inline-block' });
-      jqueryMap.$btn_extend.animate({ opacity : 1 });
+      jqueryMap.$btn_extend.animate({ opacity : 1 }, 150);
 
-      jqueryMap.$btn_retract.animate({ opacity : 0 });
+      jqueryMap.$btn_retract.animate({ opacity : 0 }, 150);
       jqueryMap.$btn_retract.css({ display : 'none' });
+
+      //
+      toggleModal(slide_state);
       return false;
     }
   };
 
   onClickSlide = function () {
-    jqueryMap.$slide.click(function (e) {
+    jqueryMap.$container.click(function (e) {
       var target;
 
       e = event || window.event;
       target = e.target;
 
       switch ( $(target)[0].className ) {
-        case 'spa-slide-btn-extend' :
+        case 'spa-slide-btn-extend' :   // 展开左侧导航
           toggleSlide(false);
           break;
-        case 'spa-slide-btn-retract' :
+        case 'spa-slide-btn-retract' :  // 收起左侧导航
+          toggleSlide(true);
+          break;
+        case 'spa-slide-modal' :        // 收起左侧导航
           toggleSlide(true);
           break;
         default:
