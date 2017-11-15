@@ -1,7 +1,7 @@
 /*
- * spa.data.case.case_16.js
+ * spa.data.case.case_27.js
  * case for data
- * 干货案例 16 - 简直不敢相信，被拉黑的你这样做竟然让她重新爱上你
+ * 干货案例 27 - 情商低被拉黑分手，真实案例教你如何逆袭挽回爱情
 */
 
 /*jslint           browser : true,   continue : true,
@@ -12,11 +12,11 @@
 */
 /*global $, spa */
 
-spa.data.case.case_16 = (function () {
+spa.data.case.case_27 = (function () {
   var
     configMap = {
       main_html : String()
-      + '简直不敢相信，被拉黑的你这样做竟然让她重新爱上你'
+      + '情商低被拉黑分手，真实案例教你如何逆袭挽回爱情'
     },
     initModule;
 

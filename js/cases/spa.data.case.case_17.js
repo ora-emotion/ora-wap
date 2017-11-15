@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_17.js
  * case for data
- * 干货案例 04 - 警惕婚姻中的几大离婚前兆，解决情感危机
+ * 干货案例 17 - 警惕婚姻中的几大离婚前兆，解决情感危机
 */
 
 /*jslint           browser : true,   continue : true,

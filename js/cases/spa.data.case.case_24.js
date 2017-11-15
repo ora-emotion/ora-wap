@@ -1,7 +1,7 @@
 /*
- * spa.data.case.case_16.js
+ * spa.data.case.case_24.js
  * case for data
- * 干货案例 16 - 简直不敢相信，被拉黑的你这样做竟然让她重新爱上你
+ * 干货案例 24 - 女人说分手拉黑后给你机会，掌握攻略教你复联挽回爱情
 */
 
 /*jslint           browser : true,   continue : true,
@@ -12,11 +12,11 @@
 */
 /*global $, spa */
 
-spa.data.case.case_16 = (function () {
+spa.data.case.case_24 = (function () {
   var
     configMap = {
       main_html : String()
-      + '简直不敢相信，被拉黑的你这样做竟然让她重新爱上你'
+      + '女人说分手拉黑后给你机会，掌握攻略教你复联挽回爱情'
     },
     initModule;
 

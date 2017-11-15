@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_06.js
  * case for data
- * 干货案例 04 - 被拉黑该如何恢复联系？教你这几步，挽回爱情指日可待！
+ * 干货案例 06 - 被拉黑该如何恢复联系？教你这几步，挽回爱情指日可待！
 */
 
 /*jslint           browser : true,   continue : true,

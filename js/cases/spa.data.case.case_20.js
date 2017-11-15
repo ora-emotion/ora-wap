@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_20.js
  * case for data
- * 干货案例 04 - 男人做好这关键的四点，就能快速挽回她！
+ * 干货案例 20 - 男人做好这关键的四点，就能快速挽回她！
 */
 
 /*jslint           browser : true,   continue : true,

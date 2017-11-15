@@ -1,7 +1,7 @@
 /*
- * spa.data.case.case_16.js
+ * spa.data.case.case_21.js
  * case for data
- * 干货案例 16 - 简直不敢相信，被拉黑的你这样做竟然让她重新爱上你
+ * 干货案例 21 - 你被定义渣男，分手后被拉黑，你懂得怎么挽回女人吗？
 */
 
 /*jslint           browser : true,   continue : true,
@@ -12,11 +12,11 @@
 */
 /*global $, spa */
 
-spa.data.case.case_16 = (function () {
+spa.data.case.case_21 = (function () {
   var
     configMap = {
       main_html : String()
-      + '简直不敢相信，被拉黑的你这样做竟然让她重新爱上你'
+      + '你被定义渣男，分手后被拉黑，你懂得怎么挽回女人吗？'
     },
     initModule;
 

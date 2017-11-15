@@ -1,7 +1,7 @@
 /*
- * spa.data.case.case_16.js
+ * spa.data.case.case_30.js
  * case for data
- * 干货案例 16 - 简直不敢相信，被拉黑的你这样做竟然让她重新爱上你
+ * 干货案例 30 - 挽回攻略：如何跟女朋友复联进行二次吸引恢复爱情？
 */
 
 /*jslint           browser : true,   continue : true,
@@ -12,11 +12,11 @@
 */
 /*global $, spa */
 
-spa.data.case.case_16 = (function () {
+spa.data.case.case_30 = (function () {
   var
     configMap = {
       main_html : String()
-      + '简直不敢相信，被拉黑的你这样做竟然让她重新爱上你'
+      + '挽回攻略：如何跟女朋友复联进行二次吸引恢复爱情？'
     },
     initModule;
 

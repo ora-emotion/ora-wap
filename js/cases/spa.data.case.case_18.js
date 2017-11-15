@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_18.js
  * case for data
- * 干货案例 04 - 了解女人的爱情心理，分分钟破解拉黑复联成功，挽回爱情
+ * 干货案例 18 - 了解女人的爱情心理，分分钟破解拉黑复联成功，挽回爱情
 */
 
 /*jslint           browser : true,   continue : true,

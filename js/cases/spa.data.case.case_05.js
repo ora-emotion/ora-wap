@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_05.js
  * case for data
- * 干货案例 04 - 被拉黑不知如何复联？学会这两点，完美逆袭挽回爱情！
+ * 干货案例 05 - 被拉黑不知如何复联？学会这两点，完美逆袭挽回爱情！
 */
 
 /*jslint           browser : true,   continue : true,

@@ -114,7 +114,7 @@ spa.shell.slide = (function () {
       jqueryMap.$btn_retract.css({ display : 'inline-block' });
       jqueryMap.$btn_retract.animate({ opacity : 1 }, 150);
 
-      //
+      // 显示模态层
       toggleModal(slide_state);
       return false;
     }
@@ -130,7 +130,7 @@ spa.shell.slide = (function () {
       jqueryMap.$btn_retract.animate({ opacity : 0 }, 150);
       jqueryMap.$btn_retract.css({ display : 'none' });
 
-      //
+      // 隐藏模态层
       toggleModal(slide_state);
       return false;
     }

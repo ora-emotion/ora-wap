@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_09.js
  * case for data
- * 干货案例 04 - 读懂女生这四种行为，教你分分钟挽回他！
+ * 干货案例 09 - 读懂女生这四种行为，教你分分钟挽回他！
 */
 
 /*jslint           browser : true,   continue : true,

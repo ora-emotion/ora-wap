@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_15.js
  * case for data
- * 干货案例 04 - 坏男人简单一招教你读懂女人，成功挽回爱情
+ * 干货案例 15 - 坏男人简单一招教你读懂女人，成功挽回爱情
 */
 
 /*jslint           browser : true,   continue : true,
