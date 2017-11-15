@@ -445,7 +445,7 @@ spa.video.vip = (function () {
     onClick();
 
     // 移除页面顶部图片
-    jqueryMap.$preface.remove();
+    jqueryMap.$preface.hide();
   };
 
   return { initModule : initModule };
