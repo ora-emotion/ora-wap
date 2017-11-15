@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_12.js
  * case for data
- * 干货案例 04 - 夫妻冷战离婚，怎样挽回即将破碎的婚姻？
+ * 干货案例 12 - 夫妻冷战离婚，怎样挽回即将破碎的婚姻？
 */
 
 /*jslint           browser : true,   continue : true,

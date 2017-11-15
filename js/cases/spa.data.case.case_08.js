@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_08.js
  * case for data
- * 干货案例 04 - 不会应对女生的“废物测试”，活该你追不到她
+ * 干货案例 08 - 不会应对女生的“废物测试”，活该你追不到她
 */
 
 /*jslint           browser : true,   continue : true,

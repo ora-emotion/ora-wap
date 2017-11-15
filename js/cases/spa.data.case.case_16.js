@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_16.js
  * case for data
- * 干货案例 04 - 简直不敢相信，被拉黑的你这样做竟然让她重新爱上你
+ * 干货案例 16 - 简直不敢相信，被拉黑的你这样做竟然让她重新爱上你
 */
 
 /*jslint           browser : true,   continue : true,

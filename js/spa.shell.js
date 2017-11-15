@@ -31,7 +31,9 @@ spa.shell = (function () {
         + '<header class="spa-header"></header>'
         + '<div class="spa-preface"></div>'
         + '<div class="spa-main"></div>'
-        + '<footer class="spa-footer"></footer>',
+        + '<footer class="spa-footer"></footer>'
+        + '<div class="spa-slide"></div>'
+        + '<div class="spa-modal"></div>',
       news_detail : {},
       page_detail : {}
     },
@@ -52,11 +54,13 @@ spa.shell = (function () {
   setJqueryMap = function () {
     var $container = stateMap.$container;
     jqueryMap = {
-      $container : $container,
-      $header    : $container.find('.spa-header'),
-      $preface   : $container.find('.spa-preface'),
-      $main      : $container.find('.spa-main'),
-      $footer    : $container.find('.spa-footer')
+      $container   : $container,
+      $header      : $container.find('.spa-header'),
+      $preface     : $container.find('.spa-preface'),
+      $main        : $container.find('.spa-main'),
+      $footer      : $container.find('.spa-footer'),
+      $slide       : $container.find('.spa-slide'),
+      $modal       : $container.find('.spa-modal')
     };
   };
   // End : jqueryMap()
@@ -102,6 +106,7 @@ spa.shell = (function () {
     spa.shell.header.initModule(jqueryMap.$header);
     spa.shell.preface.initModule(jqueryMap.$preface);
     spa.shell.footer.initModule(jqueryMap.$footer);
+    spa.shell.slide.initModule(jqueryMap.$slide);
   };
   // End : loadCommonModule();
 
@@ -217,8 +222,10 @@ spa.shell = (function () {
     $(document).scrollTop(0);
     loadPage(anchor_map);
 
-    // 每当 URI 变化时，加载左侧导航
-    spa.shell.slide.toggleSlide(true);
+    // 每当 URI 变化时，并且当加载完 js 后，加载左侧导航
+    document.getElementsByTagName('script').onload = (function () {
+      spa.shell.slide.toggleSlide(true);
+    }());
   };
   // End : onHashchange()
 
@@ -234,8 +241,8 @@ spa.shell = (function () {
 
     // 加载首页主内容区域
     spa.index.initModule(jqueryMap.$main);
-    // 加载左侧导航
-    spa.shell.slide.initModule(jqueryMap.$container);
+    // // 加载左侧导航
+    // spa.shell.slide.initModule(jqueryMap.$container);
 
     $(window)
       .bind('hashchange', onHashchange)

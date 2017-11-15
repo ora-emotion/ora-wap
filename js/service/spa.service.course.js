@@ -76,10 +76,13 @@ spa.service.course = (function () {
     setJqueryMap, freeVideo, vipVideo, loadVideo, initModule;
 
   setJqueryMap = function () {
-    var $course = stateMap.$course;
+    var $container, $course;
+
+    $container = $('#spa');
+    $course = stateMap.$course;
 
     jqueryMap = {
-      $container  : $('#spa'),
+      $preface    : $container.find('.spa-preface'),
       $course     : $course,
       $free_video : $course.find('.group:first-child'),
       $vip_video  : $course.find('.group:last-child')
@@ -109,10 +112,12 @@ spa.service.course = (function () {
 
   initModule = function ($course) {
     stateMap.$course = $course;
-    // $course.html(configMap.main_html);
+    $course.html(configMap.main_html);
 
     setJqueryMap();
     loadVideo();
+
+    jqueryMap.$preface.show();
   };
 
   return { initModule : initModule };

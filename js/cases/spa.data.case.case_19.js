@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_19.js
  * case for data
- * 干货案例 04 - 坏男人教你：没有追不到的女生，只有不会聊天的愣头青
+ * 干货案例 19 - 坏男人教你：没有追不到的女生，只有不会聊天的愣头青
 */
 
 /*jslint           browser : true,   continue : true,

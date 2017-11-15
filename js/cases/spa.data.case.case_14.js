@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_14.js
  * case for data
- * 干货案例 04 - 合理套路，帮你把握住心仪的她
+ * 干货案例 14 - 合理套路，帮你把握住心仪的她
 */
 
 /*jslint           browser : true,   continue : true,

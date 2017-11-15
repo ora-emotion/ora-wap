@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_10.js
  * case for data
- * 干货案例 04 - 断联拉黑也不怕，教你学会怎么挽回让女人绝望的感情
+ * 干货案例 10 - 断联拉黑也不怕，教你学会怎么挽回让女人绝望的感情
 */
 
 /*jslint           browser : true,   continue : true,

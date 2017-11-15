@@ -1,7 +1,7 @@
 /*
  * spa.data.case.case_07.js
  * case for data
- * 干货案例 04 - 女生的“废物测试”其实是对你有意思，你中招了吗？
+ * 干货案例 07 - 女生的“废物测试”其实是对你有意思，你中招了吗？
 */
 
 /*jslint           browser : true,   continue : true,
