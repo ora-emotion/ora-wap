@@ -117,8 +117,6 @@ spa.service.course = (function () {
     setJqueryMap();
     loadVideo();
 
-    console.log(jqueryMap.$preface);
-
     jqueryMap.$preface.show();
   };
 
