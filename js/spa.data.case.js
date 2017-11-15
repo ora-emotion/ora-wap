@@ -202,20 +202,8 @@ spa.data.case = (function () {
       case_44 : String() + '干货案例 44',
       case_45 : String() + '干货案例 45'
     },
-    stateMap = { $container : null },
-    jqueryMap = {},
 
-    setJqueryMap, createScript, loadPage, initModule;
-
-  setJqueryMap = function () {
-    var $container = stateMap.$container;
-
-    jqueryMap = {
-      $container : $container,
-      $case      : $container.find('.spa-main'),
-      $title     : $('head title')
-    };
-  };
+    createScript, loadPage, initModule;
 
   createScript = function (key_name_value, src) {
     var script, head;
@@ -258,10 +246,7 @@ spa.data.case = (function () {
     return false;
   };
 
-  initModule = function ($container) {
-    stateMap.$container = $container;
-    setJqueryMap();
-
+  initModule = function () {
     loadPage();
   };
 
