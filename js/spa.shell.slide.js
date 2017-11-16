@@ -89,7 +89,7 @@ spa.shell.slide = (function () {
 
   toggleSlide = function (slide_state) {
     // 展开左侧导航
-    if (!slide_state) {
+    if (slide_state) {
       jqueryMap.$slide.animate({ left : configMap.slide.retract_width }, 150);
 
       jqueryMap.$modal.show();
@@ -99,7 +99,7 @@ spa.shell.slide = (function () {
     }
 
     // 收起左侧导航
-    if (slide_state) {
+    if (!slide_state) {
       jqueryMap.$slide.css({ left : configMap.slide.extend_width });
 
       jqueryMap.$modal.css({ opacity : 0 });
@@ -118,10 +118,10 @@ spa.shell.slide = (function () {
 
       switch ( $(target)[0].className ) {
         case 'spa-slide-btn-extend' :   // 展开左侧导航
-          toggleSlide(false);
+          toggleSlide(true);
           break;
         case 'spa-modal' :              // 收起左侧导航
-          toggleSlide(true);
+          toggleSlide(false);
           break;
         default:
           break;
