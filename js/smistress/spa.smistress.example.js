@@ -23,7 +23,7 @@ spa.smistress.example = (function () {
       +  '</div>'
 
       + '<div class="smistress-example-main">'
-        + '<div class="top">'
+        + '<div class="top smistress-example-main-item">'
           + '<img src="images/smistress/example-pic01.png" />'
           + '<div class="wen1">'
             + '<h3>老公在外找小三，教你见招拆招</h3>'
@@ -37,7 +37,7 @@ spa.smistress.example = (function () {
             + '</p>'
           + '</div>'
         + '</div>'
-        + '<div class="bottom">'
+        + '<div class="bottom smistress-example-main-item">'
           + '<img src="images/smistress/example-pic02.png" />'
           + '<div class="wen1">'
             + '<h3>从恩爱夫妻到仇人，都是小三搞得鬼</h3>'
@@ -62,17 +62,26 @@ spa.smistress.example = (function () {
 
     jqueryMap = {
       $example : $example,
-      $top     : $example.find('.top'),
-      $bottom  : $example.find('.bottom')
+      $item    : $example.find('.smistress-example-main-item')
     };
   };
 
   onClickLink = function () {
-    jqueryMap.$top.click(function () {
-      $.uriAnchor.setAnchor({ case : 'case_01' });
-    });
-    jqueryMap.$bottom.click(function () {
-      $.uriAnchor.setAnchor({ case : 'case_02' });
+    var index;
+
+    jqueryMap.$item.click(function () {
+      index = $(this).index() + 1;
+
+      switch (index) {
+        case 1 :
+          $.uriAnchor.setAnchor({ case : 'case_40' });
+          break;
+        case 2 :
+          $.uriAnchor.setAnchor({ case : 'case_41' });
+          break;
+        default:
+          break;
+      }
     });
   };
 
