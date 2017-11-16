@@ -18,12 +18,12 @@ spa.about.environment = (function () {
       main_html : String()
         + '<div class="spa-module-title">'
           + '<span class="spa-module-title-line"></span>'
-          + '<p class="spa-module-title-txt">橘子情感发展历程</p>'
+          + '<p class="spa-module-title-txt">橘子环境</p>'
           + '<span class="spa-module-title-line"></span>'
         +  '</div>'
-        // + '<div class="about-environment-main">'
-        //   + '<div class="about-environment-main-bg"></div>'
-        // + '</div>'
+        + '<div class="about-environment-main">'
+          + '<div class="about-environment-main-bg"></div>'
+        + '</div>'
     },
     initModule;
 
