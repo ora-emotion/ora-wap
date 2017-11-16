@@ -64,9 +64,21 @@ spa.smarriage.example = (function () {
   };
 
   loadPage = function () {
+    var index;
+
     jqueryMap.$item.click(function () {
-      var index = $(this).index();
-      $.uriAnchor.setAnchor(configMap.case_arr[index]);
+      index = $(this).index() + 1;
+
+      switch (index) {
+        case 1 :
+          $.uriAnchor.setAnchor({ case : 'case_45' });
+          break;
+        case 2 :
+          $.uriAnchor.setAnchor({ case : 'case_44' });
+          break;
+        default:
+          break;
+      }
     });
   };
 
