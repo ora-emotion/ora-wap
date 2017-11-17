@@ -193,8 +193,6 @@ spa.data.case = (function () {
         $('head title')
           .text(configMap.title[key_name_value] + ' | 橘子情感干货案例 | 橘子情感');
 
-        console.log($('head meta[name="keywords"]'));
-
         // update keywords
         $('head meta[name="keywords"]')
           .attr('content', configMap.keywords[key_name_value]);

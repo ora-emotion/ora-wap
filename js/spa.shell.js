@@ -224,7 +224,7 @@ spa.shell = (function () {
 
     // 每当 URI 变化时，并且当加载完 js 后，加载左侧导航
     document.getElementsByTagName('script').onload = (function () {
-      spa.shell.slide.toggleSlide(true);
+      spa.shell.slide.toggleSlide(false);
     }());
   };
   // End : onHashchange()
