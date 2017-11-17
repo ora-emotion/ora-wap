@@ -17,51 +17,50 @@ spa.shell.slide = (function () {
     configMap = {
       main_html : String()
         + '<div class="spa-slide-main">'
-          + '<a class="spa-slide-main-item" href="./spa.html">'
-            + '<span class=>'
-            + '<span class="spa-slide-main-item-icon"></span>'
-            + '<span class="spa-slide-main-item-txt">返回首页</span>'
-          + '</a>'
-          + '<a class="spa-slide-main-item" href="./spa.html#!page=save_love">'
-            + '<span class="spa-slide-main-item-icon"></span>'
-            + '<span class="spa-slide-main-item-txt">挽回爱情</span>'
-          + '</a>'
-          + '<a class="spa-slide-main-item" href="./spa.html#!page=save_marriage">'
-            + '<span class="spa-slide-main-item-icon"></span>'
-            + '<span class="spa-slide-main-item-txt">挽救婚姻</span>'
-          + '</a>'
-          + '<a class="spa-slide-main-item" href="./spa.html#!page=separate_mistress">'
-            + '<span class="spa-slide-main-item-icon"></span>'
-            + '<span class="spa-slide-main-item-txt">分离小三</span>'
-          + '</a>'
-          + '<a class="spa-slide-main-item" href="./spa.html#!page=custom_love">'
-            + '<span class="spa-slide-main-item-icon"></span>'
-            + '<span class="spa-slide-main-item-txt">定制爱情</span>'
-          + '</a>'
-          + '<a class="spa-slide-main-item" href="./spa.html#!page=emotion_forum">'
-            + '<span class="spa-slide-main-item-icon"></span>'
-            + '<span class="spa-slide-main-item-txt">情感论坛</span>'
-          + '</a>'
-          + '<a class="spa-slide-main-item" href="./spa.html#!page=mentor_team">'
-            + '<span class="spa-slide-main-item-icon"></span>'
-            + '<span class="spa-slide-main-item-txt">权威专家</span>'
-          + '</a>'
-          + '<a class="spa-slide-main-item" href="./spa.html#!page=service_intro">'
-            + '<span class="spa-slide-main-item-icon"></span>'
-            + '<span class="spa-slide-main-item-txt">服务介绍</span>'
-          + '</a>'
-          + '<a class="spa-slide-main-item" href="./spa.html#!page=about_us">'
-            + '<span class="spa-slide-main-item-icon"></span>'
-            + '<span class="spa-slide-main-item-txt">关于我们</span>'
-          + '</a>'
+          + '<div class="spa-slide-main-item home">'
+            + '<span class="spa-slide-main-item-icon home"></span>'
+            + '<span class="spa-slide-main-item-txt home">返回首页</span>'
+          + '</div>'
+          + '<div class="spa-slide-main-item slove">'
+            + '<span class="spa-slide-main-item-icon slove"></span>'
+            + '<span class="spa-slide-main-item-txt slove">挽回爱情</span>'
+          + '</div>'
+          + '<div class="spa-slide-main-item smarriage">'
+            + '<span class="spa-slide-main-item-icon smarriage"></span>'
+            + '<span class="spa-slide-main-item-txt smarriage">挽救婚姻</span>'
+          + '</div>'
+          + '<div class="spa-slide-main-item smistress">'
+            + '<span class="spa-slide-main-item-icon smistress"></span>'
+            + '<span class="spa-slide-main-item-txt smistress">分离小三</span>'
+          + '</div>'
+          + '<div class="spa-slide-main-item clove">'
+            + '<span class="spa-slide-main-item-icon clove"></span>'
+            + '<span class="spa-slide-main-item-txt clove">定制爱情</span>'
+          + '</div>'
+          + '<div class="spa-slide-main-item forum">'
+            + '<span class="spa-slide-main-item-icon forum"></span>'
+            + '<span class="spa-slide-main-item-txt forum">情感论坛</span>'
+          + '</div>'
+          + '<div class="spa-slide-main-item mentor">'
+            + '<span class="spa-slide-main-item-icon mentor"></span>'
+            + '<span class="spa-slide-main-item-txt mentor">权威专家</span>'
+          + '</div>'
+          + '<div class="spa-slide-main-item service">'
+            + '<span class="spa-slide-main-item-icon service"></span>'
+            + '<span class="spa-slide-main-item-txt service">服务介绍</span>'
+          + '</div>'
+          + '<div class="spa-slide-main-item about">'
+            + '<span class="spa-slide-main-item-icon about"></span>'
+            + '<span class="spa-slide-main-item-txt about">关于我们</span>'
+          + '</div>'
         + '</div>'
         + '<div class="spa-slide-btn">'
           + '<span class="spa-slide-btn-extend"></span>'
         + '</div>',
 
         slide : {
-          extend_width  : '-5.2rem',
-          retract_width : '0'
+          extend_width  : '0',
+          retract_width : '-520'
         }
     },
     stateMap = {
@@ -87,23 +86,24 @@ spa.shell.slide = (function () {
     };
   };
 
-  toggleSlide = function (slide_state) {
+  toggleSlide = function (slide_state, fn) {
     // 展开左侧导航
     if (slide_state) {
-      jqueryMap.$slide.animate({ left : configMap.slide.retract_width }, 150);
-
       jqueryMap.$modal.show();
-      jqueryMap.$modal.animate({ opacity : .7 }, 150);
+      jqueryMap.$modal.animate({ opacity : '.7' }, 150);
+
+      jqueryMap.$slide.animate({ left : configMap.slide.extend_width }, 150);
 
       return false;
     }
 
     // 收起左侧导航
     if (!slide_state) {
-      jqueryMap.$slide.css({ left : configMap.slide.extend_width });
+      jqueryMap.$modal.animate({ opacity : 0 }, 150, function () {
+        jqueryMap.$modal.hide();
+      });
 
-      jqueryMap.$modal.css({ opacity : 0 });
-      jqueryMap.$modal.hide();
+      jqueryMap.$slide.animate({ left : configMap.slide.retract_width }, 150, fn);
 
       return false;
     }
@@ -115,13 +115,60 @@ spa.shell.slide = (function () {
 
       e = event || window.event;
       target = e.target;
+      target = $(target)[0].className.split(' ');
+      target = target[target.length - 1];
 
-      switch ( $(target)[0].className ) {
-        case 'spa-slide-btn-extend' :   // 展开左侧导航
+      switch (target) {
+        case 'spa-slide-btn-extend' :  // 展开左侧导航
           toggleSlide(true);
           break;
-        case 'spa-modal' :              // 收起左侧导航
+        case 'spa-modal' :             // 收起左侧导航
           toggleSlide(false);
+          break;
+        case 'home' :                  // 加载首页
+          toggleSlide(false, function () {
+            $.uriAnchor.setAnchor({});
+          });
+          break;
+        case 'slove' :                 // 加载挽回爱情页面
+          toggleSlide(false, function () {
+            $.uriAnchor.setAnchor({ page : 'save_love' });
+          });
+          break;
+        case 'smarriage' :             // 加载挽救婚姻页面
+          toggleSlide(false, function () {
+            $.uriAnchor.setAnchor({ page : 'save_marriage' });
+          });
+          break;
+        case 'smistress' :             // 加载分离小三页面
+          toggleSlide(false, function () {
+            $.uriAnchor.setAnchor({ page : 'separate_mistress' });
+          });
+          break;
+        case 'clove' :                 // 加载定制爱情页面
+          toggleSlide(false, function () {
+            $.uriAnchor.setAnchor({ page : 'custom_love' });
+          });
+          break;
+        case 'forum' :                 // 加载情感论坛页面
+          toggleSlide(false, function () {
+            $.uriAnchor.setAnchor({ page : 'emotion_forum' });
+          });
+          break;
+        case 'mentor' :                // 加载权威专家页面
+          toggleSlide(false, function () {
+            $.uriAnchor.setAnchor({ page : 'mentor_team' });
+          });
+          break;
+        case 'service' :               // 加载服务介绍页面
+          toggleSlide(false, function () {
+            $.uriAnchor.setAnchor({ page : 'service_intro' });
+          });
+          break;
+        case 'about' :                 // 加载关于我们页面
+          toggleSlide(false, function () {
+            $.uriAnchor.setAnchor({ page : 'about_us' });
+          });
           break;
         default:
           break;
