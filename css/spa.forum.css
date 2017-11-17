@@ -99,7 +99,7 @@
 .forum-main-bottom .anli {
 	width: 100%;
 	height: 1.8rem;
-	margin-top: .2rem;
+	margin-top: .1rem;
 	margin-bottom: .4rem;
 }
 .forum-main-bottom .anli .left {
@@ -127,4 +127,8 @@
 }
 .forum-main-bottom .anli .right p {
   padding-top: .1rem;
+}
+.forum-main-bottom .more {
+  padding-left: .2rem;
+  color: #fd3232;
 }

@@ -81,7 +81,7 @@ spa.forum = (function () {
               + '<span>情感问答</span>'
             + '</div>'
             + '<div class="anli-group">'
-              + '<div class="anli">'
+              + '<a class="anli" href="#!case=case_01">'
                 + '<div class="left">'
                   + '<img src="images/forum/1.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -94,8 +94,8 @@ spa.forum = (function () {
                     + '心态决定行为，行为……'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_02">'
                 + '<div class="left">'
                   + '<img src="images/forum/2.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -108,8 +108,8 @@ spa.forum = (function () {
                     + '难道所有的女人……'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_03">'
                 + '<div class="left">'
                   + '<img src="images/forum/3.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -122,7 +122,7 @@ spa.forum = (function () {
                     + '怎么解决，在和心爱的人……'
                   + '</p>'
                 + '</div>'
-              + '</div>'
+              + '</a>'
               + '<!-- <div class="anli">'
                 + '<div class="left">'
                   + '<img src="images/forum/4.jpg" alt="橘子情感 - 干货案例" />'
@@ -138,7 +138,7 @@ spa.forum = (function () {
                   + '</p>'
                 + '</div>'
               + '</div> -->'
-              + '<div class="anli">'
+              + '<a class="anli" href="#!case=case_05">'
                 + '<div class="left">'
                   + '<img src="images/forum/5.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -151,8 +151,8 @@ spa.forum = (function () {
                     + '自然而然，不谈复联的挽回计划都是纸上谈兵。'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_06">'
                 + '<div class="left">'
                   + '<img src="images/forum/6.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -165,8 +165,8 @@ spa.forum = (function () {
                     + '利的你，会怎么安慰自己？'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_07">'
                 + '<div class="left">'
                   + '<img src="images/forum/7.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -179,8 +179,8 @@ spa.forum = (function () {
                     + '废物测试，十有八九就掉进去了，要命的是……'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_08">'
                 + '<div class="left">'
                   + '<img src="images/forum/8.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -193,8 +193,8 @@ spa.forum = (function () {
                     + '，都有哪些，我们应该如何做呢？'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_09">'
                 + '<div class="left">'
                   + '<img src="images/forum/9.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -207,8 +207,8 @@ spa.forum = (function () {
                     + '子的种种状况，我们究竟该如何应对呢？'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_10">'
                 + '<div class="left">'
                   + '<img src="images/forum/10.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -221,8 +221,8 @@ spa.forum = (function () {
                     + '把它一路谈到尽头去，撞壁撞山到灰飞……'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_11">'
                 + '<div class="left">'
                   + '<img src="images/forum/11.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -235,8 +235,8 @@ spa.forum = (function () {
                     + '无助感以及想起两个人之间的美好时的那种不甘……'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case12_">'
                 + '<div class="left">'
                   + '<img src="images/forum/12.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -249,8 +249,8 @@ spa.forum = (function () {
                     + '因为什么，在不涉及具体纠纷的前提下……'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_13">'
                 + '<div class="left">'
                   + '<img src="images/forum/13.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -263,8 +263,8 @@ spa.forum = (function () {
                     + '大学，但是没能如愿，所以就都……'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_14">'
                 + '<div class="left">'
                   + '<img src="images/forum/14.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -277,8 +277,8 @@ spa.forum = (function () {
                     + '的时候舔一口回忆心理就不会那么苦了……'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_15">'
                 + '<div class="left">'
                   + '<img src="images/forum/15.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -291,8 +291,8 @@ spa.forum = (function () {
                     + '为深爱，我们才得以享有机会进而理解他们的美好……'
                   + '</p>'
                 + '</div>'
-              + '</div>'
-              + '<div class="anli">'
+              + '</a>'
+              + '<a class="anli" href="#!case=case_16">'
                 + '<div class="left">'
                   + '<img src="images/forum/4.jpg" alt="橘子情感--干货案例" />'
                 + '</div>'
@@ -305,7 +305,7 @@ spa.forum = (function () {
                     + '只有她一个人。'
                   + '</p>'
                 + '</div>'
-              + '</div>'
+              + '</a>'
             + '</div>'
             + '<p class="more">查看更多>>></p>'
           + '</div>'
@@ -330,7 +330,8 @@ spa.forum = (function () {
       $slove      : $forum.find('.forum-main-top-right-top img'),
       $swiper_two : $forum.find('.swiper-slide:nth-child(2) img'),
       $anli_group : $forum.find('.anli-group'),
-      $view_more  : $forum.find('.more')
+      $view_more  : $forum.find('.more'),
+      $case       : $forum.find('.anli-group .anli')
     };
   };
 
@@ -360,15 +361,29 @@ spa.forum = (function () {
       e = event || window.event;
       target = e.target;
 
-      switch ($(target)[0].className) {
-        // 查看更多
-        case $(jqueryMap.$view_more)[0].className :
-          jqueryMap.$anli_group.css({ height : '100%' });
-          jqueryMap.$view_more.css({ display : 'none' });
-          break;
-        default:
-          break;
+      // console.log($(target)[0]);
+      // console.log();
+      // console.log($(target)[0] == $(jqueryMap.$view_more)[0]);
+      // console.log( $(jqueryMap.$case)[0] );
+
+      if ( $(target)[0] === $(jqueryMap.$view_more)[0] ) {
+        jqueryMap.$anli_group.css({ height : '100%' });
+        jqueryMap.$view_more.css({ display : 'none' });
+        return false;
       }
+
+      // switch ( $(target)[0] ) {
+      //   // 查看更多
+      //   case $(jqueryMap.$view_more)[0] :
+      //     jqueryMap.$anli_group.css({ height : '100%' });
+      //     jqueryMap.$view_more.css({ display : 'none' });
+      //     break;
+      //   case $(jqueryMap.$case)[0] :
+      //     console.log($(jqueryMap.$case)[0]);
+      //     break;
+      //   default:
+      //     break;
+      // }
     });
   };
 
