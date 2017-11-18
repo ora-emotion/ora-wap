@@ -79,7 +79,7 @@ spa.clove.example = (function () {
   onClickLink = function () {
     jqueryMap.$item.click(function () {
       var index = $(this).index();
-      
+
       switch (index) {
         case 0 :
           $.uriAnchor.setAnchor({ case : 'case_38' });
@@ -93,7 +93,6 @@ spa.clove.example = (function () {
         default:
           break;
       }
-      // $.uriAnchor.setAnchor({ case : 'case_0' + (index + 1) });
     });
   };
 

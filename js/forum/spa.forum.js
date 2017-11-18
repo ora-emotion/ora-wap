@@ -358,32 +358,14 @@ spa.forum = (function () {
     $(document).click(function (e) {
       var e, target;
 
-      e = event || window.event;
+      e = e || window.e;
       target = e.target;
-
-      // console.log($(target)[0]);
-      // console.log();
-      // console.log($(target)[0] == $(jqueryMap.$view_more)[0]);
-      // console.log( $(jqueryMap.$case)[0] );
 
       if ( $(target)[0] === $(jqueryMap.$view_more)[0] ) {
         jqueryMap.$anli_group.css({ height : '100%' });
         jqueryMap.$view_more.css({ display : 'none' });
         return false;
       }
-
-      // switch ( $(target)[0] ) {
-      //   // 查看更多
-      //   case $(jqueryMap.$view_more)[0] :
-      //     jqueryMap.$anli_group.css({ height : '100%' });
-      //     jqueryMap.$view_more.css({ display : 'none' });
-      //     break;
-      //   case $(jqueryMap.$case)[0] :
-      //     console.log($(jqueryMap.$case)[0]);
-      //     break;
-      //   default:
-      //     break;
-      // }
     });
   };
 

@@ -113,10 +113,10 @@ spa.shell.slide = (function () {
     jqueryMap.$container.click(function (e) {
       var target;
 
-      e = event || window.event;
+      e = e || window.e;
       target = e.target;
-      target = $(target)[0].className.split(' ');
-      target = target[target.length - 1];
+      target = $(target)[0].className.split(' ');  // 将 class 名转为数组
+      target = target[target.length - 1];          // 取数组的最后一个 class 名
 
       switch (target) {
         case 'spa-slide-btn-extend' :  // 展开左侧导航
