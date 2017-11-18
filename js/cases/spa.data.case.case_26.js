@@ -31,7 +31,7 @@ spa.data.case.case_26 = (function () {
             + '的梦。感谢兄弟们的支持，在各大导师榜单中我们也位列前茅，并且一直持续，'
             + '为了情怀，为了梦想，我们会坚持努力到底。'
           + '</p>'
-          + '<div class=" class="spa-data-case-h3"spa-data-case-h3">'
+          + '<div class="spa-data-case-h3">'
             + '<div class="hong"></div>学员自述'
           + '</div>'
           + '<p>'
